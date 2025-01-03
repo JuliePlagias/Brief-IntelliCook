@@ -1,0 +1,132 @@
+.sidenav {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -100%;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s ease;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidenav.active {
+  left: 0px;
+}
+
+.sidenav .close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+.burger-icon span {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: #f1930f;
+  margin: 6px 0;
+}
+#openBtn {
+  position: fixed;
+  top: 10px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: normal;
+  padding: 15px;
+  background-color: white;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+#logo {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+#panier {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+input[type="search"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 300px;
+}
+
+/* Pour les écrans de moins de 768px */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+  #logo {
+    width: 100%;
+    height: auto;
+  }
+  form {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Pour les écrans de moins de 480px */
+@media (max-width: 480px) {
+  header {
+    padding: 10px;
+  }
+  #logo {
+    width: 100%;
+    height: auto;
+  }
+  form {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Pour les écrans de moins de 320px */
+@media (max-width: 320px) {
+  header {
+    padding: 5px;
+  }
+  #logo {
+    width: 100%;
+    height: auto;
+  }
+  form {
+    width: 100%;
+    height: auto;
+  }
+}
