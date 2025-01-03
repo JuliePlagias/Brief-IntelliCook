@@ -14,12 +14,12 @@
         {
           "name": "huile d'olive",
           "quantity": 3,
-          "unit": "cuillères à soupe"
+          "unit": "c à soupe"
         },
         {
-          "name": "herbes de Provence",
+          "name": "herbe de Provence",
           "quantity": 1,
-          "unit": "cuillère à café"
+          "unit": "c à café"
         },
         { "name": "sel"},
         { "name": "poivre"}
@@ -37,9 +37,9 @@
       "name": "Soupe de légumes",
       "img": "",
       "ingredients": [
-        { "name": "carottes", "quantity": 3 },
-        { "name": "pommes de terre", "quantity": 2 },
-        { "name": "poireau ou épinards", "quantity": 100, "unit": "g" },
+        { "name": "carotte", "quantity": 3 },
+        { "name": "pomme de terre", "quantity": 2 },
+        { "name": "poireau", "quantity": 100, "unit": "g" },
         { "name": "bouillon cube", "quantity": 1 },
         { "name": "eau", "quantity": 1, "unit": "litre" },
         { "name": "sel"},
@@ -57,7 +57,7 @@
       "name": "Gratin dauphinois",
       "img": "",
       "ingredients": [
-        { "name": "pommes de terre", "quantity": 1, "unit": "kg" },
+        { "name": "pomme de terre", "quantity": 1, "unit": "kg" },
         { "name": "crème fraîche", "quantity": 200, "unit": "ml" },
         { "name": "fromage râpé", "quantity": 100, "unit": "g" },
         { "name": "ail", "quantity": 1, "unit": "gousse" },
@@ -77,10 +77,10 @@
       "img": "",
       "ingredients": [
         { "name": "pâte brisée", "quantity": 1 },
-        { "name": "œufs", "quantity": 2 },
+        { "name": "œuf", "quantity": 2 },
         { "name": "lait", "quantity": 200, "unit": "ml" },
         { "name": "fromage râpé", "quantity": 100, "unit": "g" },
-        { "name": "épinards", "quantity": 100, "unit": "g" },
+        { "name": "épinard", "quantity": 100, "unit": "g" },
         { "name": "oignon", "quantity": 1 }
       ],
       "steps": [
@@ -99,7 +99,7 @@
         { "name": "poulet", "quantity": 400, "unit": "g" },
         { "name": "lait de coco", "quantity": 400, "unit": "ml" },
         { "name": "oignon", "quantity": 1 },
-        { "name": "curry", "quantity": 1, "unit": "cuillère à soupe" },
+        { "name": "curry", "quantity": 1, "unit": "c à soupe" },
         { "name": "riz", "quantity": 200, "unit": "g" },
         { "name": "sel"}
       ],
@@ -115,14 +115,14 @@
       "name": "Salade composée",
       "img": "",
       "ingredients": [
-        { "name": "tomates", "quantity": 3 },
+        { "name": "tomate", "quantity": 3 },
         { "name": "poivron rouge", "quantity": 1 },
         { "name": "mozzarella", "quantity": 150, "unit": "g" },
         { "name": "basilic", "quantity": "quelques feuilles" },
         {
           "name": "huile d'olive",
           "quantity": 2,
-          "unit": "cuillères à soupe"
+          "unit": "c à soupe"
         }
       ],
       "steps": [
@@ -136,10 +136,10 @@
       "name": "Omelette aux champignons",
       "img": "",
       "ingredients": [
-        { "name": "œufs", "quantity": 3 },
-        { "name": "champignons", "quantity": 100, "unit": "g" },
+        { "name": "œuf", "quantity": 3 },
+        { "name": "champignon", "quantity": 100, "unit": "g" },
         { "name": "ail", "quantity": 1, "unit": "gousse" },
-        { "name": "beurre", "quantity": 1, "unit": "cuillère à soupe" }
+        { "name": "beurre", "quantity": 1, "unit": "c à soupe" }
       ],
       "steps": [
         "Faites revenir les champignons et l’ail dans le beurre.",
@@ -169,10 +169,10 @@
       "img": "",
       "ingredients": [
         { "name": "pain de mie", "quantity": 4, "unit": "tranches" },
-        { "name": "œufs", "quantity": 2 },
+        { "name": "œuf", "quantity": 2 },
         { "name": "lait", "quantity": 200, "unit": "ml" },
         { "name": "sucre", "quantity": 50, "unit": "g" },
-        { "name": "beurre", "quantity": 1, "unit": "cuillère à soupe" }
+        { "name": "beurre", "quantity": 1, "unit": "c à soupe" }
       ],
       "steps": [
         "Mélangez les œufs, le lait et le sucre dans un bol.",
@@ -187,7 +187,7 @@
       "img": "",
       "ingredients": [
         { "name": "pâte feuilletée", "quantity": 1 },
-        { "name": "pommes", "quantity": 3 },
+        { "name": "pomme", "quantity": 3 },
         { "name": "sucre", "quantity": 50, "unit": "g" },
         { "name": "beurre", "quantity": 20, "unit": "g" }
       ],
@@ -207,7 +207,7 @@
         { "name": "chocolat noir", "quantity": 200, "unit": "g" },
         { "name": "beurre", "quantity": 150, "unit": "g" },
         { "name": "sucre", "quantity": 150, "unit": "g" },
-        { "name": "œufs", "quantity": 3 },
+        { "name": "œuf", "quantity": 3 },
         { "name": "farine", "quantity": 100, "unit": "g" },
         { "name": "noix", "quantity": 50, "unit": "g" }
       ],
@@ -226,7 +226,7 @@
       "ingredients": [
         { "name": "farine", "quantity": 250, "unit": "g" },
         { "name": "lait", "quantity": 500, "unit": "ml" },
-        { "name": "œufs", "quantity": 3 },
+        { "name": "œuf", "quantity": 3 },
         { "name": "beurre fondu", "quantity": 50, "unit": "g" },
         { "name": "sucre", "quantity": 20, "unit": "g" },
         { "name": "sel", "quantity": "une pincée" }
@@ -250,9 +250,9 @@
         {
           "name": "jus de citron",
           "quantity": 1,
-          "unit": "cuillère à soupe"
+          "unit": "c à soupe"
         },
-        { "name": "sucre", "quantity": 1, "unit": "cuillère à soupe" }
+        { "name": "sucre", "quantity": 1, "unit": "c à soupe" }
       ],
       "steps": [
         "Épluchez et coupez les fruits en morceaux.",
@@ -285,7 +285,7 @@
       "ingredients": [
         { "name": "farine", "quantity": 250, "unit": "g" },
         { "name": "lait", "quantity": 500, "unit": "ml" },
-        { "name": "œufs", "quantity": 2 },
+        { "name": "œuf", "quantity": 2 },
         { "name": "beurre fondu", "quantity": 100, "unit": "g" },
         { "name": "sucre", "quantity": 50, "unit": "g" },
         { "name": "levure chimique", "quantity": 1, "unit": "sachet" }
