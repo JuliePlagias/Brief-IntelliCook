@@ -1,270 +1,301 @@
 {
-    "recettes": [
-      {
-        "nom": "Ratatouille",
-        "img":"",
-        "ingredients": [
-          {"ingredient": "courgettes", "quantite": 2},
-          {"ingredient": "aubergine", "quantite": 1},
-          {"ingredient": "tomates", "quantite": 3},
-          {"ingredient": "poivron rouge", "quantite": 1},
-          {"ingredient": "oignon", "quantite": 1},
-          {"ingredient": "ail", "quantite": 2, "unite": "gousses"},
-          {"ingredient": "huile d'olive", "quantite": 3, "unite": "cuillères à soupe"},
-          {"ingredient": "herbes de Provence", "quantite": 1, "unite": "cuillère à café"},
-          {"ingredient": "sel", "quantite": "au goût"},
-          {"ingredient": "poivre", "quantite": "au goût"}
-        ],
-        "etapes": [
-          "Coupez les légumes en dés.",
-          "Faites revenir l’oignon et l’ail hachés dans l’huile d’olive.",
-          "Ajoutez les légumes un par un (aubergine, courgettes, poivron, tomates).",
-          "Assaisonnez avec les herbes de Provence, le sel et le poivre.",
-          "Laissez mijoter 30 minutes à feu doux en remuant régulièrement."
-        ]
-      },
-      {
-        "nom": "Soupe de légumes",
-        "img":"",
-        "ingredients": [
-          {"ingredient": "carottes", "quantite": 3},
-          {"ingredient": "pommes de terre", "quantite": 2},
-          {"ingredient": "poireau ou épinards", "quantite": 100, "unite": "g"},
-          {"ingredient": "bouillon cube", "quantite": 1},
-          {"ingredient": "eau", "quantite": 1, "unite": "litre"},
-          {"ingredient": "sel", "quantite": "au goût"},
-          {"ingredient": "poivre", "quantite": "au goût"}
-        ],
-        "etapes": [
-          "Épluchez et coupez les légumes en morceaux.",
-          "Faites bouillir l’eau avec le bouillon cube.",
-          "Ajoutez les légumes et laissez cuire 20-25 minutes.",
-          "Mixez le tout et assaisonnez."
-        ]
-      },
-      {
-        "nom": "Gratin dauphinois",
-        "img":"",
-        "ingredients": [
-          {"ingredient": "pommes de terre", "quantite": 1, "unite": "kg"},
-          {"ingredient": "crème fraîche", "quantite": 200, "unite": "ml"},
-          {"ingredient": "fromage râpé", "quantite": 100, "unite": "g"},
-          {"ingredient": "ail", "quantite": 1, "unite": "gousse"},
-          {"ingredient": "sel", "quantite": "au goût"},
-          {"ingredient": "poivre", "quantite": "au goût"}
-        ],
-        "etapes": [
-          "Épluchez et coupez les pommes de terre en fines rondelles.",
-          "Frottez le plat avec l’ail. Disposez les rondelles.",
-          "Ajoutez la crème, le fromage, le sel et le poivre.",
-          "Enfournez à 180°C pendant 45 minutes."
-        ]
-      },
-      {
-        "nom": "Quiche aux légumes",
-        "img":"",
-        "ingredients": [
-          {"ingredient": "pâte brisée", "quantite": 1},
-          {"ingredient": "œufs", "quantite": 2},
-          {"ingredient": "lait", "quantite": 200, "unite": "ml"},
-          {"ingredient": "fromage râpé", "quantite": 100, "unite": "g"},
-          {"ingredient": "épinards", "quantite": 100, "unite": "g"},
-          {"ingredient": "oignon", "quantite": 1}
-        ],
-        "etapes": [
-          "Préchauffez le four à 180°C.",
-          "Faites revenir les oignons et les épinards dans une poêle.",
-          "Mélangez les œufs, le lait et le fromage dans un bol.",
-          "Étalez la pâte dans un moule, ajoutez les légumes et versez le mélange.",
-          "Faites cuire 30 minutes."
-        ]
-      },
-      {
-        "nom": "Poulet au curry",
-        "img":"",
-        "ingredients": [
-          {"ingredient": "poulet", "quantite": 400, "unite": "g"},
-          {"ingredient": "lait de coco", "quantite": 400, "unite": "ml"},
-          {"ingredient": "oignon", "quantite": 1},
-          {"ingredient": "curry", "quantite": 1, "unite": "cuillère à soupe"},
-          {"ingredient": "riz", "quantite": 200, "unite": "g"},
-          {"ingredient": "sel", "quantite": "au goût"}
-        ],
-        "etapes": [
-          "Faites cuire le riz.",
-          "Coupez le poulet en morceaux, faites-le revenir avec l’oignon.",
-          "Ajoutez le curry, le lait de coco, et laissez mijoter 10 minutes.",
-          "Servez avec le riz."
-        ]
-      },
-      {
-        "nom": "Salade composée",
-        "img":"",
-        "ingredients": [
-          {"ingredient": "tomates", "quantite": 3},
-          {"ingredient": "poivron rouge", "quantite": 1},
-          {"ingredient": "mozzarella", "quantite": 150, "unite": "g"},
-          {"ingredient": "basilic", "quantite": "quelques feuilles"},
-          {"ingredient": "huile d'olive", "quantite": 2, "unite": "cuillères à soupe"}
-        ],
-        "etapes": [
-          "Coupez les tomates, le poivron et la mozzarella en morceaux.",
-          "Mélangez dans un saladier, ajoutez le basilic.",
-          "Assaisonnez avec l’huile d’olive, sel et poivre."
-        ]
-      },
-      {
-        "nom": "Omelette aux champignons",
-        "img":"",
-        "ingredients": [
-          {"ingredient": "œufs", "quantite": 3},
-          {"ingredient": "champignons", "quantite": 100, "unite": "g"},
-          {"ingredient": "ail", "quantite": 1, "unite": "gousse"},
-          {"ingredient": "beurre", "quantite": 1, "unite": "cuillère à soupe"}
-        ],
-        "etapes": [
-          "Faites revenir les champignons et l’ail dans le beurre.",
-          "Battez les œufs, versez-les dans la poêle.",
-          "Faites cuire à feu doux jusqu’à ce que l’omelette soit prise."
-        ]
-      },
-      {
-        "nom": "Pâtes au saumon et citron",
-        "img":"",
-        "ingredients": [
-          {"ingredient": "pâtes", "quantite": 200, "unite": "g"},
-          {"ingredient": "saumon", "quantite": 150, "unite": "g"},
-          {"ingredient": "citron", "quantite": 1},
-          {"ingredient": "crème fraîche", "quantite": 100, "unite": "ml"}
-        ],
-        "etapes": [
-          "Faites cuire les pâtes.",
-          "Faites revenir le saumon coupé en dés.",
-          "Ajoutez la crème et le jus de citron. Mélangez avec les pâtes."
-        ]
-      },
-      {
-        "nom": "Pain perdu",
-        "img":"",
-        "ingredients": [
-          {"ingredient": "pain de mie", "quantite": 4, "unite": "tranches"},
-          {"ingredient": "œufs", "quantite": 2},
-          {"ingredient": "lait", "quantite": 200, "unite": "ml"},
-          {"ingredient": "sucre", "quantite": 50, "unite": "g"},
-          {"ingredient": "beurre", "quantite": 1, "unite": "cuillère à soupe"}
-        ],
-        "etapes": [
-          "Mélangez les œufs, le lait et le sucre dans un bol.",
-          "Trempez les tranches de pain dans le mélange.",
-          "Faites chauffer le beurre dans une poêle et faites dorer les tranches de pain des deux côtés.",
-          "Servez chaud, avec du sucre ou du sirop."
-        ]
-      },
-      {
-        "nom": "Tarte aux pommes",
-        "img":"",
-        "ingredients": [
-          {"ingredient": "pâte feuilletée", "quantite": 1},
-          {"ingredient": "pommes", "quantite": 3},
-          {"ingredient": "sucre", "quantite": 50, "unite": "g"},
-          {"ingredient": "beurre", "quantite": 20, "unite": "g"}
-        ],
-        "etapes": [
-          "Préchauffez le four à 180°C.",
-          "Étalez la pâte dans un moule.",
-          "Épluchez et coupez les pommes en tranches fines, disposez-les sur la pâte.",
-          "Saupoudrez de sucre et parsemez de morceaux de beurre.",
-          "Faites cuire 30 minutes au four."
-        ]
-      },
-      {
-        "nom": "Brownies au chocolat",
-        "img":"",
-        "ingredients": [
-          {"ingredient": "chocolat noir", "quantite": 200, "unite": "g"},
-          {"ingredient": "beurre", "quantite": 150, "unite": "g"},
-          {"ingredient": "sucre", "quantite": 150, "unite": "g"},
-          {"ingredient": "œufs", "quantite": 3},
-          {"ingredient": "farine", "quantite": 100, "unite": "g"},
-          {"ingredient": "noix", "quantite": 50, "unite": "g"}
-        ],
-        "etapes": [
-          "Préchauffez le four à 180°C.",
-          "Faites fondre le chocolat et le beurre au bain-marie.",
-          "Ajoutez le sucre, les œufs, puis la farine, et mélangez bien.",
-          "Incorporez les noix concassées.",
-          "Versez dans un moule et faites cuire 25 minutes."
-        ]
-      },
-      {
-        "nom": "Crêpes",
-        "img":"",
-        "ingredients": [
-          {"ingredient": "farine", "quantite": 250, "unite": "g"},
-          {"ingredient": "lait", "quantite": 500, "unite": "ml"},
-          {"ingredient": "œufs", "quantite": 3},
-          {"ingredient": "beurre fondu", "quantite": 50, "unite": "g"},
-          {"ingredient": "sucre", "quantite": 20, "unite": "g"},
-          {"ingredient": "sel", "quantite": "une pincée"}
-        ],
-        "etapes": [
-          "Mélangez la farine, le sucre et le sel dans un saladier.",
-          "Ajoutez les œufs, le lait petit à petit, puis le beurre fondu.",
-          "Laissez reposer la pâte 30 minutes.",
-          "Faites cuire les crêpes dans une poêle chaude et légèrement huilée."
-        ]
-      },
-      {
-        "nom": "Salade de fruits",
-        "img":"",
-        "ingredients": [
-          {"ingredient": "pomme", "quantite": 1},
-          {"ingredient": "banane", "quantite": 1},
-          {"ingredient": "orange", "quantite": 1},
-          {"ingredient": "raisins", "quantite": 100, "unite": "g"},
-          {"ingredient": "jus de citron", "quantite": 1, "unite": "cuillère à soupe"},
-          {"ingredient": "sucre", "quantite": 1, "unite": "cuillère à soupe"}
-        ],
-        "etapes": [
-          "Épluchez et coupez les fruits en morceaux.",
-          "Mélangez dans un saladier avec le jus de citron et le sucre.",
-          "Servez frais."
-        ]
-      },
-      {
-        "nom": "Pizza maison",
-        "img":"",
-        "ingredients": [
-          {"ingredient": "pâte à pizza", "quantite": 1},
-          {"ingredient": "sauce tomate", "quantite": 150, "unite": "g"},
-          {"ingredient": "mozzarella", "quantite": 200, "unite": "g"},
-          {"ingredient": "jambon", "quantite": 100, "unite": "g"},
-          {"ingredient": "champignons", "quantite": 100, "unite": "g"}
-        ],
-        "etapes": [
-          "Préchauffez le four à 200°C.",
-          "Étalez la pâte et recouvrez-la de sauce tomate.",
-          "Ajoutez la mozzarella, le jambon et les champignons.",
-          "Faites cuire 15-20 minutes au four."
-        ]
-      },
-      {
-        "nom": "Gaufres",
-        "img":"",
-        "ingredients": [
-          {"ingredient": "farine", "quantite": 250, "unite": "g"},
-          {"ingredient": "lait", "quantite": 500, "unite": "ml"},
-          {"ingredient": "œufs", "quantite": 2},
-          {"ingredient": "beurre fondu", "quantite": 100, "unite": "g"},
-          {"ingredient": "sucre", "quantite": 50, "unite": "g"},
-          {"ingredient": "levure chimique", "quantite": 1, "unite": "sachet"}
-        ],
-        "etapes": [
-          "Mélangez la farine, le sucre et la levure dans un saladier.",
-          "Ajoutez les œufs, le lait et le beurre fondu.",
-          "Laissez reposer la pâte 1 heure.",
-          "Faites cuire dans un gaufrier chaud."
-        ]
-      }
-    ]
+  "recipes": [
+    {
+      "id": 1,
+      "nom": "Ratatouille",
+      "img": "",
+      "ingredients": [
+        { "ingredient": "courgettes", "quantite": 2 },
+        { "ingredient": "aubergine", "quantite": 1 },
+        { "ingredient": "tomates", "quantite": 3 },
+        { "ingredient": "poivron rouge", "quantite": 1 },
+        { "ingredient": "oignon", "quantite": 1 },
+        { "ingredient": "ail", "quantite": 2, "unite": "gousses" },
+        {
+          "ingredient": "huile d'olive",
+          "quantite": 3,
+          "unite": "cuillères à soupe"
+        },
+        {
+          "ingredient": "herbes de Provence",
+          "quantite": 1,
+          "unite": "cuillère à café"
+        },
+        { "ingredient": "sel", "quantite": "au goût" },
+        { "ingredient": "poivre", "quantite": "au goût" }
+      ],
+      "etapes": [
+        "Coupez les légumes en dés.",
+        "Faites revenir l’oignon et l’ail hachés dans l’huile d’olive.",
+        "Ajoutez les légumes un par un (aubergine, courgettes, poivron, tomates).",
+        "Assaisonnez avec les herbes de Provence, le sel et le poivre.",
+        "Laissez mijoter 30 minutes à feu doux en remuant régulièrement."
+      ]
+    },
+    {
+      "id": 2,
+      "nom": "Soupe de légumes",
+      "img": "",
+      "ingredients": [
+        { "ingredient": "carottes", "quantite": 3 },
+        { "ingredient": "pommes de terre", "quantite": 2 },
+        { "ingredient": "poireau ou épinards", "quantite": 100, "unite": "g" },
+        { "ingredient": "bouillon cube", "quantite": 1 },
+        { "ingredient": "eau", "quantite": 1, "unite": "litre" },
+        { "ingredient": "sel", "quantite": "au goût" },
+        { "ingredient": "poivre", "quantite": "au goût" }
+      ],
+      "etapes": [
+        "Épluchez et coupez les légumes en morceaux.",
+        "Faites bouillir l’eau avec le bouillon cube.",
+        "Ajoutez les légumes et laissez cuire 20-25 minutes.",
+        "Mixez le tout et assaisonnez."
+      ]
+    },
+    {
+      "id": 3,
+      "nom": "Gratin dauphinois",
+      "img": "",
+      "ingredients": [
+        { "ingredient": "pommes de terre", "quantite": 1, "unite": "kg" },
+        { "ingredient": "crème fraîche", "quantite": 200, "unite": "ml" },
+        { "ingredient": "fromage râpé", "quantite": 100, "unite": "g" },
+        { "ingredient": "ail", "quantite": 1, "unite": "gousse" },
+        { "ingredient": "sel", "quantite": "au goût" },
+        { "ingredient": "poivre", "quantite": "au goût" }
+      ],
+      "etapes": [
+        "Épluchez et coupez les pommes de terre en fines rondelles.",
+        "Frottez le plat avec l’ail. Disposez les rondelles.",
+        "Ajoutez la crème, le fromage, le sel et le poivre.",
+        "Enfournez à 180°C pendant 45 minutes."
+      ]
+    },
+    {
+      "id": 4,
+      "nom": "Quiche aux légumes",
+      "img": "",
+      "ingredients": [
+        { "ingredient": "pâte brisée", "quantite": 1 },
+        { "ingredient": "œufs", "quantite": 2 },
+        { "ingredient": "lait", "quantite": 200, "unite": "ml" },
+        { "ingredient": "fromage râpé", "quantite": 100, "unite": "g" },
+        { "ingredient": "épinards", "quantite": 100, "unite": "g" },
+        { "ingredient": "oignon", "quantite": 1 }
+      ],
+      "etapes": [
+        "Préchauffez le four à 180°C.",
+        "Faites revenir les oignons et les épinards dans une poêle.",
+        "Mélangez les œufs, le lait et le fromage dans un bol.",
+        "Étalez la pâte dans un moule, ajoutez les légumes et versez le mélange.",
+        "Faites cuire 30 minutes."
+      ]
+    },
+    {
+      "id": 5,
+      "nom": "Poulet au curry",
+      "img": "",
+      "ingredients": [
+        { "ingredient": "poulet", "quantite": 400, "unite": "g" },
+        { "ingredient": "lait de coco", "quantite": 400, "unite": "ml" },
+        { "ingredient": "oignon", "quantite": 1 },
+        { "ingredient": "curry", "quantite": 1, "unite": "cuillère à soupe" },
+        { "ingredient": "riz", "quantite": 200, "unite": "g" },
+        { "ingredient": "sel", "quantite": "au goût" }
+      ],
+      "etapes": [
+        "Faites cuire le riz.",
+        "Coupez le poulet en morceaux, faites-le revenir avec l’oignon.",
+        "Ajoutez le curry, le lait de coco, et laissez mijoter 10 minutes.",
+        "Servez avec le riz."
+      ]
+    },
+    {
+      "id": 6,
+      "nom": "Salade composée",
+      "img": "",
+      "ingredients": [
+        { "ingredient": "tomates", "quantite": 3 },
+        { "ingredient": "poivron rouge", "quantite": 1 },
+        { "ingredient": "mozzarella", "quantite": 150, "unite": "g" },
+        { "ingredient": "basilic", "quantite": "quelques feuilles" },
+        {
+          "ingredient": "huile d'olive",
+          "quantite": 2,
+          "unite": "cuillères à soupe"
+        }
+      ],
+      "etapes": [
+        "Coupez les tomates, le poivron et la mozzarella en morceaux.",
+        "Mélangez dans un saladier, ajoutez le basilic.",
+        "Assaisonnez avec l’huile d’olive, sel et poivre."
+      ]
+    },
+    {
+      "id": 7,
+      "nom": "Omelette aux champignons",
+      "img": "",
+      "ingredients": [
+        { "ingredient": "œufs", "quantite": 3 },
+        { "ingredient": "champignons", "quantite": 100, "unite": "g" },
+        { "ingredient": "ail", "quantite": 1, "unite": "gousse" },
+        { "ingredient": "beurre", "quantite": 1, "unite": "cuillère à soupe" }
+      ],
+      "etapes": [
+        "Faites revenir les champignons et l’ail dans le beurre.",
+        "Battez les œufs, versez-les dans la poêle.",
+        "Faites cuire à feu doux jusqu’à ce que l’omelette soit prise."
+      ]
+    },
+    {
+      "id": 8,
+      "nom": "Pâtes au saumon et citron",
+      "img": "",
+      "ingredients": [
+        { "ingredient": "pâtes", "quantite": 200, "unite": "g" },
+        { "ingredient": "saumon", "quantite": 150, "unite": "g" },
+        { "ingredient": "citron", "quantite": 1 },
+        { "ingredient": "crème fraîche", "quantite": 100, "unite": "ml" }
+      ],
+      "etapes": [
+        "Faites cuire les pâtes.",
+        "Faites revenir le saumon coupé en dés.",
+        "Ajoutez la crème et le jus de citron. Mélangez avec les pâtes."
+      ]
+    },
+    {
+      "id": 9,
+      "nom": "Pain perdu",
+      "img": "",
+      "ingredients": [
+        { "ingredient": "pain de mie", "quantite": 4, "unite": "tranches" },
+        { "ingredient": "œufs", "quantite": 2 },
+        { "ingredient": "lait", "quantite": 200, "unite": "ml" },
+        { "ingredient": "sucre", "quantite": 50, "unite": "g" },
+        { "ingredient": "beurre", "quantite": 1, "unite": "cuillère à soupe" }
+      ],
+      "etapes": [
+        "Mélangez les œufs, le lait et le sucre dans un bol.",
+        "Trempez les tranches de pain dans le mélange.",
+        "Faites chauffer le beurre dans une poêle et faites dorer les tranches de pain des deux côtés.",
+        "Servez chaud, avec du sucre ou du sirop."
+      ]
+    },
+    {
+      "id": 10,
+      "nom": "Tarte aux pommes",
+      "img": "",
+      "ingredients": [
+        { "ingredient": "pâte feuilletée", "quantite": 1 },
+        { "ingredient": "pommes", "quantite": 3 },
+        { "ingredient": "sucre", "quantite": 50, "unite": "g" },
+        { "ingredient": "beurre", "quantite": 20, "unite": "g" }
+      ],
+      "etapes": [
+        "Préchauffez le four à 180°C.",
+        "Étalez la pâte dans un moule.",
+        "Épluchez et coupez les pommes en tranches fines, disposez-les sur la pâte.",
+        "Saupoudrez de sucre et parsemez de morceaux de beurre.",
+        "Faites cuire 30 minutes au four."
+      ]
+    },
+    {
+      "id": 11,
+      "nom": "Brownies au chocolat",
+      "img": "",
+      "ingredients": [
+        { "ingredient": "chocolat noir", "quantite": 200, "unite": "g" },
+        { "ingredient": "beurre", "quantite": 150, "unite": "g" },
+        { "ingredient": "sucre", "quantite": 150, "unite": "g" },
+        { "ingredient": "œufs", "quantite": 3 },
+        { "ingredient": "farine", "quantite": 100, "unite": "g" },
+        { "ingredient": "noix", "quantite": 50, "unite": "g" }
+      ],
+      "etapes": [
+        "Préchauffez le four à 180°C.",
+        "Faites fondre le chocolat et le beurre au bain-marie.",
+        "Ajoutez le sucre, les œufs, puis la farine, et mélangez bien.",
+        "Incorporez les noix concassées.",
+        "Versez dans un moule et faites cuire 25 minutes."
+      ]
+    },
+    {
+      "id": 12,
+      "nom": "Crêpes",
+      "img": "",
+      "ingredients": [
+        { "ingredient": "farine", "quantite": 250, "unite": "g" },
+        { "ingredient": "lait", "quantite": 500, "unite": "ml" },
+        { "ingredient": "œufs", "quantite": 3 },
+        { "ingredient": "beurre fondu", "quantite": 50, "unite": "g" },
+        { "ingredient": "sucre", "quantite": 20, "unite": "g" },
+        { "ingredient": "sel", "quantite": "une pincée" }
+      ],
+      "etapes": [
+        "Mélangez la farine, le sucre et le sel dans un saladier.",
+        "Ajoutez les œufs, le lait petit à petit, puis le beurre fondu.",
+        "Laissez reposer la pâte 30 minutes.",
+        "Faites cuire les crêpes dans une poêle chaude et légèrement huilée."
+      ]
+    },
+    {
+      "id": 13,
+      "nom": "Salade de fruits",
+      "img": "",
+      "ingredients": [
+        { "ingredient": "pomme", "quantite": 1 },
+        { "ingredient": "banane", "quantite": 1 },
+        { "ingredient": "orange", "quantite": 1 },
+        { "ingredient": "raisins", "quantite": 100, "unite": "g" },
+        {
+          "ingredient": "jus de citron",
+          "quantite": 1,
+          "unite": "cuillère à soupe"
+        },
+        { "ingredient": "sucre", "quantite": 1, "unite": "cuillère à soupe" }
+      ],
+      "etapes": [
+        "Épluchez et coupez les fruits en morceaux.",
+        "Mélangez dans un saladier avec le jus de citron et le sucre.",
+        "Servez frais."
+      ]
+    },
+    {
+      "id": 14,
+      "nom": "Pizza maison",
+      "img": "",
+      "ingredients": [
+        { "ingredient": "pâte à pizza", "quantite": 1 },
+        { "ingredient": "sauce tomate", "quantite": 150, "unite": "g" },
+        { "ingredient": "mozzarella", "quantite": 200, "unite": "g" },
+        { "ingredient": "jambon", "quantite": 100, "unite": "g" },
+        { "ingredient": "champignons", "quantite": 100, "unite": "g" }
+      ],
+      "etapes": [
+        "Préchauffez le four à 200°C.",
+        "Étalez la pâte et recouvrez-la de sauce tomate.",
+        "Ajoutez la mozzarella, le jambon et les champignons.",
+        "Faites cuire 15-20 minutes au four."
+      ]
+    },
+    {
+      "id": 15,
+      "nom": "Gaufres",
+      "img": "",
+      "ingredients": [
+        { "ingredient": "farine", "quantite": 250, "unite": "g" },
+        { "ingredient": "lait", "quantite": 500, "unite": "ml" },
+        { "ingredient": "œufs", "quantite": 2 },
+        { "ingredient": "beurre fondu", "quantite": 100, "unite": "g" },
+        { "ingredient": "sucre", "quantite": 50, "unite": "g" },
+        { "ingredient": "levure chimique", "quantite": 1, "unite": "sachet" }
+      ],
+      "etapes": [
+        "Mélangez la farine, le sucre et la levure dans un saladier.",
+        "Ajoutez les œufs, le lait et le beurre fondu.",
+        "Laissez reposer la pâte 1 heure.",
+        "Faites cuire dans un gaufrier chaud."
+      ]
+    }
+  ]
 }
