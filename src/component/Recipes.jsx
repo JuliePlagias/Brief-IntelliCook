@@ -2,7 +2,7 @@ import React from "react";
 import recettes from "../data/recipes.json";
 import Recipe from "./Recipe";
 
-const Recipes = () => {
+const Recipes = ({ search }) => {
   const findRecipe = (recipeName) => {
     return recettes.recipes.filter((recipe) =>
       recipe.name.toLowerCase().includes(recipeName.toLowerCase())
@@ -13,8 +13,8 @@ const Recipes = () => {
 
   return (
     <div>
-      {findRecipe("rata") &&
-        findRecipe("rata").map((recipe) => (
+      {findRecipe(search) &&
+        findRecipe(search).map((recipe) => (
           <Recipe key={recipe.id} recipe={recipe} />
         ))}
     </div>

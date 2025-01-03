@@ -2,7 +2,6 @@ import React from "react";
 import Ingredient from "./Ingredient";
 
 export default function Recipe({ recipe }) {
-
   return (
     <div>
       <h1>{recipe.name}</h1>
@@ -10,7 +9,11 @@ export default function Recipe({ recipe }) {
       <ul>
         {recipe.ingredients.map((ingredient, i) => (
           <li key={i}>
-            <Ingredient name={ingredient.name} quantity={ingredient.quantity} unit={ingredient.unit}/>
+            <Ingredient
+              name={ingredient.name}
+              quantity={ingredient.quantity}
+              unit={ingredient.unit}
+            />
           </li>
         ))}
       </ul>

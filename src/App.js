@@ -1,5 +1,5 @@
-import Recipes from "./component/Recipes";
+import SearchRecipe from "./component/SearchRecipe";
 
 export default function App() {
-  return <Recipes />;
+  return <SearchRecipe />;
 }
