@@ -1,0 +1,62 @@
+{
+    "fruitLegume":{
+        "tomate":"Tomate",
+        "pommeDeTerre": "Pomme de terre",
+        "carotte" : "Carotte",
+        "oignon" :"Oignon",
+        "ail": "Ail",
+        "courgette" : "Courgettes",
+        "aubergine" : "Aubergine",
+        "poivronRouge" : "Poivron rouge",
+        "poivronVert" : "Poivron vert",
+        "epinard" : "Epinard",
+        "brocoli" : "Brocoli",
+        "champignon" : "Champignon",
+        "orange" : "Orange",
+        "banane" : "Banane",
+        "citron":"Citron"
+    },
+    "proteine":{
+        "poulet" : "Poulet",
+        "oeuf" : "Oeuf",
+        "boeufHache" : "Boeuf haché",
+        "saumon":"Saumon",
+        "thonBoite" : "Thon en boîte",
+        "tofu" : "Tofu",
+        "lentilles" : "Lentilles",
+        "poisChiche" : "Pois chiches"
+    },
+    "produitLaitier":{
+        "lait":"Lait",
+        "gruyere" : "Gruyère",
+        "parmesan" : "Parmesan",
+        "yaourt" : "Yaourt nature",
+        "cremeFraiche" : "Crème fraiche"
+    },
+    "feculent":{
+        "riz" : "Riz",
+        "pate" : "Pâtes",
+        "semoule" : "Semoule",
+        "pain" : "Pain de mie"
+    },
+    "condiments":{
+        "sel":"Sel",
+        "poivre":"Poivre",
+        "paprika" : "Paprika",
+        "curry" : "Curry",
+        "herbesProvence" : "Herbes de provence",
+        "basilic" : "Basilic",
+        "huileOlive" : "Huile d'olive",
+        "beurre" : "Beurre",
+        "sucre" : "Sucre",
+        "farine" : "Farine",
+        "levureChimique" : "Levure chimique",
+        "chocolatNoir" : "Chocolat noir",
+        "miel" : "Miel",
+        "amandes" : "Amandes",
+        "noix" : "noix",
+        "laitCoco": "Lait de coco",
+        "sauceSoja" : "Sauce soja",
+        "bouillonCube" : "Bouillon cube"
+    }
+}
