@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intellicook</title>
+    <link rel="stylesheet" href="../Css/Recettes.css" />
+  </head>
+  <body>
+    <header>
+      <div id="mySidenav" class="sidenav">
+        <a id="closeBtn" href="#" class="close">x</a>
+        <ul>
+          <li><a href="./Acceuil.html">Acceuil</a></li>
+          <li><a href="./Recettes.html">Catalogue</a></li>
+          <li><a href="./Panier.html">Panier</a></li>
+        </ul>
+      </div>
+      <a href="#" id="openBtn">
+        <span class="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </a>
+      <img id="logo" src="../Images/logoSansFonds.png" alt="Logo" />
+      <img
+        id="panier"
+        src="../Images/iconamoon--shopping-card.svg"
+        alt="Panier"
+      />
+      <form>
+        <input
+          type="search"
+          id="search"
+          placeholder="ajouter un ingredient..."
+        />
+        <button type="submit">Rechercher</button>
+      </form>
+    </header>
+    <main>
+      <h1>Intellicook</h1>
+      <p>Recettes de cuisine</p>
+      <p>avec Intellicook la cuisine devient very cool</p>
+    </main>
+    <footer>
+      <p>&copy; 2023 Intellicook. Tous droits reservés.</p>
+    </footer>
+    <script>
+      let sidenav = document.getElementById("mySidenav");
+      let openBtn = document.getElementById("openBtn");
+      let closeBtn = document.getElementById("closeBtn");
+
+      openBtn.onclick = openNav;
+      closeBtn.onclick = closeNav;
+
+      function openNav() {
+        sidenav.classList.add("active");
+      }
+      function closeNav() {
+        sidenav.classList.remove("active");
+      }
+    </script>
+  </body>
+</html>
