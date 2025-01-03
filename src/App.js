@@ -1,4 +1,4 @@
-import Recipes from "./Component/Recipes";
+import Recipes from "./component/Recipes";
 
 export default function App() {
   return <Recipes />;

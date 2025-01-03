@@ -1,15 +1,15 @@
 import React from "react";
-import recettes from "../DATA/recipes.json";
+import recettes from "../data/recipes.json";
 import Recipe from "./Recipe";
 
 const Recipes = () => {
   const findRecipe = (recipeName) => {
     return recettes.recipes.filter((recipe) =>
-      recipe.nom.toLowerCase().includes(recipeName.toLowerCase())
+      recipe.name.toLowerCase().includes(recipeName.toLowerCase())
     );
   };
 
-  console.log(findRecipe("Rata"));
+  console.log(findRecipe("Salade composée"));
 
   return (
     <div>
