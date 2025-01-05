@@ -8,7 +8,7 @@ export default function Ingredient({name, quantity, unit})
       
     return (
         <>
-        <img src={`/assets/images/${name}.jpeg`} alt={name}/>
+        <img src={`/assets/images/${name}.jpg`} alt={name}/>
         <p>{quantity} {unit} {writeGoodDeOrD(name)}{name}</p>
         </>
     )

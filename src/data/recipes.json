@@ -137,7 +137,7 @@
       "img": "",
       "ingredients": [
         { "name": "œuf", "quantity": 3 },
-        { "name": "champignon", "quantity": 100, "unit": "g" },
+        { "name": "champignons", "quantity": 100, "unit": "g" },
         { "name": "ail", "quantity": 1, "unit": "gousse" },
         { "name": "beurre", "quantity": 1, "unit": "c à soupe" }
       ],
