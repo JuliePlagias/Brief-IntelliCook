@@ -5,7 +5,6 @@
     gap: 10px;
     justify-content: center;
     .recipeCard {
-      cursor: pointer;
       box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
       border-radius: 10px;
       background: whitesmoke;
@@ -19,8 +18,33 @@
         transform: scale(1.05);
       }
       &__image {
+        cursor: pointer;
         width: 100%;
         height: 150px;
+        /* Shine effect */
+        position: relative;
+        overflow: hidden;
+        &:before {
+          background: linear-gradient(to right, fade_out(white, 1) 0%, fade_out(white, 0.8) 100%);
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: -150%;
+          width: 100%;
+          height: 100%;
+          transform: skew(-25deg);
+          z-index: 1;
+        }
+        &:hover:before, &:focus:before {
+          animation: shine 1.5s;
+        }
+        @keyframes shine {
+          100% {
+            left: 150%;
+          }
+        }
+        /* End of shine effect */
         img {
           width: 100%;
           height: 100%;
@@ -58,9 +82,9 @@
             background: white;
           }
           &:active {
-            svg {
-              transform: scale(0.8);
-            }
+            transition: 0.05s;
+            background: green;
+            transform: scale(0.9);
           }
         }
         &-favorite {
@@ -87,11 +111,11 @@
 
 @keyframes favorite-animation {
   0% {
-    transform: scale(1);
+    transform: scale(0.9);
     color: white;
   }
   40% {
-    transform: scale(1.2);
+    transform: scale(1.5);
   }
   100% {
     transform: scale(1);
