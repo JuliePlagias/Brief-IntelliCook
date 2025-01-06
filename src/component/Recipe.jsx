@@ -3,7 +3,7 @@ import Ingredient from "./Ingredient";
 
 export default function Recipe({ recipe }) {
   return (
-    <div>
+    <div className="recipe">
       <h1>{recipe.name}</h1>
       <h2>Ingrédients</h2>
       <ul>

@@ -1,6 +1,7 @@
 import React from "react";
 import recettes from "../data/recipes.json";
 import Recipe from "./Recipe";
+import RecipeCard from "./RecipeCard";
 
 const Recipes = ({ search }) => {
   const findRecipe = (recipeName) => {
@@ -12,11 +13,11 @@ const Recipes = ({ search }) => {
   console.log(findRecipe("Salade composée"));
 
   return (
-    <div>
+    <div className="recipes">
       {findRecipe(search) &&
         findRecipe(search).map((recipe, i) => {
-          if (i < 6) {
-            return <Recipe key={recipe.id} recipe={recipe} />;
+          if (i < 50) {
+            return <RecipeCard key={recipe.id} recipe={recipe} />;
           }
         })}
     </div>

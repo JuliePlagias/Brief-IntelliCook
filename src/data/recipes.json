@@ -21,8 +21,8 @@
           "quantity": 1,
           "unit": "c à café"
         },
-        { "name": "sel"},
-        { "name": "poivre"}
+        { "name": "sel" },
+        { "name": "poivre" }
       ],
       "steps": [
         "Coupez les légumes en dés.",
@@ -42,8 +42,8 @@
         { "name": "poireau", "quantity": 100, "unit": "g" },
         { "name": "bouillon cube", "quantity": 1 },
         { "name": "eau", "quantity": 1, "unit": "litre" },
-        { "name": "sel"},
-        { "name": "poivre"}
+        { "name": "sel" },
+        { "name": "poivre" }
       ],
       "steps": [
         "Épluchez et coupez les légumes en morceaux.",
@@ -61,8 +61,8 @@
         { "name": "crème fraîche", "quantity": 200, "unit": "ml" },
         { "name": "fromage râpé", "quantity": 100, "unit": "g" },
         { "name": "ail", "quantity": 1, "unit": "gousse" },
-        { "name": "sel"},
-        { "name": "poivre"}
+        { "name": "sel" },
+        { "name": "poivre" }
       ],
       "steps": [
         "Épluchez et coupez les pommes de terre en fines rondelles.",
@@ -101,7 +101,7 @@
         { "name": "oignon", "quantity": 1 },
         { "name": "curry", "quantity": 1, "unit": "c à soupe" },
         { "name": "riz", "quantity": 200, "unit": "g" },
-        { "name": "sel"}
+        { "name": "sel" }
       ],
       "steps": [
         "Faites cuire le riz.",
@@ -113,7 +113,7 @@
     {
       "id": 6,
       "name": "Salade composée",
-      "img": "",
+      "img": "salade composée",
       "ingredients": [
         { "name": "tomate", "quantity": 3 },
         { "name": "poivron rouge", "quantity": 1 },

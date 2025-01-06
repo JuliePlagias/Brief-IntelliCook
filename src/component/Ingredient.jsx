@@ -12,7 +12,7 @@ export default function Ingredient({ name, quantity, unit }) {
   return (
     <>
       <img
-        src={`/assets/images/${name}.jpg`}
+        src={`/assets/images/ingredients/${name}.jpg`}
         alt={name}
         style={{
           width: size,
