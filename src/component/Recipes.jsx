@@ -16,7 +16,7 @@ const Recipes = ({ search }) => {
     <div className="recipes">
       {findRecipe(search) &&
         findRecipe(search).map((recipe, i) => {
-          if (i < 50) {
+          if (i < 12) {
             return <RecipeCard key={recipe.id} recipe={recipe} />;
           }
         })}
