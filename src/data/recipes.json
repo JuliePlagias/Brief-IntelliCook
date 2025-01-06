@@ -149,7 +149,7 @@
     },
     {
       "id": 8,
-      "name": "Pâtes au saumon et citron",
+      "name": "Pâtes au saumon",
       "img": "",
       "ingredients": [
         { "name": "pâtes", "quantity": 200, "unit": "g" },
