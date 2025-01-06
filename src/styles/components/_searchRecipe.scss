@@ -1,0 +1,16 @@
+.searchRecipe {
+  display: block;
+  width: 340px;
+  height: 50px;
+  border-radius: 50px;
+  padding-left: 20px;
+  margin: auto;
+  font-size: 1.25rem;
+  font-family: Playfair Display;
+  border: 2px solid grey;
+  background: wheat;
+  &:focus {
+    background: whitesmoke;
+    border: 2px solid black;
+  }
+}

@@ -3,6 +3,7 @@
    v5.0.2 | 20191019
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -60,7 +61,6 @@ table {
 
 html {
   scroll-behavior: smooth;
-  background: red;
 }
 
 body {
@@ -70,6 +70,23 @@ body {
 }
 
 /* COMPONENTS */
+.searchRecipe {
+  display: block;
+  width: 340px;
+  height: 50px;
+  border-radius: 50px;
+  padding-left: 20px;
+  margin: auto;
+  font-size: 1.25rem;
+  font-family: Playfair Display;
+  border: 2px solid grey;
+  background: wheat;
+}
+.searchRecipe:focus {
+  background: whitesmoke;
+  border: 2px solid black;
+}
+
 /* LAYOUTS */
 /* PAGES */
 .home {

@@ -15,7 +15,7 @@ const Recipes = ({ search }) => {
     <div>
       {findRecipe(search) &&
         findRecipe(search).map((recipe, i) => {
-          if (i < 3) {
+          if (i < 6) {
             return <Recipe key={recipe.id} recipe={recipe} />;
           }
         })}

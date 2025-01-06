@@ -12,8 +12,9 @@ const SearchRecipe = () => {
     <div>
       <input
         type="text"
-        placeholder="Rechercher"
+        placeholder="Soupe de légumes, poireaux, etc..."
         onChange={(e) => setSearch(e.target.value)}
+        className="searchRecipe"
       />
       <Recipes search={search} />
     </div>
