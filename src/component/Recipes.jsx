@@ -14,9 +14,11 @@ const Recipes = ({ search }) => {
   return (
     <div>
       {findRecipe(search) &&
-        findRecipe(search).map((recipe) => (
-          <Recipe key={recipe.id} recipe={recipe} />
-        ))}
+        findRecipe(search).map((recipe, i) => {
+          if (i < 3) {
+            return <Recipe key={recipe.id} recipe={recipe} />;
+          }
+        })}
     </div>
   );
 };
