@@ -5,19 +5,88 @@
 */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-main, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -27,8 +96,18 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, main, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -41,16 +120,21 @@ body {
   line-height: 1;
 }
 
-menu, ol, ul {
+menu,
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -58,6 +142,11 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+button {
+  background: none;
+  border: none;
 }
 
 html {
@@ -79,6 +168,7 @@ body {
     justify-content: center;
   }
   .recipes .recipeCard {
+    cursor: pointer;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     background: whitesmoke;
@@ -87,6 +177,10 @@ body {
     padding: 0.75rem;
     display: flex;
     flex-direction: column;
+  }
+  .recipes .recipeCard:hover {
+    transition: 0.2s;
+    transform: scale(1.05);
   }
   .recipes .recipeCard__image {
     width: 100%;
@@ -100,12 +194,17 @@ body {
        object-fit: cover;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
-  .recipes .recipeCard h1 {
+  .recipes .recipeCard__name {
     margin: 0.5rem auto;
     font-weight: bold;
+    height: 20px;
+  }
+  .recipes .recipeCard__name--small {
+    font-size: 0.9rem;
   }
   .recipes .recipeCard__time {
-    margin: 0.25rem auto;
+    margin: auto;
+    font-size: 0.8rem;
   }
   .recipes .recipeCard__buttons {
     display: flex;
@@ -118,12 +217,46 @@ body {
     border-radius: 500px;
     box-shadow: 0 5px 3px rgba(0, 0, 0, 0.3);
     background: rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .recipes .recipeCard__buttons-add:hover {
+    transition: 0.2s;
+    background: white;
+  }
+  .recipes .recipeCard__buttons-add:active svg {
+    transform: scale(0.8);
   }
   .recipes .recipeCard__buttons-favorite {
     width: 25px;
     aspect-ratio: 1/1;
-    background: rgba(0, 0, 0, 0.3);
     margin-right: 10px;
+  }
+  .recipes .recipeCard__buttons-favorite svg {
+    color: darkred;
+    cursor: pointer;
+  }
+  .recipes .recipeCard__buttons-favorite svg:hover {
+    transition: 0.2s;
+    transform: scale(1.1);
+  }
+}
+.favorite-animation {
+  animation: favorite-animation 0.5s ease-in-out;
+}
+
+@keyframes favorite-animation {
+  0% {
+    transform: scale(1);
+    color: white;
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 .searchRecipe {
@@ -144,6 +277,27 @@ body {
 }
 
 /* LAYOUTS */
+.navBar {
+  background-color: #FFE4D3;
+}
+.navBar #logo {
+  height: 200;
+  width: 200px;
+}
+.navBar .icons {
+  display: flex;
+  position: absolute;
+  gap: 20px;
+  top: 95px;
+  right: 20px;
+}
+.navBar .icons img {
+  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(0deg);
+}
+.navBar .icons #heart, .navBar .icons #book {
+  display: none;
+}
+
 /* PAGES */
 .home {
   background: whitesmoke;
