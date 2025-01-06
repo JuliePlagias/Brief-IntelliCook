@@ -1,20 +1,33 @@
 .navBar{
     background-color: #FFE4D3;
+    display: flex;
+    justify-content: center;
     #logo{
-        height:200;
+        height:200px;
         width: 200px;
     }
     .icons{
         display: flex;
-        position: absolute;
-        gap: 20px;
-        top : 95px;
-        right :20px;
-        img{
-            filter: invert(.5) sepia(1) saturate(5) hue-rotate(0deg);
+        svg{
+            color: #FF914C;
         }
-        #heart, #book{
+        #book{
             display: none;
+        }
+        #burger{
+            position:absolute;
+            top:1%;
+            left:2%;
+            height: 40px;
+            width: 40px;
+        }
+        
+        #heart{
+            position: absolute;
+            top: 1%;
+            right: 2%;
+            height: 45px;
+            width: 45px;
         }
     }
 }
