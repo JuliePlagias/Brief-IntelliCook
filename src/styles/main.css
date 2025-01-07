@@ -302,6 +302,26 @@ body {
   border: 2px solid black;
 }
 
+.burgerIcon {
+  z-index: 10;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 1%;
+  left: 2%;
+}
+.burgerIcon svg {
+  color: #FF914C;
+  width: 100%;
+  height: 100%;
+}
+.burgerIcon svg:nth-child(2) {
+  transform: translateY(-42px);
+}
+.burgerIcon svg:nth-child(3) {
+  transform: translateY(-85.26px);
+}
+
 /* LAYOUTS */
 .navBarDesktop,
 .navBarMobile {
@@ -354,26 +374,6 @@ body {
     display: flex;
   }
 }
-.burgerIcon {
-  z-index: 10;
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  top: 1%;
-  left: 2%;
-}
-.burgerIcon svg {
-  color: #FF914C;
-  width: 100%;
-  height: 100%;
-}
-.burgerIcon svg:nth-child(2) {
-  transform: translateY(-42px);
-}
-.burgerIcon svg:nth-child(3) {
-  transform: translateY(-85.26px);
-}
-
 .menuBurger {
   z-index: 1;
   background-color: white;
@@ -381,7 +381,7 @@ body {
   top: 0;
   width: 100vw;
   height: 100vh;
-  transform: translateX(0);
+  animation: menuBurgerSlide 500ms forwards linear;
 }
 .menuBurger .logo {
   display: block;
@@ -404,6 +404,14 @@ body {
   color: black;
 }
 
+@keyframes menuBurgerSlide {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 /* PAGES */
 .home {
   background: whitesmoke;
