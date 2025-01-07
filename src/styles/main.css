@@ -302,10 +302,30 @@ body {
   border: 2px solid black;
 }
 
+.burgerIcon {
+  z-index: 10;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 1%;
+  left: 2%;
+}
+.burgerIcon svg {
+  color: #FF914C;
+  width: 100%;
+  height: 100%;
+}
+.burgerIcon svg:nth-child(2) {
+  transform: translateY(-42px);
+}
+.burgerIcon svg:nth-child(3) {
+  transform: translateY(-85.26px);
+}
+
 /* LAYOUTS */
 .navBarDesktop,
 .navBarMobile {
-  background-color: #ffe4d3;
+  background-color: #FFE4D3;
   display: flex;
   position: fixed;
   top: 0;
@@ -326,33 +346,11 @@ body {
 }
 .navBarDesktop .icons svg,
 .navBarMobile .icons svg {
-  color: #ff914c;
+  color: #FF914C;
 }
 .navBarDesktop .icons #book,
 .navBarMobile .icons #book {
   display: none;
-}
-.navBarDesktop .icons .burgerIcon,
-.navBarMobile .icons .burgerIcon {
-  z-index: 10;
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  top: 1%;
-  left: 2%;
-}
-.navBarDesktop .icons .burgerIcon svg,
-.navBarMobile .icons .burgerIcon svg {
-  width: 100%;
-  height: 100%;
-}
-.navBarDesktop .icons .burgerIcon svg:nth-child(2),
-.navBarMobile .icons .burgerIcon svg:nth-child(2) {
-  transform: translateY(-42px);
-}
-.navBarDesktop .icons .burgerIcon svg:nth-child(3),
-.navBarMobile .icons .burgerIcon svg:nth-child(3) {
-  transform: translateY(-85.26px);
 }
 .navBarDesktop .icons #heart,
 .navBarMobile .icons #heart {
@@ -383,7 +381,7 @@ body {
   top: 0;
   width: 100vw;
   height: 100vh;
-  transform: translateX(0);
+  animation: menuBurgerSlide 500ms forwards linear;
 }
 .menuBurger .logo {
   display: block;
@@ -406,6 +404,14 @@ body {
   color: black;
 }
 
+@keyframes menuBurgerSlide {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 /* PAGES */
 .home {
   background: whitesmoke;
