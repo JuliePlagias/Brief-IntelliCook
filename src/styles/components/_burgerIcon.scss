@@ -2,10 +2,11 @@ $dist: -42px;
 .burgerIcon {
   z-index: 10;
   position: absolute;
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   top: 1%;
   left: 2%;
+  user-select: none;
   svg {
     color: $iconsOrange;
     width: 100%;
