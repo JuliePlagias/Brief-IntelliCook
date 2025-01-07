@@ -1,0 +1,372 @@
+/* BASE */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.2 | 20191019
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+}
+
+menu,
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 150px;
+}
+
+/* COMPONENTS */
+@media screen and (max-width: 650px) {
+  .recipes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .recipes .recipeCard {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background: whitesmoke;
+    height: 230px;
+    width: 150px;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .recipes .recipeCard:hover {
+    transition: 0.2s;
+    transform: scale(1.05);
+  }
+  .recipes .recipeCard__image {
+    cursor: pointer;
+    width: 100%;
+    height: 150px;
+    /* Shine effect */
+    position: relative;
+    overflow: hidden;
+    /* End of shine effect */
+  }
+  .recipes .recipeCard__image:before {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    height: 100%;
+    transform: skew(-25deg);
+    z-index: 1;
+  }
+  .recipes .recipeCard__image:hover:before, .recipes .recipeCard__image:focus:before {
+    animation: shine 1.5s;
+  }
+  @keyframes shine {
+    100% {
+      left: 150%;
+    }
+  }
+  .recipes .recipeCard__image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .recipes .recipeCard__name {
+    margin: 0.5rem auto;
+    font-weight: bold;
+    height: 20px;
+  }
+  .recipes .recipeCard__name--small {
+    font-size: 0.9rem;
+  }
+  .recipes .recipeCard__time {
+    margin: auto;
+    font-size: 0.8rem;
+  }
+  .recipes .recipeCard__buttons {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .recipes .recipeCard__buttons-add {
+    width: 50px;
+    height: 25px;
+    border-radius: 500px;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .recipes .recipeCard__buttons-add:hover {
+    transition: 0.2s;
+    background: white;
+  }
+  .recipes .recipeCard__buttons-add:active {
+    transition: 0.05s;
+    transform: scale(0.9);
+  }
+  .recipes .recipeCard__buttons-favorite {
+    width: 25px;
+    aspect-ratio: 1/1;
+    margin-right: 10px;
+  }
+  .recipes .recipeCard__buttons-favorite svg {
+    color: darkred;
+    cursor: pointer;
+  }
+  .recipes .recipeCard__buttons-favorite svg:hover {
+    transition: 0.2s;
+    transform: scale(1.1);
+  }
+}
+.favorite-animation {
+  animation: favorite-animation 0.5s ease-in-out;
+}
+
+@keyframes favorite-animation {
+  0% {
+    transform: scale(0);
+    color: white;
+  }
+  40% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.searchRecipe {
+  display: block;
+  width: min(70%, 340px);
+  height: 50px;
+  border-radius: 50px;
+  padding-left: 20px;
+  margin: 0 auto 3rem;
+  font-size: 1.25rem;
+  font-family: Playfair Display;
+  border: 2px solid grey;
+  background: wheat;
+}
+.searchRecipe:focus {
+  background: whitesmoke;
+  border: 2px solid black;
+}
+
+/* LAYOUTS */
+.navBarDesktop, .navBarMobile {
+  background-color: #FFE4D3;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 150px;
+  justify-content: center;
+}
+.navBarDesktop #logo, .navBarMobile #logo {
+  position: absolute;
+  top: -20px;
+  height: 200px;
+  width: 200px;
+}
+.navBarDesktop .icons, .navBarMobile .icons {
+  display: flex;
+}
+.navBarDesktop .icons svg, .navBarMobile .icons svg {
+  color: #FF914C;
+}
+.navBarDesktop .icons #book, .navBarMobile .icons #book {
+  display: none;
+}
+.navBarDesktop .icons #burger, .navBarMobile .icons #burger {
+  position: absolute;
+  top: 1%;
+  left: 2%;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+.navBarDesktop .icons #heart, .navBarMobile .icons #heart {
+  position: absolute;
+  top: 1%;
+  right: 2%;
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+}
+
+.navBarMobile {
+  display: none;
+}
+
+@media (max-width: 450px) {
+  .navBarDesktop {
+    display: none;
+  }
+  .navBarMobile {
+    display: flex;
+  }
+}
+.menuBurger {
+  z-index: 10;
+  background-color: red;
+  position: absolute;
+  transform: translateX(0);
+}
+
+/* PAGES */
+.home {
+  background: whitesmoke;
+}
+
+/* THEMES */
+/* VENDORS *//*# sourceMappingURL=main.css.map */

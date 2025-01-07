@@ -1,8 +1,14 @@
-.navBar{
+.navBarDesktop, .navBarMobile{
     background-color: #FFE4D3;
     display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 150px;
     justify-content: center;
     #logo{
+        position: absolute;
+        top: -20px;
         height:200px;
         width: 200px;
     }
@@ -32,4 +38,18 @@
             cursor: pointer;
         }
     }
+}
+
+.navBarMobile{
+    display: none;
+}
+
+@media (max-width: 450px){
+    .navBarDesktop{
+        display: none;
+    }
+    .navBarMobile{
+        display: flex;
+    }
+
 }

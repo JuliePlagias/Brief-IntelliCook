@@ -1,3 +1,6 @@
 .menuBurger{
+    z-index: 10;
+    background-color: red;
+    position: absolute;
     transform: translateX(0);
 }
