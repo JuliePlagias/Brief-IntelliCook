@@ -42,6 +42,9 @@ $dist: -42px;
   0% {
     transform: translateY(-5px);
   }
+  60% {
+    transform: translateY(3px);
+  }
   100% {
     transform: translateY(0);
   }
@@ -50,6 +53,12 @@ $dist: -42px;
   0% {
     transform: translateY($dist) scaleX(0.9);
   }
+  50% {
+    transform: translateY($dist) scaleX(0.9);
+  }
+  70% {
+    transform: translateY($dist) scaleX(1.05);
+  }
   100% {
     transform: translateY($dist) scaleX(1);
   }
@@ -57,6 +66,9 @@ $dist: -42px;
 @keyframes smashBottomBun {
   0% {
     transform: translateY($dist * 2.03 + 5px);
+  }
+  60% {
+    transform: translateY($dist * 2.03 - 3px);
   }
   100% {
     transform: translateY($dist * 2.03);
