@@ -4,6 +4,11 @@ export default function Burger({ isOpen, setIsOpen }) {
   return (
     <div className='burgerIcon' onClick={() => setIsOpen(!isOpen)}>
       <svg
+        style={
+          isOpen
+            ? { animation: 'extendTopBun 500ms forwards linear' }
+            : { animation: 'smashTopBun 500ms forwards linear' }
+        }
         xmlns='http://www.w3.org/2000/svg'
         width='512'
         height='512'
@@ -19,6 +24,11 @@ export default function Burger({ isOpen, setIsOpen }) {
       </svg>
 
       <svg
+        style={
+          isOpen
+            ? { animation: 'extendSteak 500ms forwards linear' }
+            : { animation: 'smashSteak 500ms forwards linear' }
+        }
         xmlns='http://www.w3.org/2000/svg'
         width='512'
         height='512'
@@ -31,6 +41,11 @@ export default function Burger({ isOpen, setIsOpen }) {
       </svg>
 
       <svg
+        style={
+          isOpen
+            ? { animation: 'extendBottomBun 500ms forwards linear' }
+            : { animation: 'smashBottomBun 500ms forwards linear' }
+        }
         xmlns='http://www.w3.org/2000/svg'
         width='512'
         height='512'

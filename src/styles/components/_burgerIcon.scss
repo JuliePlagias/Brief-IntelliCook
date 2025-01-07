@@ -1,3 +1,4 @@
+$dist: -42px;
 .burgerIcon {
   z-index: 10;
   position: absolute;
@@ -7,7 +8,6 @@
   left: 2%;
   svg {
     color: $iconsOrange;
-    $dist: -42px;
     width: 100%;
     height: 100%;
     &:nth-child(2) {
@@ -16,5 +16,49 @@
     &:nth-child(3) {
       transform: translateY($dist * 2.03);
     }
+  }
+  @media screen and (min-width: $mobile-size) {
+    display: none;
+  }
+}
+
+@keyframes extendTopBun {
+  100% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes extendSteak {
+  100% {
+    transform: translateY($dist) scaleX(0.9);
+  }
+}
+@keyframes extendBottomBun {
+  100% {
+    transform: translateY($dist * 2.03 + 5px);
+  }
+}
+
+@keyframes smashTopBun {
+  0% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes smashSteak {
+  0% {
+    transform: translateY($dist) scaleX(0.9);
+  }
+  100% {
+    transform: translateY($dist) scaleX(1);
+  }
+}
+@keyframes smashBottomBun {
+  0% {
+    transform: translateY($dist * 2.03 + 5px);
+  }
+  100% {
+    transform: translateY($dist * 2.03);
   }
 }

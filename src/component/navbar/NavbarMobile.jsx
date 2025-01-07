@@ -43,7 +43,7 @@ export default function NavbarMobile() {
         </div>
       </div>
       <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
-      {isOpen ? <MenuBurger isOpen={isOpen} setIsOpen={setIsOpen} /> : ''}
+      <MenuBurger isOpen={isOpen} />
     </>
   )
 }

@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 
-export default function MenuBurger() {
+export default function MenuBurger({ isOpen }) {
   return (
     <>
-      <div className='menuBurger'>
+      <div className={`menuBurger ${isOpen ? 'appear' : 'disappear'}`}>
         <img
           className='logo'
           src='/assets/images/icons/logo.png'

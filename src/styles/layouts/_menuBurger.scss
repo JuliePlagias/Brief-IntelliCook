@@ -5,7 +5,14 @@
   top: 0;
   width: 100vw;
   height: 100vh;
-  animation: menuBurgerSlide 500ms forwards linear;
+  &.appear {
+    transform: translateX(0);
+    transition: 500ms;
+  }
+  &.disappear {
+    transform: translateX(-100vw);
+    transition: 500ms;
+  }
   .logo {
     display: block;
     margin: auto;
@@ -25,14 +32,5 @@
       text-decoration: none;
       color: black;
     }
-  }
-}
-
-@keyframes menuBurgerSlide {
-  0% {
-    transform: translateX(-100vw);
-  }
-  100% {
-    transform: translateX(0);
   }
 }
