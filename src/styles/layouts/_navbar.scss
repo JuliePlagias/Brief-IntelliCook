@@ -1,55 +1,74 @@
-.navBarDesktop, .navBarMobile{
-    background-color: #FFE4D3;
+.navBarDesktop,
+.navBarMobile {
+  background-color: #ffe4d3;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 150px;
+  justify-content: center;
+  .logo {
+    position: absolute;
+    top: -20px;
+    height: 200px;
+    width: 200px;
+  }
+  .icons {
     display: flex;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 150px;
-    justify-content: center;
-    #logo{
-        position: absolute;
-        top: -20px;
-        height:200px;
-        width: 200px;
+    svg {
+      color: #ff914c;
     }
-    .icons{
-        display: flex;
-        svg{
-            color: #FF914C;
-        }
-        #book{
-            display: none;
-        }
-        #burger{
-            position:absolute;
-            top:1%;
-            left:2%;
-            height: 40px;
-            width: 40px;
-            cursor: pointer;
-        }
-        
-        #heart{
-            position: absolute;
-            top: 1%;
-            right: 2%;
-            height: 45px;
-            width: 45px;
-            cursor: pointer;
-        }
+    #book {
+      display: none;
     }
+    .burgerIcon {
+      z-index: 10;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 1%;
+      left: 2%;
+      svg {
+        $dist: -42px;
+        width: 100%;
+        height: 100%;
+        &:nth-child(2) {
+          transform: translateY($dist);
+        }
+        &:nth-child(3) {
+          transform: translateY($dist * 2.03);
+        }
+      }
+    }
+    // #burger {
+    //   position: absolute;
+    //   top: 1%;
+    //   left: 2%;
+    //   height: 40px;
+    //   width: 40px;
+    //   cursor: pointer;
+    // }
+
+    #heart {
+      position: absolute;
+      top: 1%;
+      right: 2%;
+      height: 45px;
+      width: 45px;
+      cursor: pointer;
+    }
+  }
 }
 
-.navBarMobile{
+.navBarMobile {
+  display: none;
+}
+
+@media (max-width: 450px) {
+  .navBarDesktop {
     display: none;
-}
-
-@media (max-width: 450px){
-    .navBarDesktop{
-        display: none;
-    }
-    .navBarMobile{
-        display: flex;
-    }
-
+  }
+  .navBarMobile {
+    display: flex;
+  }
 }
