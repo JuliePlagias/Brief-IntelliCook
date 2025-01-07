@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Burger({ isOpen, setIsOpen }) {
   return (
-    <div className='burgerIcon' onClick={() => setIsOpen(!isOpen)}>
+    <button className='burgerIcon' onClick={() => setIsOpen(!isOpen)}>
       <svg
         style={
           isOpen
@@ -56,6 +56,6 @@ export default function Burger({ isOpen, setIsOpen }) {
           d='M32 416c0-8.8 7.2-16 16-16h416c8.8 0 16 7.2 16 16v16c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64v-16z'
         />
       </svg>
-    </div>
+    </button>
   )
 }
