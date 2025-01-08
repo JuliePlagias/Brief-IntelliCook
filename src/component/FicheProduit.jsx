@@ -11,10 +11,11 @@ export default function FicheProduit({ recipes }) {
   const navigate = useNavigate()
   const recipe = recipes.find(r => r.id === parseInt(id, 10))
 
-  if (!recipe) return <p>Pas de recettes trouvée :(...</p>
+  if (!recipe)
+    return <p className='ficheProduit--error'>Pas de recettes trouvée :(...</p>
 
   return (
-    <div className='recipe'>
+    <div className='ficheProduit'>
       <h1>{recipe.name}</h1>
       <img
         src={`/assets/images/recettes/${recipe.name.toLowerCase()}.jpg`}

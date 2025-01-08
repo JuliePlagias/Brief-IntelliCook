@@ -32,14 +32,14 @@ const RecipeCard = ({ recipe }) => {
 
   return (
     <div className='recipeCard'>
-      <div className='recipeCard__image'>
-        <Link to={`/recipe/${recipe.id}`} key={recipe.id}>
+      <Link to={`/recipe/${recipe.id}`} key={recipe.id}>
+        <div className='recipeCard__image'>
           <img
             src={`/assets/images/recettes/${recipe.name.toLowerCase()}.jpg`}
             alt={recipe.name}
           />
-        </Link>
-      </div>
+        </div>
+      </Link>
       <h1
         className={`recipeCard__name ${
           recipe.name.length > 16 ? 'recipeCard__name--small' : ''
