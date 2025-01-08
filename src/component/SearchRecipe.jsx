@@ -6,12 +6,12 @@ import React from 'react'
  */
 const SearchRecipe = ({ setSearch }) => {
   return (
-    <div>
+    <div id='search-bar'>
       <input
         type='text'
         placeholder='Ratatouille, poireaux, ...'
         onChange={e => setSearch(e.target.value)}
-        className='searchRecipe'
+        class='searchRecipe'
       />
 
       <img
