@@ -1,13 +1,11 @@
-import NavbarMobile from "./NavbarMobile";
-import NavbarDesktop from "./NavbarDesktop";
+import NavbarMobile from './NavbarMobile'
+import NavbarDesktop from './NavbarDesktop'
 
-export default function NavBar()
-{       
-    return (
-
-        <div>
-            <NavbarDesktop/>
-            <NavbarMobile/>   
-        </div>
-    );
+export default function NavBar() {
+  return (
+    <>
+      <NavbarDesktop />
+      <NavbarMobile />
+    </>
+  )
 }

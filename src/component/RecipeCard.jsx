@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 /**
- * Crée une carte de recette avec son nom, le temps de cuisson, et les boutons de favoris
+ * Crée une carte de recette avec son image,son nom, le temps de cuisson, et les boutons "ajouter au panier" et "favoris"
  * @param {Object} recipe
  * @returns
  */
@@ -13,7 +13,6 @@ const RecipeCard = ({ recipe }) => {
     if (!isFavorite) {
       favorites.push(recipe)
       localStorage.setItem('favorites', JSON.stringify(favorites))
-      console.log(localStorage.getItem('favorites'))
     } else {
       const updatedFavorites = favorites.filter(fav => fav.id !== recipe.id)
       localStorage.setItem('favorites', JSON.stringify(updatedFavorites))
@@ -25,7 +24,6 @@ const RecipeCard = ({ recipe }) => {
     const displayFavorites = () => {
       const favorites = JSON.parse(localStorage.getItem('favorites')) || []
       setIsFavorite(favorites.some(favorite => favorite.id === recipe.id))
-      console.log(favorites)
     }
     displayFavorites()
   }, [recipe.id])

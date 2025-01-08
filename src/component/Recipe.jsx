@@ -1,9 +1,14 @@
-import React from "react";
-import Ingredient from "./Ingredient";
+import React from 'react'
+import Ingredient from './Ingredient'
 
+/**
+ * --- COMPOSANT ACTUELLEMENT OFF ---
+ * Affiche la fiche produit de la recette passée en props
+ * @param {Object} recipe
+ */
 export default function Recipe({ recipe }) {
   return (
-    <div className="recipe">
+    <div className='recipe'>
       <h1>{recipe.name}</h1>
       <h2>Ingrédients</h2>
       <ul>
@@ -24,5 +29,5 @@ export default function Recipe({ recipe }) {
         ))}
       </ul>
     </div>
-  );
+  )
 }
