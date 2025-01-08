@@ -1,6 +1,7 @@
 import React from 'react'
 import recettes from '../data/recipes.json'
 import RecipeCard from './RecipeCard'
+import { Link } from 'react-router-dom'
 
 /**
  * Mappe toutes les recettes trouvées à partir de la recherche search

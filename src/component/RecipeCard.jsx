@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { updateLocalStorage } from '../utils/functions/updateLocalStorage'
+import { Link } from 'react-router-dom'
 
 /**
  * Crée une carte de recette avec son image,son nom, le temps de cuisson, et les boutons "ajouter au panier" et "favoris"
@@ -32,10 +33,12 @@ const RecipeCard = ({ recipe }) => {
   return (
     <div className='recipeCard'>
       <div className='recipeCard__image'>
-        <img
-          src={`/assets/images/recettes/${recipe.name.toLowerCase()}.jpg`}
-          alt={recipe.name}
-        />
+        <Link to={`/recipe/${recipe.id}`} key={recipe.id}>
+          <img
+            src={`/assets/images/recettes/${recipe.name.toLowerCase()}.jpg`}
+            alt={recipe.name}
+          />
+        </Link>
       </div>
       <h1
         className={`recipeCard__name ${

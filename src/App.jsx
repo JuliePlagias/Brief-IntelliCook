@@ -1,9 +1,14 @@
-import Home from './pages/Home'
-import './styles/main.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+//Components
 import Navbar from './component/navbar/Navbar'
+import Home from './pages/Home'
 import Catalogue from './pages/Catalogue'
 import Favorites from './pages/Favorites'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import FicheProduit from './component/FicheProduit'
+//styles
+import './styles/main.css'
+//JSON
+import recettes from './data/recipes.json'
 
 export default function App() {
   return (
@@ -14,6 +19,10 @@ export default function App() {
             <Route index element={<Home />} />
             <Route path='catalogue' element={<Catalogue />} />
             <Route path='favoris' element={<Favorites />} />
+            <Route
+              path='recipe/:id'
+              element={<FicheProduit recipes={recettes.recipes} />}
+            />
           </Route>
         </Routes>
       </BrowserRouter>
