@@ -1,8 +1,9 @@
 import Home from './pages/Home'
 import './styles/main.css'
 import Navbar from './component/navbar/Navbar'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Catalogue from './pages/Catalogue'
+import Favorites from './pages/Favorites'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 export default function App() {
   return (
@@ -12,7 +13,7 @@ export default function App() {
           <Route path='/' element={<Navbar />}>
             <Route index element={<Home />} />
             <Route path='catalogue' element={<Catalogue />} />
-            <Route path='favoris' element={<h1>Favoris</h1>} />
+            <Route path='favoris' element={<Favorites />} />
           </Route>
         </Routes>
       </BrowserRouter>
