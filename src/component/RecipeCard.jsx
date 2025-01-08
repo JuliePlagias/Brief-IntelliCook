@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from 'react'
 
+/**
+ * Crée une carte de recette avec son nom, le temps de cuisson, et les boutons de favoris
+ * @param {Object} recipe
+ * @returns
+ */
 const RecipeCard = ({ recipe }) => {
   const [isFavorite, setIsFavorite] = useState(false)
 
