@@ -9,11 +9,13 @@ import Recipes from './Recipes'
  */
 const SearchingPage = ({ titlePage }) => {
   const [search, setSearch] = useState('')
+  const style =
+    titlePage === 'Mes recettes favorites' ? 'searchingPage__favorites' : ''
 
   return (
     <>
       <SearchRecipe search={search} setSearch={setSearch} />
-      <h1 className={`searchingPage__title`}>{titlePage}</h1>
+      <h1 className={`searchingPage__title ${style}`}>{titlePage}</h1>
       <Recipes search={search} />
     </>
   )
