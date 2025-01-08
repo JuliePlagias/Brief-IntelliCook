@@ -1,6 +1,4 @@
 import React from 'react';
-import RecipeCard from '../component/RecipeCard';
-import Recipes from '../component/Recipes';
 import SearchRecipe from '../component/SearchRecipe';
 
 const Catalogue = () => {
