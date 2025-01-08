@@ -220,21 +220,28 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   .recipes .recipeCard__name {
-    margin: 0.5rem auto;
+    text-align: center;
+    margin: 0.2rem auto 0;
     font-weight: bold;
     height: 20px;
   }
   .recipes .recipeCard__name--small {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
   .recipes .recipeCard__time {
-    margin: auto;
+    margin: 0.5rem auto 0;
     font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+  }
+  .recipes .recipeCard__time svg {
+    margin-right: 0.2rem;
   }
   .recipes .recipeCard__buttons {
     display: flex;
     justify-content: space-between;
-    height: 60px;
+    align-items: center;
+    height: 30px;
   }
   .recipes .recipeCard__buttons-add {
     width: 50px;

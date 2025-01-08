@@ -25,8 +25,12 @@
         position: relative;
         overflow: hidden;
         &:before {
-          background: linear-gradient(to right, fade_out(white, 1) 0%, fade_out(white, 0.8) 100%);
-          content: "";
+          background: linear-gradient(
+            to right,
+            fade_out(white, 1) 0%,
+            fade_out(white, 0.8) 100%
+          );
+          content: '';
           display: block;
           position: absolute;
           top: 0;
@@ -36,7 +40,8 @@
           transform: skew(-25deg);
           z-index: 1;
         }
-        &:hover:before, &:focus:before {
+        &:hover:before,
+        &:focus:before {
           animation: shine 1.5s;
         }
         @keyframes shine {
@@ -54,21 +59,28 @@
         }
       }
       &__name {
-        margin: 0.5rem auto;
+        text-align: center;
+        margin: 0.2rem auto 0;
         font-weight: bold;
         height: 20px;
         &--small {
-          font-size: 0.9rem;
+          font-size: 0.85rem;
         }
       }
       &__time {
-        margin: auto;
+        margin: 0.5rem auto 0;
         font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        svg {
+          margin-right: 0.2rem;
+        }
       }
       &__buttons {
         display: flex;
         justify-content: space-between;
-        height: 60px;
+        align-items: center;
+        height: 30px;
         &-add {
           width: 50px;
           height: 25px;
