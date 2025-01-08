@@ -3,7 +3,7 @@
     position: relative;
     display: flex;
     justify-content: center;
-    padding-top: 10px;
+    padding-top: 30px;
     padding-bottom: 10px;
     width: min(70%, 340px);
     margin: auto;
@@ -28,7 +28,7 @@
       position: absolute;
       width: 45px;
       height: 45px;
-      top: 25px;
+      top: 45px;
       right: 15px;
       cursor: pointer;
       &:hover {
