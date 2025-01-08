@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import MenuBurger from '../home/MenuBurger'
+import MenuBurger from '../navbar/MenuBurger'
 import Burger from './Burger'
 
 export default function NavbarMobile() {
@@ -43,7 +43,7 @@ export default function NavbarMobile() {
         </div>
       </div>
       <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
-      <MenuBurger isOpen={isOpen} />
+      <MenuBurger isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   )
 }

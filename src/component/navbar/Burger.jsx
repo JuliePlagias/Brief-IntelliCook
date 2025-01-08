@@ -1,22 +1,28 @@
 import React from 'react'
 
+/**
+ * Gère l'icone du menu burger
+ * @param {boolean} isOpen
+ * @param {function} setIsOpen
+ * @returns
+ */
 export default function Burger({ isOpen, setIsOpen }) {
-  const lockScroll = isOpen => {
-    if (isOpen) {
+  const lockScroll = state => {
+    if (state) {
       document.body.classList.add('lockScroll')
     } else {
       document.body.classList.remove('lockScroll')
     }
   }
+
+  const handleBurgerClick = () => {
+    const newState = !isOpen
+    setIsOpen(newState)
+    lockScroll(newState)
+  }
+
   return (
-    <div
-      className='burgerIcon'
-      onClick={() => {
-        const newState = !isOpen
-        setIsOpen(newState)
-        lockScroll(newState)
-      }}
-    >
+    <div className='burgerIcon' onClick={handleBurgerClick}>
       <svg
         style={
           isOpen
