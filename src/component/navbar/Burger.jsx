@@ -1,8 +1,22 @@
 import React from 'react'
 
 export default function Burger({ isOpen, setIsOpen }) {
+  const lockScroll = isOpen => {
+    if (isOpen) {
+      document.body.classList.add('lockScroll')
+    } else {
+      document.body.classList.remove('lockScroll')
+    }
+  }
   return (
-    <div className='burgerIcon' onClick={() => setIsOpen(!isOpen)}>
+    <div
+      className='burgerIcon'
+      onClick={() => {
+        const newState = !isOpen
+        setIsOpen(newState)
+        lockScroll(newState)
+      }}
+    >
       <svg
         style={
           isOpen
