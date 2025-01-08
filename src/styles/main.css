@@ -158,6 +158,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   margin-top: 150px;
+  background: whitesmoke;
 }
 
 /* COMPONENTS */
@@ -298,7 +299,7 @@ body {
   height: 50px;
   border-radius: 50px;
   padding-left: 20px;
-  margin: 0 auto 3rem;
+  margin: 12rem auto 3rem;
   font-size: 1.25rem;
   font-family: Playfair Display;
   border: 2px solid grey;
@@ -393,7 +394,7 @@ body {
 .navBarMobile {
   background-color: #ffe4d3;
   display: flex;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   height: 150px;
@@ -478,9 +479,5 @@ body {
 }
 
 /* PAGES */
-.home {
-  background: whitesmoke;
-}
-
 /* THEMES */
 /* VENDORS *//*# sourceMappingURL=main.css.map */
