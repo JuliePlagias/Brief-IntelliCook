@@ -3,39 +3,38 @@
     position: relative;
     display: flex;
     justify-content: center;
-    margin: auto;
     padding-top: 10px;
     padding-bottom: 10px;
     width: min(70%, 340px);
-    height: 50px;
-    border-radius: 50px;
-    padding-left: 20px;
+    margin: auto;
+    .searchRecipe {
+      width: 100%;
+      padding: 10px 0 10px 20px;
+      height: 50px;
+      border-radius: 50px;
+      font-size: 1.25rem;
+      font-family: Playfair Display;
+      border: 2px solid grey;
+      background: ghostwhite;
 
-    font-size: 1.25rem;
-    font-family: Playfair Display;
-    border: 2px solid grey;
-    background: ghostwhite;
-    margin-left: 25px;
-
-    &:focus {
-      background: lightgray;
-      border: 3px solid black;
-      outline: none;
+      &:focus {
+        background: oldlace;
+        border: 3px solid black;
+        outline: none;
+      }
     }
-  }
 
-  #search-bar {
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  #loupe {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    top: 15px;
-    right: 45px;
+    #loupe {
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      top: 25px;
+      right: 15px;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.1s;
+      }
+    }
   }
 }
