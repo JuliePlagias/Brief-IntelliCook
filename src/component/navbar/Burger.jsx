@@ -7,18 +7,8 @@ import React from 'react'
  * @returns
  */
 export default function Burger({ isOpen, setIsOpen }) {
-  const lockScroll = state => {
-    if (state) {
-      document.body.classList.add('lockScroll')
-    } else {
-      document.body.classList.remove('lockScroll')
-    }
-  }
-
   const handleBurgerClick = () => {
-    const newState = !isOpen
-    setIsOpen(newState)
-    lockScroll(newState)
+    setIsOpen(!isOpen)
   }
 
   return (
