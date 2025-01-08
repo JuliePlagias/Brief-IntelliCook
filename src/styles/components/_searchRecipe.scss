@@ -4,11 +4,12 @@
   height: 50px;
   border-radius: 50px;
   padding-left: 20px;
-  margin: 0 auto 3rem;
+  margin: 12rem auto 3rem;
   font-size: 1.25rem;
   font-family: Playfair Display;
   border: 2px solid grey;
   background: wheat;
+
   &:focus {
     background: whitesmoke;
     border: 2px solid black;
