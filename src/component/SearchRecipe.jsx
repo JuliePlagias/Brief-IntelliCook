@@ -11,7 +11,7 @@ const SearchRecipe = ({ setSearch }) => {
         type='text'
         placeholder='Ratatouille, poireaux, ...'
         onChange={e => setSearch(e.target.value)}
-        class='searchRecipe'
+        className='searchRecipe'
       />
 
       <img

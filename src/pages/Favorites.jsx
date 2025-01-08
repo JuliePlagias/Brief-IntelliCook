@@ -1,20 +1,29 @@
 import React, { useEffect, useState } from 'react'
 import Footer from '../component/home/Footer'
-import Recipes from '../component/Recipes'
 import RecipeCard from '../component/RecipeCard'
 
 /**
  * Composant de page qui affiche la liste des recettes favorites
  */
 export default function Favorites() {
-  const [favorites, setFavorites] = useState(null)
+  const [favorites, setFavorites] = useState(() =>
+    JSON.parse(localStorage.getItem('favorites') || '[]'),
+  )
 
   //Aller chercher les recettes favorites dans le localStorage
   useEffect(() => {
-    const getFavorites = JSON.parse(localStorage.getItem('favorites'))
-    setFavorites(getFavorites)
-    console.log(JSON.stringify(getFavorites))
+    const handleFavoritesUpdated = e => {
+      console.log('event')
+      setFavorites(e.detail)
+    }
+    window.addEventListener('favoritesUpdated', handleFavoritesUpdated)
+
+    return () => {
+      console.log('composant démonté')
+      window.removeEventListener('favoritesUpdated', handleFavoritesUpdated)
+    }
   }, [])
+  console.log('render')
 
   return (
     <div className='favorites'>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { updateLocalStorage } from '../utils/functions/updateLocalStorage'
 
 /**
  * Crée une carte de recette avec son image,son nom, le temps de cuisson, et les boutons "ajouter au panier" et "favoris"
@@ -12,10 +13,10 @@ const RecipeCard = ({ recipe }) => {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || []
     if (!isFavorite) {
       favorites.push(recipe)
-      localStorage.setItem('favorites', JSON.stringify(favorites))
+      updateLocalStorage('favorites', favorites)
     } else {
       const updatedFavorites = favorites.filter(fav => fav.id !== recipe.id)
-      localStorage.setItem('favorites', JSON.stringify(updatedFavorites))
+      updateLocalStorage('favorites', updatedFavorites)
     }
     setIsFavorite(!isFavorite)
   }

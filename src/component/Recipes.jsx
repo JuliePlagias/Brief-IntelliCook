@@ -3,7 +3,7 @@ import recettes from '../data/recipes.json'
 import RecipeCard from './RecipeCard'
 
 /**
- * Mappe toutes les recettes trouvées à partir du nom de la recette
+ * Mappe toutes les recettes trouvées à partir de la recherche search
  * @param {string} search
  */
 
