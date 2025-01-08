@@ -1,12 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const RecipeCard = ({ recipe }) => {
   const [isFavorite, setIsFavorite] = useState(false)
 
   const handleFavoriteClick = () => {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || []
-    console.dir('favorites : ', favorites)
-
     if (!isFavorite) {
       favorites.push(recipe)
       localStorage.setItem('favorites', JSON.stringify(favorites))
@@ -17,6 +15,15 @@ const RecipeCard = ({ recipe }) => {
     }
     setIsFavorite(!isFavorite)
   }
+
+  useEffect(() => {
+    const displayFavorites = () => {
+      const favorites = JSON.parse(localStorage.getItem('favorites')) || []
+      setIsFavorite(favorites.some(favorite => favorite.id === recipe.id))
+      console.log(favorites)
+    }
+    displayFavorites()
+  }, [recipe.id])
 
   return (
     <div className='recipeCard'>
