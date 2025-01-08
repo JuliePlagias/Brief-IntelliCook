@@ -8,10 +8,21 @@
   font-size: 1.25rem;
   font-family: Playfair Display;
   border: 2px solid grey;
-  background: wheat;
+  background: ghostwhite;
 
   &:focus {
-    background: whitesmoke;
-    border: 2px solid black;
+    background: lightgray;
+    border: 3px solid black;
+    outline: none;
   }
+}
+#loupe {
+  position: absolute;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  right: 10%;
 }
