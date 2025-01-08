@@ -9,8 +9,6 @@ import RecipeCard from './RecipeCard'
 
 const Recipes = ({ search }) => {
   const findRecipe = recipeName => {
-    console.log('recipeName', recipeName)
-
     return recettes.recipes.filter(recipe =>
       recipe.name.toLowerCase().includes(recipeName.toLowerCase()),
     )

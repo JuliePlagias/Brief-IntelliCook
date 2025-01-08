@@ -13,17 +13,14 @@ export default function Favorites() {
   //Aller chercher les recettes favorites dans le localStorage
   useEffect(() => {
     const handleFavoritesUpdated = e => {
-      console.log('event')
       setFavorites(e.detail)
     }
     window.addEventListener('favoritesUpdated', handleFavoritesUpdated)
 
     return () => {
-      console.log('composant démonté')
       window.removeEventListener('favoritesUpdated', handleFavoritesUpdated)
     }
   }, [])
-  console.log('render')
 
   return (
     <div className='favorites'>

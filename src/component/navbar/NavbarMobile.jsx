@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import MenuBurger from '../navbar/MenuBurger'
 import Burger from './Burger'
+import { Link } from 'react-router-dom'
 
 export default function NavbarMobile() {
   const [isOpen, setIsOpen] = useState(false)
@@ -21,11 +22,13 @@ export default function NavbarMobile() {
   return (
     <>
       <div className='navBarMobile'>
-        <img
-          className='logo'
-          src={`${path}logo.png`}
-          alt='Intelli Cook Logo'
-        ></img>
+        <Link to={'/'}>
+          <img
+            className='logo'
+            src={`${path}logo.png`}
+            alt='Intelli Cook Logo'
+          />
+        </Link>
       </div>
       <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
       <MenuBurger isOpen={isOpen} setIsOpen={setIsOpen} />
