@@ -1,30 +1,33 @@
-.searchRecipe {
-  width: min(70%, 340px);
-  height: 50px;
-  border-radius: 50px;
-  padding-left: 20px;
+@media screen and (max-width: 650px) {
+  .searchRecipe {
+    width: min(70%, 340px);
+    height: 50px;
+    border-radius: 50px;
+    padding-left: 20px;
 
-  font-size: 1.25rem;
-  font-family: Playfair Display;
-  border: 2px solid grey;
-  background: ghostwhite;
-
-  &:focus {
-    background: lightgray;
-    border: 3px solid black;
-    outline: none;
+    font-size: 1.25rem;
+    font-family: Playfair Display;
+    border: 2px solid grey;
+    background: ghostwhite;
+    margin-left: 25px;
+    &:focus {
+      background: lightgray;
+      border: 3px solid black;
+      outline: none;
+    }
   }
-}
-#search-bar {
-  display: flex;
-  justify-content: center;
-}
+  #search-bar {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 
-#loupe {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  top: 15px;
-  z-index: 15;
-  right: 45px;
+  #loupe {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    top: 15px;
+    right: 45px;
+  }
 }
