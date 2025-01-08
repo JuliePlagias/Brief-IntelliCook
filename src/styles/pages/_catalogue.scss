@@ -1,9 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
 @media screen and (max-width: 650px) {
+
     .catalogue__title {
-        font-size: 30px;
+        font-size: 40px;
         font-family: 'Aclonica';
+        text-align: center;
+        height: 5rem;
+
     }
 
     .recipes {
@@ -139,6 +143,10 @@
             }
         }
     }
+}
+
+.catalogue__footer {
+    margin-top: 2rem;
 }
 
 .favorite-animation {
