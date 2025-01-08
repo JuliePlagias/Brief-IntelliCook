@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SearchRecipe from '../component/SearchRecipe';
-
+import Recipes from '../component/Recipes';
 const Catalogue = () => {
+    const [search, setSearch] = useState('')
 
-    const add = (a, b) => {
-        return a + b;
-    }
+
     return (
         <div className='catalogue'>
-            <SearchRecipe />
-            {add(1, 2)}
+            <SearchRecipe search={search} setSearch={setSearch} />
+            <h1 className='catalogue__title'>Catalogue</h1>
+            <Recipes search={search} />
         </div>
+
     );
 };
 

@@ -1,4 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
 @media screen and (max-width: 650px) {
+    .catalogue__title {
+        font-size: 30px;
+        font-family: 'Aclonica';
+    }
+
     .recipes {
         display: flex;
         flex-wrap: wrap;
@@ -66,17 +73,19 @@
 
             &__name {
                 text-align: center;
-                margin: 0.2rem auto 0;
+                margin: 0.2rem auto 0.3rem;
                 font-weight: bold;
-                height: 20px;
+                height: 25px;
+                padding: 0 0.5rem;
+
 
                 &--small {
-                    font-size: 0.85rem;
+                    font-size: 1rem
                 }
             }
 
             &__time {
-                margin: 0.5rem auto 0;
+                margin: 0.5rem auto 0.3rem;
                 font-size: 0.8rem;
                 display: flex;
                 align-items: center;
