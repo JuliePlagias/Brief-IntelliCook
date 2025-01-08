@@ -1,6 +1,5 @@
 import React from "react";
 import recettes from "../data/recipes.json";
-import Recipe from "./Recipe";
 import RecipeCard from "./RecipeCard";
 
 const Recipes = ({ search }) => {
