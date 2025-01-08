@@ -1,13 +1,10 @@
-import React, { useState } from 'react'
-
+import React from 'react'
 
 /**
  * Retourne toutes les recettes qui correspondent à la recherche.
  * @returns {JSX.Element} Toutes les recettes sont affichées si rien n'est entré dans l'input.
  */
-const SearchRecipe = ({ search, setSearch }) => {
-
-
+const SearchRecipe = ({ setSearch }) => {
   return (
     <div>
       <input
@@ -17,14 +14,11 @@ const SearchRecipe = ({ search, setSearch }) => {
         className='searchRecipe'
       />
 
-
       <img
         id='loupe'
         src='./assets/images/icons/loupe recherche.png'
         alt='Recherche'
       />
-
-
     </div>
   )
 }

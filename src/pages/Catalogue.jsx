@@ -14,7 +14,4 @@ const Catalogue = () => {
             <Footer className={'catalogue__footer'}></Footer>
         </div>
 
-    );
-};
-
-export default Catalogue;
+export default Catalogue
