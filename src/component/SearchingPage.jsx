@@ -15,6 +15,8 @@ const SearchingPage = ({ titlePage }) => {
   return (
     <>
       <SearchRecipe search={search} setSearch={setSearch} />
+      <p>Filtrer par : </p>
+      <input type="button" value="" />
       <h1 className={`searchingPage__title ${style}`}>{titlePage}</h1>
       <Recipes search={search} />
     </>
