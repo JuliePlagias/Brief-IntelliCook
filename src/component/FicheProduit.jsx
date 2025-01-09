@@ -33,13 +33,17 @@ export default function FicheProduit({ recipes }) {
           </li>
         ))}
       </ul>
-      <h2>Etapes</h2>
-      <ul className='steps'>
-        {recipe.steps.map((step, i) => (
-          <li key={i}>Étape {i +1} <br></br>{step}</li>
-        ))}
-      </ul>
-      <button onClick={() => navigate(-1)}>Retour</button>
+      <div id="preparation">
+        <h2>Préparation</h2>
+        <ul className='steps'>
+          {recipe.steps.map((step, i) => (
+            <>
+              <li className='step'>Étape {i+1}</li>
+              <li className='step_content' key={i}>{step}</li>
+            </>
+         ))}
+        </ul>
+      </div>
     </div>
   )
 }
