@@ -26,3 +26,12 @@
     transform: scale(1);
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .recipeCard {
+    display: flex;
+    flex-direction: column;
+    width: 250px; /* Largeur des cartes de recettes */
+    margin-bottom: 20px; /* Espacement entre les cartes de recettes */
+  }
+}
