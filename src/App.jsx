@@ -6,7 +6,7 @@ import Catalogue from './pages/Catalogue'
 import Favorites from './pages/Favorites'
 import FicheProduit from './component/FicheProduit'
 //styles
-import './styles/main.css'
+import './styles/main.scss'
 //JSON
 import recettes from './data/recipes.json'
 
