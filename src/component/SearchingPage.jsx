@@ -15,17 +15,19 @@ const SearchingPage = ({ titlePage }) => {
     titlePage === 'Mes recettes favorites' ? 'searchingPage__favorites' : ''
 
   return (
-    <>
+    <div className='searchingPage'>
       <SearchRecipe search={search} setSearch={setSearch} />
       {/* Filtres */}
-      <span>Filtrer par : </span>
-      <input type="button" value="Nom de recette" onClick={() => setTypeOfSearch('name')} className={`filterButton ${typeOfSearch === 'name' ? 'filterButton--active' : ''}`} />
+      <div className="searchingPage__filters">
+        <span>Filtrer par : </span>
+        <input type="button" value="Nom de recette" onClick={() => setTypeOfSearch('name')} className={`filterButton ${typeOfSearch === 'name' ? 'filterButton--active' : ''}`} />
 
-      <input type="button" value="Ingrédients" onClick={() => setTypeOfSearch('ingredients')}  className={`filterButton ${typeOfSearch === 'ingredients' ? 'filterButton--active' : ''}`} />
+        <input type="button" value="Ingrédients" onClick={() => setTypeOfSearch('ingredients')}  className={`filterButton ${typeOfSearch === 'ingredients' ? 'filterButton--active' : ''}`} />
+      </div>
       {/* Fin filtres */}
       <h1 className={`searchingPage__title ${style}`}>{titlePage}</h1>
       <Recipes search={search} typeOfSearch={typeOfSearch} />
-    </>
+    </div>
   )
 }
 
