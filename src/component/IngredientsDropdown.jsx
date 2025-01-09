@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ingredients from '../data/ingredients.json'
 
 /**
@@ -21,13 +21,12 @@ const IngredientsDropdown = ({search}) => {
     if (newIngredientsListTemp.length === 0) return null;
 
     const newIngredientsList = newIngredientsListTemp.filter((newI) => !ingredientsList.includes(newI));
-    console.log("newIngList : ",newIngredientsList);
-    
+
     return newIngredientsList.length ? newIngredientsList : null;
   }
 
   const addIngredientToList = (ingredient) => {
-    setIngredientsList([...ingredientsList, ingredient]);
+    setIngredientsList([...ingredientsList, ingredient])
     setAddedIngredientsList([...addedIngredientsList, ingredient])
   }
 
@@ -35,9 +34,6 @@ const IngredientsDropdown = ({search}) => {
     setIngredientsList([...ingredientsList, ingredient])
     setRemovedIngredientsList([...removedIngredientsList, ingredient])
   }
-  console.log(ingredientsList);
-  
-    
 
   return (findIngredients(search) && (
     <div className='ingredientsDropdown'>

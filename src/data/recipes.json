@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Ratatouille",
-      "img": "",
+      "time": "30",
       "ingredients": [
         { "name": "courgette", "quantity": 2 },
         { "name": "aubergine", "quantity": 1 },
@@ -35,7 +35,7 @@
     {
       "id": 2,
       "name": "Soupe de légumes",
-      "img": "",
+      "time": "30",
       "ingredients": [
         { "name": "carotte", "quantity": 3 },
         { "name": "pomme de terre", "quantity": 2 },
@@ -55,7 +55,7 @@
     {
       "id": 3,
       "name": "Gratin dauphinois",
-      "img": "",
+      "time": "75",
       "ingredients": [
         { "name": "pomme de terre", "quantity": 1, "unit": "kg" },
         { "name": "crème fraîche", "quantity": 200, "unit": "ml" },
@@ -74,7 +74,7 @@
     {
       "id": 4,
       "name": "Quiche aux légumes",
-      "img": "",
+      "time": "60",
       "ingredients": [
         { "name": "pâte brisée", "quantity": 1 },
         { "name": "œuf", "quantity": 2 },
@@ -94,7 +94,7 @@
     {
       "id": 5,
       "name": "Poulet au curry",
-      "img": "",
+      "time": "90",
       "ingredients": [
         { "name": "poulet", "quantity": 400, "unit": "g" },
         { "name": "lait de coco", "quantity": 400, "unit": "ml" },
@@ -113,7 +113,7 @@
     {
       "id": 6,
       "name": "Salade composée",
-      "img": "salade composée",
+      "time": "15",
       "ingredients": [
         { "name": "tomate", "quantity": 3 },
         { "name": "poivron rouge", "quantity": 1 },
@@ -134,7 +134,7 @@
     {
       "id": 7,
       "name": "Omelette aux champignons",
-      "img": "",
+      "time": "15",
       "ingredients": [
         { "name": "œuf", "quantity": 3 },
         { "name": "champignons", "quantity": 100, "unit": "g" },
@@ -150,7 +150,7 @@
     {
       "id": 8,
       "name": "Pâtes au saumon",
-      "img": "",
+      "time": "15",
       "ingredients": [
         { "name": "pâtes", "quantity": 200, "unit": "g" },
         { "name": "saumon", "quantity": 150, "unit": "g" },
@@ -166,7 +166,7 @@
     {
       "id": 9,
       "name": "Pain perdu",
-      "img": "",
+      "time": "15",
       "ingredients": [
         { "name": "pain de mie", "quantity": 4, "unit": "tranches" },
         { "name": "œuf", "quantity": 2 },
@@ -184,7 +184,7 @@
     {
       "id": 10,
       "name": "Tarte aux pommes",
-      "img": "",
+      "time": "45",
       "ingredients": [
         { "name": "pâte feuilletée", "quantity": 1 },
         { "name": "pomme", "quantity": 3 },
@@ -202,7 +202,7 @@
     {
       "id": 11,
       "name": "Brownies au chocolat",
-      "img": "",
+      "time": "60",
       "ingredients": [
         { "name": "chocolat noir", "quantity": 200, "unit": "g" },
         { "name": "beurre", "quantity": 150, "unit": "g" },
@@ -222,7 +222,7 @@
     {
       "id": 12,
       "name": "Crêpes",
-      "img": "",
+      "time": "60",
       "ingredients": [
         { "name": "farine", "quantity": 250, "unit": "g" },
         { "name": "lait", "quantity": 500, "unit": "ml" },
@@ -241,7 +241,7 @@
     {
       "id": 13,
       "name": "Salade de fruits",
-      "img": "",
+      "time": "15",
       "ingredients": [
         { "name": "pomme", "quantity": 1 },
         { "name": "banane", "quantity": 1 },
@@ -263,7 +263,7 @@
     {
       "id": 14,
       "name": "Pizza maison",
-      "img": "",
+      "time": "30",
       "ingredients": [
         { "name": "pâte à pizza", "quantity": 1 },
         { "name": "sauce tomate", "quantity": 150, "unit": "g" },
@@ -281,7 +281,7 @@
     {
       "id": 15,
       "name": "Gaufres",
-      "img": "",
+      "time": "90",
       "ingredients": [
         { "name": "farine", "quantity": 250, "unit": "g" },
         { "name": "lait", "quantity": 500, "unit": "ml" },
