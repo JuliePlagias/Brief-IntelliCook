@@ -9,16 +9,19 @@ import Recipes from './Recipes'
  */
 const SearchingPage = ({ titlePage }) => {
   const [search, setSearch] = useState('')
+  const [typeOfSearch, setTypeOfSearch] = useState('name')
+
   const style =
     titlePage === 'Mes recettes favorites' ? 'searchingPage__favorites' : ''
 
   return (
     <>
       <SearchRecipe search={search} setSearch={setSearch} />
-      <p>Filtrer par : </p>
-      <input type="button" value="" />
+      <span>Filtrer par : </span>
+      <input type="button" value="Nom de recette" onClick={() => setTypeOfSearch('name')} className={`filterButton ${typeOfSearch === 'name' ? 'filterButton--active' : ''}`} />
+      <input type="button" value="Ingrédients" onClick={() => setTypeOfSearch('ingredients')}  className={`filterButton ${typeOfSearch === 'ingredients' ? 'filterButton--active' : ''}`} />
       <h1 className={`searchingPage__title ${style}`}>{titlePage}</h1>
-      <Recipes search={search} />
+      <Recipes search={search} typeOfSearch={typeOfSearch} />
     </>
   )
 }
