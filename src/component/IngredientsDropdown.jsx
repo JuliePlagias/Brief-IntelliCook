@@ -8,14 +8,21 @@ import ingredients from '../data/ingredients.json'
  */
 const IngredientsDropdown = ({search}) => {
   const findIngredient = (value) => {
-    return ingredients[value];
+    console.log(ingredients[value.toLowerCase()]);
+    
+    return ingredients[value.toLowerCase()];
   }
 
-  return (
+  return (findIngredient(search) && (
     <div className='ingredientsDropdown'>
-      {findIngredient(search) ? findIngredient(search) : "AUCUNE RECHERCHE"}
-    </div>
-  );
+      <div className='ingredientsDropdown__content'>
+        <span>{findIngredient(search)}</span>
+        <div className="ingredientsDropdown__content__buttons">
+          <button>V</button>
+          <button>X</button>
+        </div>
+      </div>
+    </div>));
 };
 
 export default IngredientsDropdown;
