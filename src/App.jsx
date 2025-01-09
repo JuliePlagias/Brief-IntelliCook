@@ -14,20 +14,24 @@ import Footer from './component/home/Footer'
 
 export default function App() {
   return (
+    <div className="app-container">
       <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Navbar />}>
-            <Route index element={<Home />} />
-            <Route path='catalogue' element={<Catalogue />} />
-            <Route path='favoris' element={<Favorites />} />
-            <Route path='conditions' element={<Conditions />} />
-            <Route
-              path='recipe/:id'
-              element={<FicheProduit recipes={recettes.recipes} />}
-            />
-          </Route>
-        </Routes>
+        <div className="content">
+          <Routes>
+            <Route path='/' element={<Navbar />}>
+              <Route index element={<Home />} />
+              <Route path='catalogue' element={<Catalogue />} />
+              <Route path='favoris' element={<Favorites />} />
+              <Route path='conditions' element={<Conditions />} />
+              <Route
+                path='recipe/:id'
+                element={<FicheProduit recipes={recettes.recipes} />}
+                />
+            </Route>
+          </Routes>
+        </div>
         <Footer />
       </BrowserRouter>
+    </div>
   )
 }
