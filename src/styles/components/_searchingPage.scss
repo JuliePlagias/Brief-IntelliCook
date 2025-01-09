@@ -1,11 +1,13 @@
-h1.searchingPage {
+.searchingPage {
+  &__title, &__favorites {
+    margin: 2rem auto;
+    text-align: center;
+    font-family: "aclonica";
+  }
   &__title {
     font-size: 30px;
-    font-family: 'Aclonica';
   }
   &__favorites {
     font-size: 22px;
-    text-align: center;
-    margin: 2rem 0 0;
   }
 }

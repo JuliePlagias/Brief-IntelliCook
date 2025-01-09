@@ -17,9 +17,12 @@ const SearchingPage = ({ titlePage }) => {
   return (
     <>
       <SearchRecipe search={search} setSearch={setSearch} />
+      {/* Filtres */}
       <span>Filtrer par : </span>
       <input type="button" value="Nom de recette" onClick={() => setTypeOfSearch('name')} className={`filterButton ${typeOfSearch === 'name' ? 'filterButton--active' : ''}`} />
+
       <input type="button" value="Ingrédients" onClick={() => setTypeOfSearch('ingredients')}  className={`filterButton ${typeOfSearch === 'ingredients' ? 'filterButton--active' : ''}`} />
+      {/* Fin filtres */}
       <h1 className={`searchingPage__title ${style}`}>{titlePage}</h1>
       <Recipes search={search} typeOfSearch={typeOfSearch} />
     </>
