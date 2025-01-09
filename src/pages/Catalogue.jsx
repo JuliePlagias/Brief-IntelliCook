@@ -11,7 +11,6 @@ const Catalogue = () => {
             <SearchRecipe search={search} setSearch={setSearch} />
             <h1 className='catalogue__title'>Catalogue</h1>
             <Recipes search={search} />
-            <Footer className={'catalogue__footer'}></Footer>
         </div>
     )
 }

@@ -3,7 +3,7 @@ import Footer from '../component/home/Footer'
 import RecipeCard from '../component/RecipeCard'
 
 /**
- * Composant de page qui affiche la liste des recettes favorites
+ * Page favoris
  */
 export default function Favorites() {
   const [favorites, setFavorites] = useState(() =>
@@ -33,7 +33,6 @@ export default function Favorites() {
             <RecipeCard key={recipe.id} recipe={recipe} />
           ))}
       </div>
-      <Footer />
     </div>
   )
 }
