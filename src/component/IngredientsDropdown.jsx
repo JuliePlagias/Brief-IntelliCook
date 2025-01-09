@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ingredients from '../data/ingredients.json'
 
 /**
@@ -7,21 +7,49 @@ import ingredients from '../data/ingredients.json'
  * @returns 
  */
 const IngredientsDropdown = ({search}) => {
-  const findIngredient = (value) => {
-    console.log(ingredients[value.toLowerCase()]);
+  const [ingredientsList, setIngredientsList] = useState([])
+  const [addedIngredientsList, setAddedIngredientsList] = useState([])
+  const [removedIngredientsList, setRemovedIngredientsList] = useState([])
+
+  //Retourne la liste des ingrédients qui correspondent à la recherche sous l'input
+  const findIngredients = (value) => {
+    if (!value) return null;
+
+    const newIngredientsListTemp = Object.keys(ingredients).filter(key => {
+      return key.includes(value.toLowerCase());
+    });
+    if (newIngredientsListTemp.length === 0) return null;
+
+    const newIngredientsList = newIngredientsListTemp.filter((newI) => !ingredientsList.includes(newI));
+    console.log("newIngList : ",newIngredientsList);
     
-    return ingredients[value.toLowerCase()];
+    return newIngredientsList.length ? newIngredientsList : null;
   }
 
-  return (findIngredient(search) && (
+  const addIngredientToList = (ingredient) => {
+    setIngredientsList([...ingredientsList, ingredient]);
+    setAddedIngredientsList([...addedIngredientsList, ingredient])
+  }
+
+  const removeIngredientFromList = (ingredient) => {
+    setIngredientsList([...ingredientsList, ingredient])
+    setRemovedIngredientsList([...removedIngredientsList, ingredient])
+  }
+  console.log(ingredientsList);
+  
+    
+
+  return (findIngredients(search) && (
     <div className='ingredientsDropdown'>
-      <div className='ingredientsDropdown__content'>
-        <span>{findIngredient(search)}</span>
-        <div className="ingredientsDropdown__content__buttons">
-          <button>V</button>
-          <button>X</button>
+      {findIngredients(search).slice(0,3).map((ingredient,i) => 
+        <div key={i} className='ingredientsDropdown__content'>
+          <span>{ingredient}</span>
+          <div className="ingredientsDropdown__content__buttons">
+            <button onClick={() => addIngredientToList(ingredient)}>V</button>
+            <button onClick={() => removeIngredientFromList(ingredient)}>X</button>
+          </div>
         </div>
-      </div>
+      )}
     </div>));
 };
 
