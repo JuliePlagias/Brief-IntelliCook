@@ -171,8 +171,8 @@
 @media screen and (min-width: 1024px) {
   .catalogue {
     display: flex;
-    flex-wrap: wrap; /* Permet de faire passer les éléments à la ligne suivante si l'espace est insuffisant */
-    justify-content: space-between; /* Équilibre l'espacement entre les éléments */
-    gap: 20px; /* Espacement entre les recettes */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
   }
 }
