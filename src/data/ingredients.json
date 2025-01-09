@@ -1,5 +1,4 @@
 {
-    "fruitLegume":{
         "tomate":"Tomate",
         "pommeDeTerre": "Pomme de terre",
         "carotte" : "Carotte",
@@ -14,9 +13,7 @@
         "champignon" : "Champignon",
         "orange" : "Orange",
         "banane" : "Banane",
-        "citron":"Citron"
-    },
-    "proteine":{
+        "citron":"Citron",
         "poulet" : "Poulet",
         "oeuf" : "Oeuf",
         "boeufHache" : "Boeuf haché",
@@ -24,22 +21,16 @@
         "thonBoite" : "Thon en boîte",
         "tofu" : "Tofu",
         "lentilles" : "Lentilles",
-        "poisChiche" : "Pois chiches"
-    },
-    "produitLaitier":{
+        "poisChiche" : "Pois chiches",
         "lait":"Lait",
         "gruyere" : "Gruyère",
         "parmesan" : "Parmesan",
         "yaourt" : "Yaourt nature",
-        "cremeFraiche" : "Crème fraiche"
-    },
-    "feculent":{
+        "cremeFraiche" : "Crème fraiche",
         "riz" : "Riz",
         "pate" : "Pâtes",
         "semoule" : "Semoule",
-        "pain" : "Pain de mie"
-    },
-    "condiments":{
+        "pain" : "Pain de mie",
         "sel":"Sel",
         "poivre":"Poivre",
         "paprika" : "Paprika",
@@ -57,6 +48,6 @@
         "noix" : "noix",
         "laitCoco": "Lait de coco",
         "sauceSoja" : "Sauce soja",
-        "bouillonCube" : "Bouillon cube"
-    }
+        "bouillonCube" : "Bouillon cube",
+        "poireau": "Poireau"
 }

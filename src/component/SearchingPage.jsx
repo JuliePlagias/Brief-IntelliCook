@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import SearchRecipe from './SearchRecipe'
+import SearchBar from './SearchBar'
 import Recipes from './Recipes'
 
 /**
@@ -16,7 +16,7 @@ const SearchingPage = ({ titlePage }) => {
 
   return (
     <div className='searchingPage'>
-      <SearchRecipe search={search} setSearch={setSearch} />
+      <SearchBar search={search} setSearch={setSearch} typeOfSearch={typeOfSearch} />
       {/* Filtres */}
       <div className="searchingPage__filters">
         <span>Filtrer par : </span>

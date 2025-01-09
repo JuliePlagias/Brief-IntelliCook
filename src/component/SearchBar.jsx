@@ -1,10 +1,13 @@
 import React from 'react'
+import IngredientsDropdown from './IngredientsDropdown'
 
 /**
- * Retourne toutes les recettes qui correspondent à la recherche.
+ * Affiche l'input qui gère la recherche des recettes ou des ingrédients
+ * Affiche la dropdown des ingrédients si une recherche par ingrédient est active
  * @returns {JSX.Element} Toutes les recettes sont affichées si rien n'est entré dans l'input.
  */
-const SearchRecipe = ({ setSearch }) => {
+const SearchBar = ({ search, setSearch, typeOfSearch }) => {
+
   return (
     <div id='search-bar'>
       <input
@@ -13,7 +16,7 @@ const SearchRecipe = ({ setSearch }) => {
         onChange={e => setSearch(e.target.value)}
         className='searchRecipe'
       />
-
+      {typeOfSearch === "ingredients" && <IngredientsDropdown search={search} />}
       <img
         id='loupe'
         src='./assets/images/icons/loupe recherche.png'
@@ -23,4 +26,4 @@ const SearchRecipe = ({ setSearch }) => {
   )
 }
 
-export default SearchRecipe
+export default SearchBar

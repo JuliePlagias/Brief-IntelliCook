@@ -1,0 +1,11 @@
+/* enfant de #search-bar */
+.ingredientsDropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: grey;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
