@@ -24,7 +24,7 @@ export default function App() {
               <Route path='favoris' element={<Favorites />} />
               <Route path='conditions' element={<Conditions />} />
               <Route
-                path='recipe/:id'
+                path='recipe/:name'
                 element={<FicheProduit recipes={recettes.recipes} />}
                 />
             </Route>

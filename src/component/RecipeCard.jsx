@@ -32,7 +32,7 @@ const RecipeCard = ({ recipe }) => {
 
   return (
     <div className='recipeCard'>
-      <Link to={`/recipe/${recipe.id}`} key={recipe.id}>
+      <Link to={`/recipe/${recipe.name.toLowerCase()}`} key={recipe.id}>
         <div className='recipeCard__image'>
           <img
             src={`/assets/images/recettes/${recipe.name.toLowerCase()}.jpg`}

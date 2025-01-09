@@ -7,10 +7,10 @@ import { useNavigate, useParams } from 'react-router-dom'
  * @param {Object} recipe
  */
 export default function FicheProduit({ recipes }) {
-  const { id } = useParams()
+  const { name } = useParams()
   const navigate = useNavigate()
-  const recipe = recipes.find(r => r.id === parseInt(id, 10))
-
+  const recipe = recipes.find(r => r.name.toLowerCase() === name)
+  
   if (!recipe)
     return <p className='ficheProduit--error'>Pas de recettes trouvée :(...</p>
 
