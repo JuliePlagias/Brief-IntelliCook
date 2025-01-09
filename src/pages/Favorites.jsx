@@ -27,6 +27,9 @@ export default function Favorites() {
       <h1 className={`searchingPage__title searchingPage__favorites`}>
         Mes recettes favorites
       </h1>
+      <p className='placeHolder' hidden={favorites.length>0}>
+        Vous n'avez pas encore de recettes favorites, parcourez notre catalogue pour trouver des recettes qui vous plaisent
+      </p>
       <div className='recipes'>
         {favorites &&
           favorites.map(recipe => (
