@@ -16,7 +16,7 @@ $dist: -42px;
       transform: translateY($dist);
     }
     &:nth-child(3) {
-      transform: translateY($dist * 2.03);
+      transform: translateY($dist * 2);
     }
   }
   @media screen and (min-width: $mobile-size) {
@@ -36,7 +36,7 @@ $dist: -42px;
 }
 @keyframes extendBottomBun {
   100% {
-    transform: translateY($dist * 2.03 + 5px);
+    transform: translateY($dist * 2 + 5px);
   }
 }
 
@@ -67,12 +67,12 @@ $dist: -42px;
 }
 @keyframes smashBottomBun {
   0% {
-    transform: translateY($dist * 2.03 + 5px);
+    transform: translateY($dist * 2 + 5px);
   }
   60% {
-    transform: translateY($dist * 2.03 - 3px);
+    transform: translateY($dist * 2 - 3px);
   }
   100% {
-    transform: translateY($dist * 2.03);
+    transform: translateY($dist * 2);
   }
 }
