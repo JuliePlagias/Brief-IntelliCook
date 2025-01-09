@@ -1,4 +1,4 @@
-@media screen and (max-width: 650px) {
+
   .recipes {
     margin: 2rem auto;
     display: flex;
@@ -6,7 +6,6 @@
     gap: 10px;
     justify-content: center;
   }
-}
 
 .favorite-animation {
   animation: favorite-animation 0.5s ease-in-out;
