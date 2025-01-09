@@ -3,10 +3,10 @@
     position: relative;
     display: flex;
     justify-content: center;
-    padding-top: 30px;
     padding-bottom: 10px;
     width: min(70%, 340px);
-    margin: auto;
+    margin: 30px auto 0;
+    z-index: 10;
     .searchRecipe {
       width: 100%;
       padding: 10px 0 10px 20px;
@@ -28,7 +28,7 @@
       position: absolute;
       width: 45px;
       height: 45px;
-      top: 45px;
+      top: 15px;
       right: 15px;
       cursor: pointer;
       &:hover {
