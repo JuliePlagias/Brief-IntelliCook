@@ -1,4 +1,3 @@
-const size = 150;
 
 export default function Ingredient({ name, quantity, unit }) {
   const writeGoodDeOrD = (ingredient) => {
@@ -10,21 +9,16 @@ export default function Ingredient({ name, quantity, unit }) {
   };
 
   return (
-    <>
+    <div className="ingredient">
       <img
         src={`/assets/images/ingredients/${name}.jpg`}
         alt={name}
-        style={{
-          width: size,
-          height: size,
-          borderRadius: size / 2,
-        }}
       />
       <p>
         {quantity} {unit} {writeGoodDeOrD(name)}
         {name}
         {singularOrPlural(quantity)}
       </p>
-    </>
+    </div>
   );
 }

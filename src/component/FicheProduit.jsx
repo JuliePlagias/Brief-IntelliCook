@@ -16,13 +16,13 @@ export default function FicheProduit({ recipes }) {
 
   return (
     <div className='ficheProduit'>
-      <h1>{recipe.name}</h1>
       <img
         src={`/assets/images/recettes/${recipe.name.toLowerCase()}.jpg`}
         alt={recipe.name}
-      />
+        />
+      <h1>{recipe.name}</h1>
       <h2>Ingrédients</h2>
-      <ul>
+      <ul className='ingredients'>
         {recipe.ingredients.map((ingredient, i) => (
           <li key={i}>
             <Ingredient
@@ -34,9 +34,9 @@ export default function FicheProduit({ recipes }) {
         ))}
       </ul>
       <h2>Etapes</h2>
-      <ul>
+      <ul className='steps'>
         {recipe.steps.map((step, i) => (
-          <li key={i}>{step}</li>
+          <li key={i}>Étape {i +1} <br></br>{step}</li>
         ))}
       </ul>
       <button onClick={() => navigate(-1)}>Retour</button>

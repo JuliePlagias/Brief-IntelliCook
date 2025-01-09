@@ -1,0 +1,16 @@
+$size : 90px;
+.ingredient{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+        width: $size;
+        height: $size;
+        border-radius: $size / 2;
+    }
+    p{
+        width: 150px;
+        text-align: center;
+        text-wrap: wrap;
+    }
+}
