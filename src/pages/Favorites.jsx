@@ -28,7 +28,9 @@ export default function Favorites() {
         Mes recettes favorites
       </h1>
       <p className='placeHolder' hidden={favorites.length>0}>
-        Vous n'avez pas encore de recettes favorites, parcourez notre catalogue pour trouver des recettes qui vous plaisent
+        Vous n'avez pas encore de recettes favorites.
+        <br />
+        Parcourez notre catalogue pour trouver des recettes qui vous plaisent.
       </p>
       <div className='recipes'>
         {favorites &&
