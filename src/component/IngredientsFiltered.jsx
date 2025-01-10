@@ -1,5 +1,10 @@
 import React from 'react';
 
+/**
+ * Affiche les ingrédients qui ont été ajoutés ou retirés depuis la dropdown
+ * @param {Object} filterIng
+ * @returns 
+ */
 const IngredientsFiltered = ({filterIng}) => {
     const {addedIngredientsList, removedIngredientsList, removeIngredientFromFilter} = filterIng;
 

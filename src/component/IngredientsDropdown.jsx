@@ -6,7 +6,7 @@ import ingredients from '../data/ingredients.json'
  * @param {string} search
  * @returns 
  */
-const IngredientsDropdown = ({search, filterIng}) => {
+const IngredientsDropdown = ({search, setSearch, filterIng}) => {
   const {filteredIngredients, addIngredient, addUndesirableIngredient} = filterIng;
   
   //Retourne la liste des ingrédients qui correspondent à la recherche sous l'input
@@ -23,14 +23,24 @@ const IngredientsDropdown = ({search, filterIng}) => {
     return newIngredientsList.length ? newIngredientsList : null;
   }
 
+  const handleAddIngredient = (ingredient) => {
+    addIngredient(ingredient)
+    setSearch('')
+  }
+
+  const handleAddUndesirableIngredient = (ingredient) => {
+    addUndesirableIngredient(ingredient)
+    setSearch('')
+  }
+
   return (findIngredients(search) && (
     <div className='ingredientsDropdown'>
       {findIngredients(search).slice(0,3).map((ingredient,i) => 
         <div key={i} className='ingredientsDropdown__content'>
           <span>{ingredient}</span>
           <div className="ingredientsDropdown__content__buttons">
-            <button onClick={() => addIngredient(ingredient)}>V</button>
-            <button onClick={() => addUndesirableIngredient(ingredient)}>X</button>
+            <button onClick={() => handleAddIngredient(ingredient)}>V</button>
+            <button onClick={() => handleAddUndesirableIngredient(ingredient)}>X</button>
           </div>
         </div>
       )}
