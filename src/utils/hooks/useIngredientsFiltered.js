@@ -1,5 +1,9 @@
 import { useState } from 'react'
 
+/**
+ * Permet de gérer les ingrédients qui ont été ajoutés ou retirés pendant la recherche
+ * @returns {Object} filteredIngredients, addIngredient, removeIngredient
+ */
 export function useIngredientsFiltered() {
   const [ingredientsList, setIngredientsList] = useState([])
   const [addedIngredientsList, setAddedIngredientsList] = useState([])
@@ -16,8 +20,8 @@ export function useIngredientsFiltered() {
   }
 
   return {
-    ingredientsList,
-    addedIngredientsList,
-    removedIngredientsList,
+    filteredIngredients: ingredientsList,
+    addIngredient: addIngredientToList,
+    removeIngredient: removeIngredientFromList,
   }
 }
