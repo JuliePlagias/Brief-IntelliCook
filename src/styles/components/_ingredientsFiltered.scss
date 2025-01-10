@@ -16,6 +16,7 @@
             border-radius: 25px;
             display: flex;
             &:hover {
+                transition: 0.1s;
                 filter: brightness(0.9);
             }
             span {

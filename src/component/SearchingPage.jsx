@@ -32,7 +32,7 @@ const SearchingPage = ({ titlePage }) => {
       {/* Faire apparaître les ingrédients filtrés s'il y en a */}
       {filterIng.filteredIngredients.length > 0 && <IngredientsFiltered filterIng={filterIng} />}
       {/* FIN ingrédients filtrés */}
-      <Recipes search={search} typeOfSearch={typeOfSearch} />
+      <Recipes search={search} typeOfSearch={typeOfSearch} filterIng={filterIng} />
     </div>
   )
 }

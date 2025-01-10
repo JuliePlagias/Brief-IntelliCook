@@ -7,11 +7,22 @@ import RecipeCard from './RecipeCard'
  * @param {string} search
  */
 
-const Recipes = ({ search, typeOfSearch }) => {
+const Recipes = ({ search, typeOfSearch, filterIng }) => {
+  const {addedIngredientsList, removedIngredientsList} = filterIng;
+
   const findRecipeByName = inputValue => {
-    return recettes.recipes.filter(recipe =>
+    //Filtrer les recettes dont le nom contient la recherche (recherche par défaut sans ingrédients ajoutés ou retirés)
+    const filteredRecipesByDefault = recettes.recipes.filter(recipe =>
       recipe.name.toLowerCase().includes(inputValue.toLowerCase())
-    )
+    );
+
+    //si addedIngredientsList est vide, retourner les recettes par défaut
+    if (addedIngredientsList.length === 0) return filteredRecipesByDefault;
+    //Filtrer les recettes dont les ingrédients indispensables sont présents
+    const filteredRecipesByAddedIngredients = filteredRecipesByDefault.filter((recipe) => recipe.ingredients.some(ing => addedIngredientsList.includes(ing.name))
+  );
+    //Puis, dégager les recettes dont les ingrédients non désirables sont présents
+    return filteredRecipesByAddedIngredients;
   }
 
   const findRecipeByIngredient = inputValue => recettes.recipes.filter(recipe => recipe.ingredients.some(ingredient => ingredient.name.toLowerCase().includes(inputValue.toLowerCase())))
