@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ingredients from '../data/ingredients.json'
+import { useIngredientsFiltered } from '../utils/hooks/useIngredientsFiltered';
 
 /**
  * Affiche la liste des ingrédients qui correspondent à la recherche sous l'input
@@ -7,20 +8,21 @@ import ingredients from '../data/ingredients.json'
  * @returns 
  */
 const IngredientsDropdown = ({search}) => {
+  const {filteredIngredients, addIngredient, removeIngredient} = useIngredientsFiltered();
   
-    //Retourne la liste des ingrédients qui correspondent à la recherche sous l'input
-    const findIngredients = (value) => {
-      if (!value) return null;
-  
-      const newIngredientsListTemp = Object.keys(ingredients).filter(key => {
-        return key.includes(value.toLowerCase());
-      });
-      if (newIngredientsListTemp.length === 0) return null;
-  
-      const newIngredientsList = newIngredientsListTemp.filter((newI) => !ingredientsList.includes(newI));
-  
-      return newIngredientsList.length ? newIngredientsList : null;
-    }
+  //Retourne la liste des ingrédients qui correspondent à la recherche sous l'input
+  const findIngredients = (value) => {
+    if (!value) return null;
+
+    const newIngredientsListTemp = Object.keys(ingredients).filter(key => {
+      return key.includes(value.toLowerCase());
+    });
+    if (newIngredientsListTemp.length === 0) return null;
+
+    const newIngredientsList = newIngredientsListTemp.filter((newI) => !filteredIngredients.includes(newI));
+
+    return newIngredientsList.length ? newIngredientsList : null;
+  }
 
   return (findIngredients(search) && (
     <div className='ingredientsDropdown'>
@@ -28,8 +30,8 @@ const IngredientsDropdown = ({search}) => {
         <div key={i} className='ingredientsDropdown__content'>
           <span>{ingredient}</span>
           <div className="ingredientsDropdown__content__buttons">
-            <button onClick={() => addIngredientToList(ingredient)}>V</button>
-            <button onClick={() => removeIngredientFromList(ingredient)}>X</button>
+            <button onClick={() => addIngredient(ingredient)}>V</button>
+            <button onClick={() => removeIngredient(ingredient)}>X</button>
           </div>
         </div>
       )}
