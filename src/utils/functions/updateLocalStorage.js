@@ -1,5 +1,5 @@
 /**
- * Fonction qui permet d'écouter les évènements globales
+ * Fonction qui permet d'écouter les évènements globaux
  * Permet notamment de gérer dynamiquement les states concernant le localStorage
  */
 

@@ -1,11 +1,13 @@
+import Ingredients from '../data/ingredients.json';
 
 export default function Ingredient({ name, quantity, unit }) {
   const writeGoodDeOrD = (ingredient) => {
-    const d = ["a", "e", "i", "o", "u", "y", "h"];
+    const d = ["a", "e", "i", "o", "u", "y", "h", "é"];
     return unit ? (d.find((l) => l === ingredient[0]) ? " d'" : " de ") : "";
   };
-  const singularOrPlural = (quantity) => {
-    return quantity > 1 ? "s" : "";
+  const singularOrPlural = (name,quantity) => {
+
+    return quantity > 1 ? Ingredients[name]:name;
   };
 
   return (
@@ -16,8 +18,7 @@ export default function Ingredient({ name, quantity, unit }) {
       />
       <p>
         {quantity} {unit} {writeGoodDeOrD(name)}
-        {name}
-        {singularOrPlural(quantity)}
+        {singularOrPlural(name,quantity)}
       </p>
     </div>
   );

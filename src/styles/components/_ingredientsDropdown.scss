@@ -3,9 +3,44 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  background: grey;
-  bottom: 0;
+  background: rgb(240, 240, 240,1);
+  border: 1px solid black;
+  border-radius: 35px;
+  min-height: 150px;
+  top: 0;
   left: 0;
   right: 0;
+  text-align: center;
+  border: none;
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
+  z-index: -1;
+  background: rgba(255, 255, 255, 0.8);
+  padding-bottom: 20px;
+  &__content {
+    &:first-child {
+      margin-top: 80px;
+    }
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    span {
+      margin-left: 20px;
+      font-size: 1.25rem;
+    }
+    &__buttons {
+      display: flex;
+      margin-right: 20px;
+      gap: 10px;
+      button {
+        border: 1px solid black;
+        cursor: pointer;
+        border-radius: 10px;
+        height: 35px;
+        width: 35px;
+      }
+    }
+  }
 }

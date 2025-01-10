@@ -22,6 +22,11 @@ const RecipeCard = ({ recipe }) => {
     setIsFavorite(!isFavorite)
   }
 
+  const timeInHour = (time) => {
+    const addZero = time % 60 < 10 ? '0' : '';
+    return `${Math.floor(time / 60)}h${Math.floor(time % 60)}${addZero}`;
+  }
+
   useEffect(() => {
     const displayFavorites = () => {
       const favorites = JSON.parse(localStorage.getItem('favorites')) || []
@@ -60,7 +65,7 @@ const RecipeCard = ({ recipe }) => {
           />
           <path fill='black' d='M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z' />
         </svg>
-        40 min
+        {recipe.time >= 60 ? timeInHour(recipe.time) : recipe.time + ' min'}
       </span>
       <div className='recipeCard__buttons'>
         <button className='recipeCard__buttons-add'>
