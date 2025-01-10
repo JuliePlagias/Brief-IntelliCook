@@ -1,18 +1,30 @@
+import {useState} from 'react';
 import Bloc from '../component/home/Bloc'
-import SearchingPage from '../component/SearchingPage'
-import RandomFavorites from '../component/RandomFavorites' 
+import SearchBar from '../component/SearchBar';
+import recettes from '../data/recipes.json';
+import RecipeCard from '../component/RecipeCard';
 
 /**
  * Page d'accueil
  */
 const Home = () => {
 
+   const [search, setSearch] = useState('');
+    const [searchType, setSearchType] = useState('name');
+
   return (
     <div className='home'>
-      <SearchingPage titlePage={'Accueil'} />
-      <h2>Quelques favoris</h2>
+      <SearchBar search={search} setSearch={setSearch} searchType={searchType} />
+      <div className="searchingPage__filters">
+        <span>Filtrer par : </span>
+        <input type="button" value="Nom de recette" onClick={() => setSearchType('name')} className={`filterButton ${searchType === 'name' ? 'filterButton--active' : ''}`} />
+
+        <input type="button" value="Ingrédients" onClick={() => setSearchType('ingredients')}  className={`filterButton ${searchType === 'ingredients' ? 'filterButton--active' : ''}`} />
+      </div>
+      
+      <h2>Des idées de recettes pour vous</h2>
       <div className='recipes'>
-        <RandomFavorites number={3}/>
+        {(recettes.recipes.slice(0, 4).map(recipe=>(<RecipeCard key={recipe.id} recipe={recipe}/>)))}
       </div>
       <Bloc />
     </div>

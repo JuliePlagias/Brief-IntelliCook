@@ -6,7 +6,7 @@ import IngredientsDropdown from './IngredientsDropdown'
  * Affiche la dropdown des ingrédients si une recherche par ingrédient est active
  * @returns {JSX.Element} Toutes les recettes sont affichées si rien n'est entré dans l'input.
  */
-const SearchBar = ({ search, setSearch, typeOfSearch }) => {
+const SearchBar = ({ search, setSearch, searchType }) => {
 
   return (
     <div id='search-bar'>
@@ -16,7 +16,7 @@ const SearchBar = ({ search, setSearch, typeOfSearch }) => {
         onChange={e => setSearch(e.target.value)}
         className='searchRecipe'
       />
-      {typeOfSearch === "ingredients" && <IngredientsDropdown search={search} />}
+      {searchType === "ingredients" && <IngredientsDropdown search={search} />}
       <img
         id='loupe'
         src='./assets/images/icons/loupe recherche.png'

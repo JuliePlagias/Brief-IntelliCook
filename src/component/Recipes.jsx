@@ -7,7 +7,7 @@ import RecipeCard from './RecipeCard'
  * @param {string} search
  */
 
-const Recipes = ({ search, typeOfSearch }) => {
+const Recipes = ({ search, searchType }) => {
   const findRecipeByName = inputValue => {
     return recettes.recipes.filter(recipe =>
       recipe.name.toLowerCase().includes(inputValue.toLowerCase())
@@ -18,13 +18,13 @@ const Recipes = ({ search, typeOfSearch }) => {
 
   return (
     <div className='recipes'>
-      {typeOfSearch === 'name' && findRecipeByName(search) &&
+      {searchType === 'name' && findRecipeByName(search) &&
         findRecipeByName(search).map((recipe, i) => {
           if (i < 12) {
             return <RecipeCard key={recipe.id} recipe={recipe} />
           }
         })}
-      {typeOfSearch === 'ingredients' && findRecipeByIngredient(search) &&
+      {searchType === 'ingredients' && findRecipeByIngredient(search) &&
         findRecipeByIngredient(search).map((recipe, i) => {
           if (i < 12) {
             return <RecipeCard key={recipe.id} recipe={recipe} />

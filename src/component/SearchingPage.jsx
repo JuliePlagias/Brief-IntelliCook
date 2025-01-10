@@ -9,24 +9,24 @@ import Recipes from './Recipes'
  */
 const SearchingPage = ({ titlePage }) => {
   const [search, setSearch] = useState('')
-  const [typeOfSearch, setTypeOfSearch] = useState('name')
+  const [searchType, setSearchType] = useState('name')
 
   const style =
     titlePage === 'Mes recettes favorites' ? 'searchingPage__favorites' : ''
 
   return (
     <div className='searchingPage'>
-      <SearchBar search={search} setSearch={setSearch} typeOfSearch={typeOfSearch} />
+      <SearchBar search={search} setSearch={setSearch} searchType={searchType} />
       {/* Filtres */}
       <div className="searchingPage__filters">
         <span>Filtrer par : </span>
-        <input type="button" value="Nom de recette" onClick={() => setTypeOfSearch('name')} className={`filterButton ${typeOfSearch === 'name' ? 'filterButton--active' : ''}`} />
+        <input type="button" value="Nom de recette" onClick={() => setSearchType('name')} className={`filterButton ${searchType === 'name' ? 'filterButton--active' : ''}`} />
 
-        <input type="button" value="Ingrédients" onClick={() => setTypeOfSearch('ingredients')}  className={`filterButton ${typeOfSearch === 'ingredients' ? 'filterButton--active' : ''}`} />
+        <input type="button" value="Ingrédients" onClick={() => setSearchType('ingredients')}  className={`filterButton ${searchType === 'ingredients' ? 'filterButton--active' : ''}`} />
       </div>
       {/* Fin filtres */}
       <h1 className={`searchingPage__title ${style}`}>{titlePage}</h1>
-      <Recipes search={search} typeOfSearch={typeOfSearch} />
+      {/* <Recipes search={search} searchType={searchType} /> */}
     </div>
   )
 }
