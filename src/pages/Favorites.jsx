@@ -21,13 +21,12 @@ export default function Favorites() {
       window.removeEventListener('favoritesUpdated', handleFavoritesUpdated)
     }
   }, [])
-
   return (
     <div className='favorites'>
       <h1 className={`searchingPage__title searchingPage__favorites`}>
         Mes recettes favorites
       </h1>
-      <p className='placeHolder' hidden={favorites.length>0}>
+      <p className={`placeHolder ${favorites.length>0? "notVisible":"visible"}`} >
         Vous n'avez pas encore de recettes favorites.
         <br />
         Parcourez notre catalogue pour trouver des recettes qui vous plaisent.
