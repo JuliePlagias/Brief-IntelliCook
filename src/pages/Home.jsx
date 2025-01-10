@@ -3,6 +3,7 @@ import Bloc from '../component/home/Bloc'
 import SearchBar from '../component/SearchBar';
 import recettes from '../data/recipes.json';
 import RecipeCard from '../component/RecipeCard';
+import { useIngredientsFiltered } from '../utils/hooks/useIngredientsFiltered';
 
 /**
  * Page d'accueil
@@ -11,10 +12,11 @@ const Home = () => {
 
    const [search, setSearch] = useState('');
     const [searchType, setSearchType] = useState('name');
+    const filterIng = useIngredientsFiltered();
 
   return (
     <div className='home'>
-      <SearchBar search={search} setSearch={setSearch} searchType={searchType} />
+      <SearchBar search={search} setSearch={setSearch} searchType={searchType} filterIng={filterIng}/>
       <div className="searchingPage__filters">
         <span>Filtrer par : </span>
         <input type="button" value="Nom de recette" onClick={() => setSearchType('name')} className={`filterButton ${searchType === 'name' ? 'filterButton--active' : ''}`} />
