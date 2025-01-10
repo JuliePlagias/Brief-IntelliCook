@@ -1,6 +1,5 @@
 import React from 'react';
 import ingredients from '../data/ingredients.json'
-import { useIngredientsFiltered } from '../utils/hooks/useIngredientsFiltered';
 
 /**
  * Affiche la liste des ingrédients qui correspondent à la recherche sous l'input

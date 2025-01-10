@@ -10,6 +10,7 @@ import {findRecipeByName, findRecipeByIngredient} from "../utils/functions/searc
 
 const Recipes = ({ search, searchType, filterIng }) => {
   const {addedIngredientsList, removedIngredientsList} = filterIng;
+  
   return (
     <div className='recipes'>
       {searchType === 'name' && findRecipeByName(search, addedIngredientsList, removedIngredientsList) &&
@@ -19,7 +20,7 @@ const Recipes = ({ search, searchType, filterIng }) => {
           }
         })}
       {searchType === 'ingredients' && findRecipeByIngredient(search, addedIngredientsList, removedIngredientsList) &&
-        findRecipeByIngredient(search).map((recipe, i) => {
+        findRecipeByIngredient(search, addedIngredientsList, removedIngredientsList).map((recipe, i) => {
           if (i < 12) {
             return <RecipeCard key={recipe.id} recipe={recipe} />
           }

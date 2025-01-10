@@ -30,7 +30,7 @@ const SearchingPage = ({ titlePage }) => {
       {/* Fin filtres */}
       <h1 className={`searchingPage__title ${style}`}>{titlePage}</h1>
       {/* Faire apparaître les ingrédients filtrés s'il y en a */}
-      {filterIng.filteredIngredients.length > 0 && <IngredientsFiltered filterIng={filterIng} />}
+      {filterIng.filteredIngredients.length > 0 && searchType === "ingredients" && <IngredientsFiltered filterIng={filterIng} />}
       {/* FIN ingrédients filtrés */}
       <Recipes search={search} searchType={searchType} filterIng={filterIng} />
     </div>
