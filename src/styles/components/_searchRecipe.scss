@@ -64,17 +64,17 @@
         outline: none;
       }
     }
-  }
-  #loupe {
-    position: absolute;
-    width: 45px;
-    height: 45px;
-    top: 45px;
-    right: 15px;
-    cursor: pointer;
-    &:hover {
-      transform: scale(1.1);
-      transition: 0.1s;
+    #loupe {
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      top: 45px;
+      right: 15px;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.1s;
+      }
     }
   }
 }
