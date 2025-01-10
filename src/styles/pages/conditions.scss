@@ -1,11 +1,11 @@
-// Variables pour les couleurs et la font 
+// Variables pour les couleurs et les styles
 $primary-color: #A3D9A5;
 $secondary-color: #555;
 $background-color: #f9f9f9;
 $border-color: #ddd;
-$font-family: 'Playfair';
+$font-family: 'Arial, sans-serif';
 
-
+// Breakpoints pour les appareils
 $breakpoint-mobile: 767px;
 $breakpoint-tablet: 1365px;
 $breakpoint-notebook: 1919px;
@@ -23,7 +23,6 @@ $breakpoint-desktop: 1920px;
         margin-bottom: 20px;
         text-align: center;
         color: $primary-color;
-        font-family: 'Aclonica';
     }
 
     .conditions-content {
@@ -61,7 +60,7 @@ $breakpoint-desktop: 1920px;
 }
 
 // Media Queries
-@media (max-width: 767px) {
+@media (max-width: $breakpoint-mobile) {
     .conditions-container {
         padding: 15px;
 
@@ -85,7 +84,7 @@ $breakpoint-desktop: 1920px;
     }
 }
 
-@media (min-width: 768px) and (max-width: $breakpoint-tablet) {
+@media (min-width: $breakpoint-mobile + 1) and (max-width: $breakpoint-tablet) {
     .conditions-container {
         padding: 20px;
 
@@ -109,7 +108,7 @@ $breakpoint-desktop: 1920px;
     }
 }
 
-@media (min-width: 1366px) and (max-width: $breakpoint-notebook) {
+@media (min-width: $breakpoint-tablet + 1) and (max-width: $breakpoint-notebook) {
     .conditions-container {
         padding: 30px;
 
@@ -133,7 +132,7 @@ $breakpoint-desktop: 1920px;
     }
 }
 
-@media (min-width: 1920px) and (max-width: 1919px) {
+@media (min-width: $breakpoint-notebook + 1) and (max-width: $breakpoint-desktop - 1) {
     .conditions-container {
         padding: 40px;
 
