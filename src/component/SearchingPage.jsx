@@ -26,7 +26,7 @@ const SearchingPage = ({ titlePage }) => {
       </div>
       {/* Fin filtres */}
       <h1 className={`searchingPage__title ${style}`}>{titlePage}</h1>
-      {/* <Recipes search={search} searchType={searchType} /> */}
+      <Recipes search={search} searchType={searchType} />
     </div>
   )
 }
