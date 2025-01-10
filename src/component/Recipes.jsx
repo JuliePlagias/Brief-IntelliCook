@@ -13,8 +13,8 @@ const Recipes = ({ search, searchType, filterIng }) => {
   
   return (
     <div className='recipes'>
-      {searchType === 'name' && findRecipeByName(search, addedIngredientsList, removedIngredientsList) &&
-        findRecipeByName(search, addedIngredientsList, removedIngredientsList).map((recipe, i) => {
+      {searchType === 'name' && findRecipeByName(search) &&
+        findRecipeByName(search).map((recipe, i) => {
           if (i < 12) {
             return <RecipeCard key={recipe.id} recipe={recipe} />
           }

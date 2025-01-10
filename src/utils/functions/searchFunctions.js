@@ -1,10 +1,6 @@
 import recettes from '../../data/recipes.json'
 
-export function findRecipeByName(
-  inputValue,
-  addedIngredientsList,
-  removedIngredientsList,
-) {
+export function findRecipeByName(inputValue) {
   return recettes.recipes.filter(recipe =>
     recipe.name.toLowerCase().includes(inputValue.toLowerCase()),
   )

@@ -3,7 +3,6 @@ import IngredientsDropdown from './IngredientsDropdown'
 
 /**
  * Affiche l'input qui gère la recherche des recettes ou des ingrédients
- * Affiche la dropdown des ingrédients si une recherche par ingrédient est active
  * @returns {JSX.Element} Toutes les recettes sont affichées si rien n'est entré dans l'input.
  */
 const SearchBar = ({ search, setSearch, searchType, filterIng }) => {
