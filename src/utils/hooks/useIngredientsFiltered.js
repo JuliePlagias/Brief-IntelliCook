@@ -26,9 +26,6 @@ export function useIngredientsFiltered() {
     )
     setAddedIngredientsList(addedIngredientsList.filter(i => i !== ingredient))
   }
-  console.log('ingredientsList : ', ingredientsList)
-  console.log('addedIngList : ', addedIngredientsList)
-  console.log('removeIngList : ', removedIngredientsList)
 
   return {
     filteredIngredients: ingredientsList,

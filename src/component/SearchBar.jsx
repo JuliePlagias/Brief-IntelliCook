@@ -16,7 +16,7 @@ const SearchBar = ({ search, setSearch, searchType, filterIng }) => {
         onChange={e => setSearch(e.target.value)}
         className='searchRecipe'
       />
-      {searchType === "ingredients" && <IngredientsDropdown search={search} setSearch={setSearch} filterIng={filterIng} />}
+      {searchType === "ingredients" && search.length > 0 && <IngredientsDropdown search={search} setSearch={setSearch} filterIng={filterIng} />}
       <img
         id='loupe'
         src='./assets/images/icons/loupe recherche.png'
