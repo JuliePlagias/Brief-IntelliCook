@@ -8,7 +8,7 @@ import { useIngredientsFiltered } from '../utils/hooks/useIngredientsFiltered';
  * @returns 
  */
 const IngredientsDropdown = ({search, filterIng}) => {
-  const {filteredIngredients, addIngredient, removeIngredient} = filterIng;
+  const {filteredIngredients, addIngredient, addUndesirableIngredient} = filterIng;
   
   //Retourne la liste des ingrédients qui correspondent à la recherche sous l'input
   const findIngredients = (value) => {
@@ -31,7 +31,7 @@ const IngredientsDropdown = ({search, filterIng}) => {
           <span>{ingredient}</span>
           <div className="ingredientsDropdown__content__buttons">
             <button onClick={() => addIngredient(ingredient)}>V</button>
-            <button onClick={() => removeIngredient(ingredient)}>X</button>
+            <button onClick={() => addUndesirableIngredient(ingredient)}>X</button>
           </div>
         </div>
       )}
