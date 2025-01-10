@@ -1,0 +1,181 @@
+// Variables pour les couleurs et les styles
+$primary-color: #A3D9A5;
+$secondary-color: #555;
+$background-color: #f9f9f9;
+$border-color: #ddd;
+$font-family: 'Arial, sans-serif';
+
+// Breakpoints pour les appareils
+$breakpoint-mobile: 767px;
+$breakpoint-tablet: 1365px;
+$breakpoint-notebook: 1919px;
+$breakpoint-desktop: 1920px;
+
+.conditions-container {
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: $font-family;
+    color: $primary-color;
+
+    .conditions-title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        text-align: center;
+        color: $primary-color;
+    }
+
+    .conditions-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .condition-item {
+            padding: 15px;
+            border: 1px solid $border-color;
+            border-radius: 8px;
+            background-color: $background-color;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+            .condition-title {
+                font-size: 1.2rem;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: $primary-color;
+            }
+
+            .condition-description {
+                font-size: 1rem;
+                line-height: 1.6;
+                color: $secondary-color;
+            }
+
+            &:hover {
+                background-color: lighten($background-color, 5%);
+                border-color: darken($border-color, 10%);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+}
+
+// Media Queries
+@media (max-width: $breakpoint-mobile) {
+    .conditions-container {
+        padding: 15px;
+
+        .conditions-title {
+            font-size: 1.5rem;
+        }
+
+        .conditions-content {
+            .condition-item {
+                padding: 10px;
+
+                .condition-title {
+                    font-size: 1rem;
+                }
+
+                .condition-description {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoint-mobile + 1) and (max-width: $breakpoint-tablet) {
+    .conditions-container {
+        padding: 20px;
+
+        .conditions-title {
+            font-size: 1.8rem;
+        }
+
+        .conditions-content {
+            .condition-item {
+                padding: 15px;
+
+                .condition-title {
+                    font-size: 1.1rem;
+                }
+
+                .condition-description {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoint-tablet + 1) and (max-width: $breakpoint-notebook) {
+    .conditions-container {
+        padding: 30px;
+
+        .conditions-title {
+            font-size: 2rem;
+        }
+
+        .conditions-content {
+            .condition-item {
+                padding: 20px;
+
+                .condition-title {
+                    font-size: 1.3rem;
+                }
+
+                .condition-description {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoint-notebook + 1) and (max-width: $breakpoint-desktop - 1) {
+    .conditions-container {
+        padding: 40px;
+
+        .conditions-title {
+            font-size: 2.2rem;
+        }
+
+        .conditions-content {
+            .condition-item {
+                padding: 25px;
+
+                .condition-title {
+                    font-size: 1.4rem;
+                }
+
+                .condition-description {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoint-desktop) {
+    .conditions-container {
+        padding: 50px;
+
+        .conditions-title {
+            font-size: 2.5rem;
+        }
+
+        .conditions-content {
+            .condition-item {
+                padding: 30px;
+
+                .condition-title {
+                    font-size: 1.5rem;
+                }
+
+                .condition-description {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
