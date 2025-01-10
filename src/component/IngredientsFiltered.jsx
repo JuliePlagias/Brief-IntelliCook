@@ -9,7 +9,7 @@ const IngredientsFiltered = ({filterIng}) => {
             <ul>
                 {removedIngredientsList.map(ingredient => (
                     <li key={ingredient.id}>
-                        {ingredient}
+                        <span>{ingredient}</span>
                         <button>X</button>
                     </li>
                 ))}
@@ -18,7 +18,7 @@ const IngredientsFiltered = ({filterIng}) => {
             <ul>
                 {addedIngredientsList.map(ingredient => (
                     <li key={ingredient.id}>
-                        {ingredient}
+                        <span>{ingredient}</span>
                         <button>X</button>
                     </li>
                 ))}
