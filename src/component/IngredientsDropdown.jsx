@@ -37,22 +37,14 @@ const IngredientsDropdown = ({search, setSearch, filterIng}) => {
     }
   }
 
-  const handleAddIngredient = (ingredient) => {
-    addIngredient(ingredient)
-  }
-
-  const handleAddUndesirableIngredient = (ingredient) => {
-    addUndesirableIngredient(ingredient)
-  }
-
   return (findIngredients(search) && openSlide && (
     <div className='ingredientsDropdown' ref={catMenu}>
       {findIngredients(search).map((ingredient,i) => 
         <div key={i} className='ingredientsDropdown__content'>
           <span>{ingredient}</span>
           <div className="ingredientsDropdown__content__buttons">
-            <button onClick={() => handleAddIngredient(ingredient)}>V</button>
-            <button onClick={() => handleAddUndesirableIngredient(ingredient)}>X</button>
+            <button onClick={() => addIngredient(ingredient)}>V</button>
+            <button onClick={() => addUndesirableIngredient(ingredient)}>X</button>
           </div>
         </div>
       )}
