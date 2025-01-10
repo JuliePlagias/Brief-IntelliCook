@@ -73,7 +73,7 @@
 
   &__time {
     margin: 0.5rem auto 1;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
     margin-top: 40px;
@@ -112,7 +112,7 @@
     }
 
     &-favorite {
-      width: 25px;
+      width: 30px;
       aspect-ratio: 1/1;
       margin-right: -120px;
       margin-top: -40px;
@@ -135,5 +135,8 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+  }
+  .recipeCard__buttons-favorite {
+    margin-right: -220px;
   }
 }
