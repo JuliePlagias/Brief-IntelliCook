@@ -2,7 +2,7 @@ import Ingredients from '../data/ingredients.json';
 
 export default function Ingredient({ name, quantity, unit }) {
   const writeGoodDeOrD = (ingredient) => {
-    const d = ["a", "e", "i", "o", "u", "y", "h"];
+    const d = ["a", "e", "i", "o", "u", "y", "h", "é"];
     return unit ? (d.find((l) => l === ingredient[0]) ? " d'" : " de ") : "";
   };
   const singularOrPlural = (name,quantity) => {
