@@ -39,12 +39,10 @@ const IngredientsDropdown = ({search, setSearch, filterIng}) => {
 
   const handleAddIngredient = (ingredient) => {
     addIngredient(ingredient)
-    setSearch('')
   }
 
   const handleAddUndesirableIngredient = (ingredient) => {
     addUndesirableIngredient(ingredient)
-    setSearch('')
   }
 
   return (findIngredients(search) && openSlide && (
