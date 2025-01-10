@@ -11,8 +11,42 @@
         flex-wrap: wrap;
         justify-content: center;
         font-size: 1.1rem;
-        &:first-child{
-            background: green;
+        li {
+            border: 1px solid silver;
+            border-radius: 25px;
+            display: flex;
+            &:hover {
+                filter: brightness(0.9);
+            }
+            span {
+                display: block;
+                padding: 10px;
+                padding-left: 15px;
+                padding-right: 5px;
+                user-select: none;
+                font-family: Plus Jakarta Sans;
+                color: black;
+                font-size: 1.25rem;
+            }
+            button {
+                cursor: pointer;
+                border-radius: 5px;
+                width: 35px;
+                &:hover {
+                    color: darkslategray;
+                    transform: scale(1.1);
+                }
+            }
+        }
+        &:first-of-type {
+            li {
+                background: indianred;
+            }
+        }
+        &:nth-of-type(2) {
+            li {
+                background: $green;
+            }
         }
     }
 }
