@@ -43,8 +43,8 @@ const IngredientsDropdown = ({search, setSearch, filterIng}) => {
         <div key={i} className='ingredientsDropdown__content'>
           <span>{ingredient}</span>
           <div className="ingredientsDropdown__content__buttons">
-            <button onClick={() => addIngredient(ingredient)}>V</button>
-            <button onClick={() => addUndesirableIngredient(ingredient)}>X</button>
+            <button onClick={() => addIngredient(ingredient)}>➕</button>
+            <button onClick={() => addUndesirableIngredient(ingredient)}>➖</button>
           </div>
         </div>
       )}
