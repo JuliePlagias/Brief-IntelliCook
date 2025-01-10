@@ -37,10 +37,10 @@ export default function FicheProduit({ recipes }) {
         <h2>Préparation</h2>
         <ul className='steps'>
           {recipe.steps.map((step, i) => (
-            <>
-              <li className='step'>Étape {i+1}</li>
-              <li className='step_content' key={i}>{step}</li>
-            </>
+            <li  key={i}>
+              <p className='step'>Étape {i+1}</p>
+              <p className='step_content'>{step}</p>
+            </li>
          ))}
         </ul>
       </div>
