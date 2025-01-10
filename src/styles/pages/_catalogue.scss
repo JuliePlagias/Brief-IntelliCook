@@ -1,21 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+.catalogue__title {
+  font-size: 40px;
+  font-family: 'Aclonica';
+  text-align: center;
+  height: 5rem;
+  margin-top: 2rem;
+}
 
-  .catalogue__title {
-    font-size: 40px;
-    font-family: 'Aclonica';
-    text-align: center;
-    height: 5rem;
-    margin-top: 2rem;
-  }
-
-  .recipes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-
+.recipes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
 
 .catalogue__footer {
   margin-top: 2rem;
@@ -40,8 +38,7 @@
   }
 }
 
-
-@media screen and (max-width: 1024px) {
+@media #{$tabletSize} {
   .catalogue {
     display: flex;
     flex-wrap: wrap;
