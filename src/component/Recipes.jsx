@@ -29,13 +29,13 @@ const Recipes = ({ search, typeOfSearch, filterIng }) => {
 
   return (
     <div className='recipes'>
-      {typeOfSearch === 'name' && findRecipeByName(search) &&
+      {searchType === 'name' && findRecipeByName(search) &&
         findRecipeByName(search).map((recipe, i) => {
           if (i < 12) {
             return <RecipeCard key={recipe.id} recipe={recipe} />
           }
         })}
-      {typeOfSearch === 'ingredients' && findRecipeByIngredient(search) &&
+      {searchType === 'ingredients' && findRecipeByIngredient(search) &&
         findRecipeByIngredient(search).map((recipe, i) => {
           if (i < 12) {
             return <RecipeCard key={recipe.id} recipe={recipe} />

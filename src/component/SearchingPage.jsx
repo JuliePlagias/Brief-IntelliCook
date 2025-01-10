@@ -23,9 +23,9 @@ const SearchingPage = ({ titlePage }) => {
       {/* Filtres */}
       <div className="searchingPage__filters">
         <span>Filtrer par : </span>
-        <input type="button" value="Nom de recette" onClick={() => setTypeOfSearch('name')} className={`filterButton ${typeOfSearch === 'name' ? 'filterButton--active' : ''}`} />
+        <input type="button" value="Nom de recette" onClick={() => setSearchType('name')} className={`filterButton ${searchType === 'name' ? 'filterButton--active' : ''}`} />
 
-        <input type="button" value="Ingrédients" onClick={() => setTypeOfSearch('ingredients')}  className={`filterButton ${typeOfSearch === 'ingredients' ? 'filterButton--active' : ''}`} />
+        <input type="button" value="Ingrédients" onClick={() => setSearchType('ingredients')}  className={`filterButton ${searchType === 'ingredients' ? 'filterButton--active' : ''}`} />
       </div>
       {/* Fin filtres */}
       <h1 className={`searchingPage__title ${style}`}>{titlePage}</h1>
