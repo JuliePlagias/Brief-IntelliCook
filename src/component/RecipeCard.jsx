@@ -22,9 +22,9 @@ const RecipeCard = ({ recipe }) => {
     setIsFavorite(!isFavorite)
   }
 
-  const timeInHour = (time) => {
-    const addZero = time % 60 < 10 ? '0' : '';
-    return `${Math.floor(time / 60)}h${Math.floor(time % 60)}${addZero}`;
+  const timeInHour = time => {
+    const addZero = time % 60 < 10 ? '0' : ''
+    return `${Math.floor(time / 60)}h${Math.floor(time % 60)}${addZero}`
   }
 
   useEffect(() => {
