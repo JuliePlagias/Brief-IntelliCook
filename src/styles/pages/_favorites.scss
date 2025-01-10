@@ -2,7 +2,12 @@
 .favorites {
   margin: auto 0;
   .placeHolder{
-    display: block;
+    &.visible{
+      display:block;
+    }
+    &.notVisible{
+      display: none;
+    }
     margin-top: 28vh;
     font-family: Playfair;
     font-size: 1.5rem;
