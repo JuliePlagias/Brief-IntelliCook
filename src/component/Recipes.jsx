@@ -7,7 +7,7 @@ import RecipeCard from './RecipeCard'
  * @param {string} search
  */
 
-const Recipes = ({ search, typeOfSearch, filterIng }) => {
+const Recipes = ({ search, searchType, filterIng }) => {
   const {addedIngredientsList, removedIngredientsList} = filterIng;
 
   const findRecipeByName = inputValue => {
