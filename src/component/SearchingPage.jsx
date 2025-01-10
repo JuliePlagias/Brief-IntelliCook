@@ -11,7 +11,7 @@ import IngredientsFiltered from './IngredientsFiltered';
  */
 const SearchingPage = ({ titlePage }) => {
   const [search, setSearch] = useState('')
-  const [typeOfSearch, setTypeOfSearch] = useState('name')
+  const [searchType, setSearchType] = useState('name')
   const filterIng = useIngredientsFiltered();
 
   const style =
@@ -19,7 +19,7 @@ const SearchingPage = ({ titlePage }) => {
 
   return (
     <div className='searchingPage'>
-      <SearchBar search={search} setSearch={setSearch} typeOfSearch={typeOfSearch} filterIng={filterIng} />
+      <SearchBar search={search} setSearch={setSearch} searchType={searchType} filterIng={filterIng} />
       {/* Filtres */}
       <div className="searchingPage__filters">
         <span>Filtrer par : </span>
@@ -32,7 +32,7 @@ const SearchingPage = ({ titlePage }) => {
       {/* Faire apparaître les ingrédients filtrés s'il y en a */}
       {filterIng.filteredIngredients.length > 0 && <IngredientsFiltered filterIng={filterIng} />}
       {/* FIN ingrédients filtrés */}
-      <Recipes search={search} typeOfSearch={typeOfSearch} filterIng={filterIng} />
+      <Recipes search={search} searchType={searchType} filterIng={filterIng} />
     </div>
   )
 }
