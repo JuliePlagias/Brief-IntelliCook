@@ -7,8 +7,8 @@ import { useIngredientsFiltered } from '../utils/hooks/useIngredientsFiltered';
  * @param {string} search
  * @returns 
  */
-const IngredientsDropdown = ({search}) => {
-  const {filteredIngredients, addIngredient, removeIngredient} = useIngredientsFiltered();
+const IngredientsDropdown = ({search, filterIng}) => {
+  const {filteredIngredients, addIngredient, removeIngredient} = filterIng;
   
   //Retourne la liste des ingrédients qui correspondent à la recherche sous l'input
   const findIngredients = (value) => {

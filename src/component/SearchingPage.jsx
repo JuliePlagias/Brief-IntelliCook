@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import SearchBar from './SearchBar'
 import Recipes from './Recipes'
+import { useIngredientsFiltered } from '../utils/hooks/useIngredientsFiltered';
+import IngredientsFiltered from './IngredientsFiltered';
 
 /**
  * Affiche l'input de recherche, le titre de la page et les recettes recherchées.
@@ -10,13 +12,14 @@ import Recipes from './Recipes'
 const SearchingPage = ({ titlePage }) => {
   const [search, setSearch] = useState('')
   const [typeOfSearch, setTypeOfSearch] = useState('name')
+  const filterIng = useIngredientsFiltered();
 
   const style =
     titlePage === 'Mes recettes favorites' ? 'searchingPage__favorites' : ''
 
   return (
     <div className='searchingPage'>
-      <SearchBar search={search} setSearch={setSearch} typeOfSearch={typeOfSearch} />
+      <SearchBar search={search} setSearch={setSearch} typeOfSearch={typeOfSearch} filterIng={filterIng} />
       {/* Filtres */}
       <div className="searchingPage__filters">
         <span>Filtrer par : </span>
@@ -26,6 +29,9 @@ const SearchingPage = ({ titlePage }) => {
       </div>
       {/* Fin filtres */}
       <h1 className={`searchingPage__title ${style}`}>{titlePage}</h1>
+      {/* Faire apparaître les ingrédients filtrés s'il y en a */}
+      {filterIng.filteredIngredients.length > 0 && <IngredientsFiltered filterIng={filterIng} />}
+      {/* FIN ingrédients filtrés */}
       <Recipes search={search} typeOfSearch={typeOfSearch} />
     </div>
   )

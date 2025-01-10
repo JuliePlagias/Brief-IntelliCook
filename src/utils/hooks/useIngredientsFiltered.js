@@ -18,9 +18,14 @@ export function useIngredientsFiltered() {
     setIngredientsList([...ingredientsList, ingredient])
     setRemovedIngredientsList([...removedIngredientsList, ingredient])
   }
+  console.log('ingredientsList : ', ingredientsList)
+  console.log('addedIngList : ', addedIngredientsList)
+  console.log('removeIngList : ', removedIngredientsList)
 
   return {
     filteredIngredients: ingredientsList,
+    addedIngredientsList,
+    removedIngredientsList,
     addIngredient: addIngredientToList,
     removeIngredient: removeIngredientFromList,
   }
