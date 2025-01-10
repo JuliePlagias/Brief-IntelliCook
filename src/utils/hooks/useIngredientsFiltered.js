@@ -9,14 +9,22 @@ export function useIngredientsFiltered() {
   const [addedIngredientsList, setAddedIngredientsList] = useState([])
   const [removedIngredientsList, setRemovedIngredientsList] = useState([])
 
-  const addIngredientToList = ingredient => {
+  const addIngredientsFromSearch = ingredient => {
     setIngredientsList([...ingredientsList, ingredient])
     setAddedIngredientsList([...addedIngredientsList, ingredient])
   }
 
-  const removeIngredientFromList = ingredient => {
+  const removeIngredientsFromSearch = ingredient => {
     setIngredientsList([...ingredientsList, ingredient])
     setRemovedIngredientsList([...removedIngredientsList, ingredient])
+  }
+
+  const removeIngredientFromFilter = ingredient => {
+    setIngredientsList(ingredientsList.filter(i => i !== ingredient))
+    setRemovedIngredientsList(
+      removedIngredientsList.filter(i => i !== ingredient),
+    )
+    setAddedIngredientsList(addedIngredientsList.filter(i => i !== ingredient))
   }
   console.log('ingredientsList : ', ingredientsList)
   console.log('addedIngList : ', addedIngredientsList)
@@ -26,7 +34,8 @@ export function useIngredientsFiltered() {
     filteredIngredients: ingredientsList,
     addedIngredientsList,
     removedIngredientsList,
-    addIngredient: addIngredientToList,
-    removeIngredient: removeIngredientFromList,
+    addIngredient: addIngredientsFromSearch,
+    addUndesirableIngredient: removeIngredientsFromSearch,
+    removeIngredientFromFilter,
   }
 }

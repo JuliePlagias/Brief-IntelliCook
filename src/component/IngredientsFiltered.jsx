@@ -1,25 +1,25 @@
 import React from 'react';
 
 const IngredientsFiltered = ({filterIng}) => {
-    const {addedIngredientsList, removedIngredientsList} = filterIng;
+    const {addedIngredientsList, removedIngredientsList, removeIngredientFromFilter} = filterIng;
 
     return (
         <div className='ingredients-filtered'>
-            <h2>Ingredients non désirables</h2>
+            {removedIngredientsList.length > 0 && <h2>Ingrédients non désirables</h2>}
             <ul>
                 {removedIngredientsList.map(ingredient => (
                     <li key={ingredient.id}>
                         <span>{ingredient}</span>
-                        <button>X</button>
+                        <button onClick={() => removeIngredientFromFilter(ingredient)}>X</button>
                     </li>
                 ))}
             </ul>
-            <h2>Ingredients ajoutés</h2>
+            {addedIngredientsList.length > 0 && <h2>Ingrédients indispensables</h2>}
             <ul>
                 {addedIngredientsList.map(ingredient => (
                     <li key={ingredient.id}>
                         <span>{ingredient}</span>
-                        <button>X</button>
+                        <button onClick={() => removeIngredientFromFilter(ingredient)}>X</button>
                     </li>
                 ))}
             </ul>
