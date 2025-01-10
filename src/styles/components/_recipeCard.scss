@@ -61,8 +61,9 @@
 
   &__name {
     text-align: center;
-    margin: 0.2rem auto 0;
+    margin: 0.2rem auto -0.2rem;
     font-weight: bold;
+    margin-top: 10px;
     height: 20px;
 
     &--small {
@@ -71,13 +72,15 @@
   }
 
   &__time {
-    margin: 0.5rem auto 0;
-    font-size: 0.8rem;
+    margin: 0.5rem auto 1;
+    font-size: 0.9rem;
     display: flex;
     align-items: center;
+    margin-top: 40px;
 
     svg {
       margin-right: 0.2rem;
+      color: green;
     }
   }
 
@@ -111,7 +114,8 @@
     &-favorite {
       width: 25px;
       aspect-ratio: 1/1;
-      margin-right: 10px;
+      margin-right: -120px;
+      margin-top: -40px;
 
       svg {
         color: darkred;
