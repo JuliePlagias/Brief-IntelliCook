@@ -16,7 +16,7 @@
   box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
   z-index: -1;
   background: rgba(255, 255, 255, 0.8);
-  padding-top: 90px;
+  padding-top: 80px;
   padding-bottom: 20px;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -45,6 +45,8 @@
         border-radius: 10px;
         height: 40px;
         width: 40px;
+        font-size: 1.5rem;
+        color: darkslategray;
         &:hover {
           transition: 0.2s;
           transform: scale(1.1);
