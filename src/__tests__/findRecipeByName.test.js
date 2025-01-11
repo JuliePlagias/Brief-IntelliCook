@@ -36,3 +36,11 @@ describe('findRecipeByName', () => {
     expect(result).toEqual(recettes.recipes)
   })
 })
+
+describe('findRecipeByName', () => {
+  it('should return no recipes (empty array)', () => {
+    const inputValue = 'zdqr'
+    const result = findRecipeByName(inputValue)
+    expect(result).toEqual([])
+  })
+})
