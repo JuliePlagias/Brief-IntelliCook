@@ -1,16 +1,11 @@
-function findRecipeByName(inputValue) {
-  return recettes.recipes.filter(recipe =>
-    recipe.name.toLowerCase().includes(inputValue.toLowerCase()),
-  )
-}
+import { findRecipeByName } from '../utils/functions/searchFunctions'
+import recettes from '../data/recipes.json'
 
-const RATATOUILLE = [require('../data/recipes.json').recipes[0]]
-
-const recettes = require('../data/recipes.json')
+const RATATOUILLE = [recettes.recipes[0]]
 
 const RATATOUILLE_AND_GRATIN_DAUPHINOIS = [
   { ...RATATOUILLE[0] },
-  { ...require('../data/recipes.json').recipes[2] },
+  { ...recettes.recipes[2] },
 ]
 
 describe('findRecipeByName', () => {

@@ -8,6 +8,7 @@ export function findRecipeByName(inputValue) {
 
 /**
  * Retourne les recettes qui correspondent aux ingrédients ajoutés ou retirés
+ * @returns {Array} recettes
  */
 export function findRecipeByIngredient(
   inputValue,
