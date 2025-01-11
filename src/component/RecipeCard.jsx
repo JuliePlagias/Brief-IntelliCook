@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { updateLocalStorage } from '../utils/functions/updateLocalStorage'
 import { Link } from 'react-router-dom'
+import Tooltip from './Tooltip'
 
 /**
  * Crée une carte de recette avec son image,son nom, le temps de cuisson, et les boutons "ajouter au panier" et "favoris"
@@ -9,6 +10,16 @@ import { Link } from 'react-router-dom'
  */
 const RecipeCard = ({ recipe }) => {
   const [isFavorite, setIsFavorite] = useState(false)
+  const [showTooltip, setShowTooltip] = useState(false); //Pour afficher la tooltip
+  const [hoverTimeout, setHoverTimeout] = useState(null);
+  
+  useEffect(() => {
+    const displayFavorites = () => {
+      const favorites = JSON.parse(localStorage.getItem('favorites')) || []
+      setIsFavorite(favorites.some(favorite => favorite.id === recipe.id))
+    }
+    displayFavorites()
+  }, [recipe.id])
 
   const handleFavoriteClick = () => {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || []
@@ -27,16 +38,20 @@ const RecipeCard = ({ recipe }) => {
     return `${Math.floor(time / 60)}h${Math.floor(time % 60)}${addZero}`
   }
 
-  useEffect(() => {
-    const displayFavorites = () => {
-      const favorites = JSON.parse(localStorage.getItem('favorites')) || []
-      setIsFavorite(favorites.some(favorite => favorite.id === recipe.id))
-    }
-    displayFavorites()
-  }, [recipe.id])
+  /*Gérer la tooltip*/
+  const handleMouseEnter = () => {
+    const timeout = setTimeout(() => { setShowTooltip(true) }, 1000);
+    setHoverTimeout(timeout);
+  }
+
+  const handleMouseLeave = () => {
+    clearTimeout(hoverTimeout);
+    setHoverTimeout(null);
+    setShowTooltip(false);
+  }
 
   return (
-    <div className='recipeCard'>
+    <div className='recipeCard' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <Link to={`/recipe/${recipe.name.toLowerCase()}`} key={recipe.id}>
         <div className='recipeCard__image'>
           <img
@@ -89,6 +104,7 @@ const RecipeCard = ({ recipe }) => {
           </svg>
         </button>
       </div>
+      {showTooltip && <Tooltip ingredients={recipe.ingredients.map(i => i.name)} />}
     </div>
   )
 }

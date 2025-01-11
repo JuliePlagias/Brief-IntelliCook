@@ -12,7 +12,10 @@ export default function FicheProduit({ recipes }) {
   const recipe = recipes.find(r => r.name.toLowerCase() === name)
   
   if (!recipe)
-    return <p className='ficheProduit--error'>Pas de recettes trouvée :(...</p>
+    return <div className='ficheProduit--error'>
+      <span>Oups ! Pas de recette trouvée 🐀</span>
+      <button onClick={() => navigate(-1)}>Retour</button>
+      </div>
 
   return (
     <div className='ficheProduit'>
