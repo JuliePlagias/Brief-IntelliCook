@@ -24,7 +24,6 @@ const IngredientsDropdown = ({search, setSearch, filterIng}) => {
   const findIngredients = (value) => {
     if (!value) return null;
     const newIngredientsListTemp = Object.keys(ingredients).filter(key =>  key.includes(value.toLowerCase()));
-    console.log(newIngredientsListTemp);
     
     if (newIngredientsListTemp.length === 0) return null;
     const newIngredientsList = newIngredientsListTemp.filter((newI) => !filteredIngredients.includes(newI));
