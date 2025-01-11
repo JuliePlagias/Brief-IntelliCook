@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   padding-bottom: 10px;
-  width: 340px;
+  width: min(70%, 340px);
   margin: 30px auto 0;
   z-index: 10;
   .searchRecipe {

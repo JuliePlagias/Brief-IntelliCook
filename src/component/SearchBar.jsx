@@ -11,7 +11,7 @@ const SearchBar = ({ search, setSearch, searchType, filterIng }) => {
     <div id='search-bar'>
       <input
         type='text'
-        placeholder='Ratatouille, poireaux, ...'
+        placeholder={`${searchType === 'name' ? 'Ratatouille, Soupe...' : searchType === 'ingredients' ? 'Aubergine, Tomate...' : 'Recherche...' }`}
         value={search}
         onChange={e => setSearch(e.target.value)}
         className='searchRecipe'
