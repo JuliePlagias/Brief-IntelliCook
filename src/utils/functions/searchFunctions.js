@@ -1,6 +1,6 @@
-import recettes from '../../data/recipes.json'
+const recettes = require('../../data/recipes.json')
 
-export function findRecipeByName(inputValue) {
+function findRecipeByName(inputValue) {
   return recettes.recipes.filter(recipe =>
     recipe.name.toLowerCase().includes(inputValue.toLowerCase()),
   )
@@ -10,7 +10,7 @@ export function findRecipeByName(inputValue) {
  * Retourne les recettes qui correspondent aux ingrédients ajoutés ou retirés
  * @returns {Array} recettes
  */
-export function findRecipeByIngredient(
+function findRecipeByIngredient(
   inputValue,
   addedIngredientsList,
   removedIngredientsList,
@@ -57,4 +57,9 @@ export function findRecipeByIngredient(
   )
 
   return finalFilteredRecipes
+}
+
+module.exports = {
+  findRecipeByName,
+  findRecipeByIngredient,
 }

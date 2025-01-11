@@ -2,7 +2,6 @@
   "name": "intelli-cook",
   "version": "0.1.0",
   "private": true,
-  "type":"module",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",
@@ -14,7 +13,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

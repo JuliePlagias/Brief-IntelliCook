@@ -1,5 +1,5 @@
-import { findRecipeByName } from '../utils/functions/searchFunctions'
-import recettes from '../data/recipes.json'
+const { findRecipeByName } = require('../utils/functions/searchFunctions')
+const recettes = require('../data/recipes.json')
 
 const RATATOUILLE = [recettes.recipes[0]]
 
