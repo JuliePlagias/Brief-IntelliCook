@@ -1,5 +1,4 @@
 import React from 'react'
-import recettes from '../data/recipes.json'
 import RecipeCard from './RecipeCard'
 import {findRecipeByName, findRecipeByIngredient} from "../utils/functions/searchFunctions";
 
@@ -19,8 +18,8 @@ const Recipes = ({ search, searchType, filterIng }) => {
             return <RecipeCard key={recipe.id} recipe={recipe} />
           }
         })}
-      {searchType === 'ingredients' && findRecipeByIngredient(search, addedIngredientsList, removedIngredientsList) &&
-        findRecipeByIngredient(search, addedIngredientsList, removedIngredientsList).map((recipe, i) => {
+      {searchType === 'ingredients' && findRecipeByIngredient(addedIngredientsList, removedIngredientsList) &&
+        findRecipeByIngredient(addedIngredientsList, removedIngredientsList).map((recipe, i) => {
           if (i < 12) {
             return <RecipeCard key={recipe.id} recipe={recipe} />
           }

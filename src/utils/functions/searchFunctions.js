@@ -10,11 +10,7 @@ function findRecipeByName(inputValue) {
  * Retourne les recettes qui correspondent aux ingrédients ajoutés ou retirés
  * @returns {Array} recettes
  */
-function findRecipeByIngredient(
-  search,
-  addedIngredientsList,
-  removedIngredientsList,
-) {
+function findRecipeByIngredient(addedIngredientsList, removedIngredientsList) {
   //Filtrer les recettes dont les ingrédients indispensables sont présents
   const filteredRecipesByAddedIngredients = recettes.recipes.filter(recipe => {
     // console.log('recette testé : ', recipe)
