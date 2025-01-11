@@ -27,11 +27,6 @@ function findRecipeByIngredient(addedIngredientsList, removedIngredientsList) {
     return true
   })
 
-  console.log(
-    'recherche par ingrédients ajoutés : ',
-    filteredRecipesByAddedIngredients,
-  )
-
   //Puis, dégager les recettes dont les ingrédients non désirables sont présents
   const finalFilteredRecipes = filteredRecipesByAddedIngredients.filter(
     recipe => {
@@ -47,7 +42,6 @@ function findRecipeByIngredient(addedIngredientsList, removedIngredientsList) {
       return true
     },
   )
-  console.log('résultat de la recherche : ', finalFilteredRecipes)
 
   return finalFilteredRecipes
 }
