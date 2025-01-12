@@ -15,4 +15,15 @@
     padding-right: 30px;
     text-align: center;
   }
+  &__title, &__favorites {
+    margin: 2rem auto;
+    text-align: center;
+    font-family: Aclonica;
+  }
+  &__title {
+    font-size: 30px;
+  }
+  &__favorites {
+    font-size: 22px;
+  }
 }

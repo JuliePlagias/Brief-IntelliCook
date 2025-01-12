@@ -1,7 +1,4 @@
-.searchingPage {
-  padding-top: 30px;
-  /* Filtres */
-  &__filters {
+.filters {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,19 +26,4 @@
         transition: 0.2s;
       }
     }
-  }
-  /* Fin filtres */
-  /* h1 */
-  &__title, &__favorites {
-    margin: 2rem auto;
-    text-align: center;
-    font-family: "aclonica";
-  }
-  &__title {
-    font-size: 30px;
-  }
-  &__favorites {
-    font-size: 22px;
-  }
-  /* fin h1 */
 }

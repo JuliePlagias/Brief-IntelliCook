@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 .catalogue {
-  .searchingPage {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
   margin: auto;
-  }
   .recipes {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
   }
+  /* Filtres */
 }
   .catalogue__title {
     font-size: 40px;

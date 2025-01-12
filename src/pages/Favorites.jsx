@@ -23,7 +23,7 @@ export default function Favorites() {
   }, [])
   return (
     <div className='favorites'>
-      <h1 className={`searchingPage__title searchingPage__favorites`}>
+      <h1 className={`favorites__title favorites__favorites`}>
         Mes recettes favorites
       </h1>
       <p className={`placeHolder ${favorites.length>0? "notVisible":"visible"}`} >
