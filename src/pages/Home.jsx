@@ -7,6 +7,7 @@ import { useIngredientsFiltered } from '../utils/hooks/useIngredientsFiltered';
 import Recipes from '../component/Recipes';
 import Filters from '../component/Filters';
 import IngredientsFiltered from '../component/IngredientsFiltered';
+import FavoritesRecipes from '../component/FavoritesRecipes';
 
 
 /**
@@ -17,6 +18,9 @@ const Home = () => {
    const [search, setSearch] = useState('');
     const [searchType, setSearchType] = useState('name');
     const filterIng = useIngredientsFiltered();
+    const [favorites, setFavorites] = useState(() =>
+        JSON.parse(localStorage.getItem('favorites') || '[]'),
+      )
 
   return (
     <div className='home'>
@@ -31,6 +35,8 @@ const Home = () => {
           <h2>Résultats de votre recherche</h2>
           <Recipes search={search} searchType={searchType} filterIng={filterIng} />
         </div>
+        <h2>Quelques Favoris</h2>
+          <FavoritesRecipes favorites={favorites} setFavorites={setFavorites}/>
         <h2>Des idées de recettes pour vous</h2>
         <div className='recommandation'> 
           {(recettes.recipes.slice(0, 4).map(recipe=>(<RecipeCard key={recipe.id} recipe={recipe}/>)))}
