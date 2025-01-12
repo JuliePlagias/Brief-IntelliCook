@@ -20,7 +20,9 @@ const Home = () => {
     const filterIng = useIngredientsFiltered();
     const [favorites, setFavorites] = useState(() =>
         JSON.parse(localStorage.getItem('favorites') || '[]'),
-      )
+    )
+
+    
 
   return (
     <div className='home'>
@@ -37,11 +39,11 @@ const Home = () => {
         </div>
         <div className={`favorites ${favorites.length>0? "visible":"notVisible"}`}>
           <h2>Quelques Favoris</h2>
-            <FavoritesRecipes favorites={favorites} setFavorites={setFavorites}/>
+            <FavoritesRecipes favorites={favorites} setFavorites={setFavorites} sliceNumber={4}/>
         </div>
         <h2>Des idées de recettes pour vous</h2>
         <div className='recipes'> 
-          {(recettes.recipes.slice(0, 4).map(recipe=>(<RecipeCard key={recipe.id} recipe={recipe}/>)))}
+          {(recettes.recipes.filter(recipe=>!favorites.some(fav => fav.id === recipe.id)).map(recipe=>(<RecipeCard key={recipe.id} recipe={recipe}/>))).slice(0, 4)}
         </div>
       </div>
       <Bloc />
