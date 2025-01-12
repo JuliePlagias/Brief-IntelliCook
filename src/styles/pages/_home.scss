@@ -9,10 +9,28 @@
   padding-top: 30px;
   margin: auto;
   &__recipes {
-    display: flex;
-    flex-wrap: wrap;
+    text-align: center;
     gap: 10px;
-    justify-content: center;
+    h2{
+      font-size: 20px;
+      font-family: 'Aclonica';
+      text-align: center;
+      height: 5rem;
+      margin-top: 2rem;
+    }
+    .recommandation{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .search{
+      &.visible{
+        display: block;
+      }
+      &.notVisible{
+        display: none;
+      }
+  }
   }
   /* Filtres */
   &__filters {

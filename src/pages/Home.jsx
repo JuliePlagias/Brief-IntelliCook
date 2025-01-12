@@ -23,11 +23,13 @@ const Home = () => {
       <Filters searchType={searchType} setSearchType={setSearchType}/>
       <h1 className={`home__title`}>Acceuil</h1>
       <div className='home__recipes'>
-        <div className={`${search.length>0?'visible':'notVisible'}`}>
+        <div className={`search ${search.length>0?'visible':'notVisible'}`}>
           <Recipes search={search} searchType={searchType} filterIng={filterIng} />
         </div>
         <h2>Des idées de recettes pour vous</h2>
-        {(recettes.recipes.slice(0, 4).map(recipe=>(<RecipeCard key={recipe.id} recipe={recipe}/>)))}
+        <div className='recommandation'> 
+          {(recettes.recipes.slice(0, 4).map(recipe=>(<RecipeCard key={recipe.id} recipe={recipe}/>)))}
+        </div>
       </div>
       <Bloc />
     </div>
