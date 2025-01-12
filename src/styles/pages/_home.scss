@@ -30,6 +30,16 @@
       &.notVisible{
         display: none;
       }
+
+    
+  }
+  .favorites{
+    &.visble{
+      display: block;
+    }
+    &.notVisible{
+      display: none;
+    }
   }
   }
   /* Filtres */
