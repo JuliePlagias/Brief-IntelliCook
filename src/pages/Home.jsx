@@ -38,7 +38,7 @@ const Home = () => {
         <h2>Quelques Favoris</h2>
           <FavoritesRecipes favorites={favorites} setFavorites={setFavorites}/>
         <h2>Des idées de recettes pour vous</h2>
-        <div className='recommandation'> 
+        <div className='recipes'> 
           {(recettes.recipes.slice(0, 4).map(recipe=>(<RecipeCard key={recipe.id} recipe={recipe}/>)))}
         </div>
       </div>
