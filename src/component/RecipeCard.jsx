@@ -10,7 +10,8 @@ import Tooltip from './Tooltip'
  */
 const RecipeCard = ({ recipe }) => {
   const [isFavorite, setIsFavorite] = useState(false)
-  const [showTooltip, setShowTooltip] = useState(false); //Pour afficher la tooltip
+   //Pour gérer la tooltip
+  const [showTooltip, setShowTooltip] = useState(false);
   const [hoverTimeout, setHoverTimeout] = useState(null);
   
   useEffect(() => {
@@ -51,7 +52,7 @@ const RecipeCard = ({ recipe }) => {
   }
 
   return (
-    <div className='recipeCard' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div className='recipeCard' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
       <Link to={`/recipe/${recipe.name.toLowerCase()}`} key={recipe.id}>
         <div className='recipeCard__image'>
           <img
