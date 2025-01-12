@@ -41,7 +41,7 @@ const RecipeCard = ({ recipe }) => {
 
   /*Gérer la tooltip*/
   const handleMouseEnter = () => {
-    const timeout = setTimeout(() => { setShowTooltip(true) }, 1000);
+    const timeout = setTimeout(() => { setShowTooltip(true) }, 1500);
     setHoverTimeout(timeout);
   }
 
