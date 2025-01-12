@@ -54,7 +54,7 @@ const RecipeCard = ({ recipe }) => {
   return (
     <div className='recipeCard' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
       <Link to={`/recipe/${recipe.name.toLowerCase()}`} key={recipe.id}>
-          {showTooltip && <Tooltip ingredients={recipe.ingredients.map(i => i.name)} />}
+        {showTooltip && <Tooltip ingredients={recipe.ingredients.map(i => i.name)} />}
         <div className='recipeCard__image'>
           <img
             src={`/assets/images/recettes/${recipe.name.toLowerCase()}.jpg`}
