@@ -54,20 +54,21 @@ const RecipeCard = ({ recipe }) => {
   return (
     <div className='recipeCard' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
       <Link to={`/recipe/${recipe.name.toLowerCase()}`} key={recipe.id}>
+          {showTooltip && <Tooltip ingredients={recipe.ingredients.map(i => i.name)} />}
         <div className='recipeCard__image'>
           <img
             src={`/assets/images/recettes/${recipe.name.toLowerCase()}.jpg`}
             alt={recipe.name}
-          />
+            />
         </div>
-      </Link>
       <h1
         className={`recipeCard__name ${
           recipe.name.length > 16 ? 'recipeCard__name--small' : ''
         }`}
-      >
+        >
         {recipe.name}
       </h1>
+        </Link>
       <span className='recipeCard__time'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -105,7 +106,6 @@ const RecipeCard = ({ recipe }) => {
           </svg>
         </button>
       </div>
-      {showTooltip && <Tooltip ingredients={recipe.ingredients.map(i => i.name)} />}
     </div>
   )
 }

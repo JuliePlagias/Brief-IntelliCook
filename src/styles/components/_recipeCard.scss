@@ -8,10 +8,13 @@
   padding: 0.75rem;
   display: flex;
   flex-direction: column;
-
   &:hover {
     transition: 0.2s;
     transform: scale(1.05);
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 
   &__image {
@@ -68,16 +71,15 @@
     height: 20px;
 
     &--small {
-      font-size: 0.85rem;
+      font-size: 1rem;
     }
   }
 
   &__time {
-    margin: 0.5rem auto 1;
     font-size: 1.2rem;
     display: flex;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 30px;
 
     svg {
       margin-right: 0.2rem;
