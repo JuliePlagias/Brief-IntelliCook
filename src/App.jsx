@@ -5,12 +5,13 @@ import Home from './pages/Home'
 import Catalogue from './pages/Catalogue'
 import Favorites from './pages/Favorites'
 import FicheProduit from './component/FicheProduit'
+import Footer from './component/home/Footer'
+import Error from './pages/Error'
 //styles
 import './styles/main.scss'
 //JSON
 import recettes from './data/recipes.json'
 import Conditions from './pages/Conditions'
-import Footer from './component/home/Footer'
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
                 path='recipe/:name'
                 element={<FicheProduit recipes={recettes.recipes} />}
                 />
+                <Route path='*' element={<Error />} />
             </Route>
           </Routes>
         </div>
