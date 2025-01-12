@@ -41,7 +41,7 @@ const Home = () => {
           <h2>Quelques Favoris</h2>
             <FavoritesRecipes favorites={favorites} setFavorites={setFavorites} sliceNumber={4}/>
         </div>
-        <h2>Des idées de recettes pour vous</h2>
+        <h2 className={`favorites ${favorites.length === recettes.recipes.length ? "notVisible":"visible"}`}>Des idées de recettes pour vous</h2>
         <div className='recipes'> 
           {(recettes.recipes.filter(recipe=>!favorites.some(fav => fav.id === recipe.id)).map(recipe=>(<RecipeCard key={recipe.id} recipe={recipe}/>))).slice(0, 4)}
         </div>
