@@ -2,3 +2,53 @@
   overflow: hidden;
   height: 100vh;
 }
+
+.home {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  margin: auto;
+  &__recipes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  /* Filtres */
+  &__filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      padding: 0 20px;
+      font-style: italic;
+    }
+    .filterButton {
+      padding: 10px 15px;
+      border-radius: 50px;
+      background: whitesmoke;
+      margin-right: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+      outline: none;
+      border: 1px solid grey;
+      &:hover {
+        filter: brightness(0.8);
+        transition: 0.2s;
+      }
+      &--active {
+        background: $iconsOrange;
+        color: white;
+        transition: 0.2s;
+      }
+    }
+  }
+  &__title{
+      font-size: 40px;
+      font-family: 'Aclonica';
+      text-align: center;
+      height: 5rem;
+      margin-top: 2rem;
+  }
+}

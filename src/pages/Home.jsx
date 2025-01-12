@@ -4,6 +4,9 @@ import SearchBar from '../component/SearchBar';
 import recettes from '../data/recipes.json';
 import RecipeCard from '../component/RecipeCard';
 import { useIngredientsFiltered } from '../utils/hooks/useIngredientsFiltered';
+import Recipes from '../component/Recipes';
+import Filters from '../component/Filters';
+
 
 /**
  * Page d'accueil
@@ -17,15 +20,13 @@ const Home = () => {
   return (
     <div className='home'>
       <SearchBar search={search} setSearch={setSearch} searchType={searchType} filterIng={filterIng}/>
-      <div className="searchingPage__filters">
-        <span>Filtrer par : </span>
-        <input type="button" value="Nom de recette" onClick={() => setSearchType('name')} className={`filterButton ${searchType === 'name' ? 'filterButton--active' : ''}`} />
-
-        <input type="button" value="Ingrédients" onClick={() => setSearchType('ingredients')}  className={`filterButton ${searchType === 'ingredients' ? 'filterButton--active' : ''}`} />
-      </div>
-      
-      <h2>Des idées de recettes pour vous</h2>
-      <div className='recipes'>
+      <Filters searchType={searchType} setSearchType={setSearchType}/>
+      <h1 className={`home__title`}>Acceuil</h1>
+      <div className='home__recipes'>
+        <div className={`${search.length>0?'visible':'notVisible'}`}>
+          <Recipes search={search} searchType={searchType} filterIng={filterIng} />
+        </div>
+        <h2>Des idées de recettes pour vous</h2>
         {(recettes.recipes.slice(0, 4).map(recipe=>(<RecipeCard key={recipe.id} recipe={recipe}/>)))}
       </div>
       <Bloc />
