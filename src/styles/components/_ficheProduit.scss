@@ -5,6 +5,7 @@
   align-items: center;
   gap: 15px;
   img {
+    margin-top: 30px;
     width: 200px;
     height: 150px;
     object-fit: cover;
@@ -92,6 +93,10 @@
 
 @media #{$tabletSize} {
   .ficheProduit {
+    img {
+      width: 400px;
+      height: 300px;
+    }
     .preparation {
       ul.steps {
         align-items: center;
@@ -107,6 +112,10 @@
 
 @media #{$desktopSize} {
   .ficheProduit {
+    img {
+      width: 400px;
+      height: 300px;
+    }
     .preparation {
       ul.steps {
         align-items: center;
