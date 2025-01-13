@@ -6,7 +6,6 @@ export default function DarkModeProvider({ children }) {
   const [darkMode, setDarkMode] = useState(false)
 
   function toggleDarkMode() {
-    console.log(darkMode)
     setDarkMode(!darkMode)
   }
   return (

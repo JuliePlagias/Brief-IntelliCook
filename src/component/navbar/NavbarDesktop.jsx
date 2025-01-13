@@ -16,7 +16,9 @@ export default function NavbarDesktop() {
             alt='Intelli Cook Logo'
           ></img>
         </Link>
-        <ToggleButton />
+        <div className='toggleButton'>
+          <ToggleButton />
+        </div>
         <div className='icons'>
           <Link to='/'>
             <svg

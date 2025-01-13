@@ -13,6 +13,11 @@
     height: 200px;
     width: 200px;
   }
+  .toggleButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
   .icons {
     display: flex;
     flex-direction: row;
@@ -48,5 +53,3 @@
     display: flex;
   }
 }
-
-

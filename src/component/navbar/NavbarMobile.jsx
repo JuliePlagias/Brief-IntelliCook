@@ -32,7 +32,9 @@ export default function NavbarMobile() {
             alt='Intelli Cook Logo'
           />
         </Link>
-        <ToggleButton />
+        <div className='toggleButton'>
+          <ToggleButton />
+        </div>
       </div>
       <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
       <MenuBurger isOpen={isOpen} setIsOpen={setIsOpen} />

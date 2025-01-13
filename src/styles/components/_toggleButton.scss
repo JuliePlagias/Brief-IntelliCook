@@ -1,0 +1,26 @@
+.toggle {
+  width: 35px;
+  height: 35px;
+  border: solid $iconsOrange;
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    width: 25px;
+    height: 25px;
+    color: $iconsOrange;
+  }
+  .moon {
+    display: none;
+    &.visible {
+      display: block;
+    }
+  }
+  .sun {
+    display: block;
+    &.notVisible {
+      display: none;
+    }
+  }
+}
