@@ -11,9 +11,6 @@ import { DarkModeContext } from './DarkModeProvider'
  */
 const RecipeCard = ({ recipe }) => {
   const [isFavorite, setIsFavorite] = useState(false)
-
-  //Pour gérer la tooltip
-  const [hoverTimeout, setHoverTimeout] = useState(null)
   const { darkMode } = useContext(DarkModeContext)
 
   useEffect(() => {
