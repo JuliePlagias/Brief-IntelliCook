@@ -1,10 +1,13 @@
 import { Link, Outlet } from 'react-router-dom'
+import { useContext } from 'react'
+import { DarkModeContext } from '../DarkModeProvider'
 
 export default function NavbarDesktop() {
+  const { darkMode } = useContext(DarkModeContext)
   const path = '/assets/images/icons/'
   return (
     <>
-      <div className='navBarDesktop'>
+      <div className={`navBarDesktop ${darkMode && 'navBarDark'}`}>
         <Link to={'/'}>
           <img
             className='logo'

@@ -2,9 +2,12 @@ import { useEffect, useState } from 'react'
 import MenuBurger from '../navbar/MenuBurger'
 import Burger from './Burger'
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { DarkModeContext } from '../DarkModeProvider'
 
 export default function NavbarMobile() {
   const [isOpen, setIsOpen] = useState(false)
+  const { darkMode } = useContext(DarkModeContext)
 
   useEffect(() => {
     const lockScroll = () => {
@@ -20,7 +23,7 @@ export default function NavbarMobile() {
   const path = '/assets/images/icons/'
   return (
     <>
-      <div className='navBarMobile'>
+      <div className={`navBarMobile ${darkMode && 'navBarDark'}`}>
         <Link to={'/'}>
           <img
             className='logo'
