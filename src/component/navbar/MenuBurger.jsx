@@ -1,4 +1,6 @@
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { DarkModeContext } from '../DarkModeProvider'
 
 /**
  * Menu avec les liens qui apparaît lorsqu'on clique sur l'icône burger
@@ -10,10 +12,15 @@ export default function MenuBurger({ isOpen, setIsOpen }) {
   const handleBurgerMenu = () => {
     setIsOpen(false)
   }
+  const { darkMode } = useContext(DarkModeContext)
 
   return (
-    <div className={`menuBurger ${isOpen ? 'appear' : 'disappear'}`}>
-      <Link to={"/"} onClick={handleBurgerMenu}>
+    <div
+      className={`menuBurger ${isOpen ? 'appear' : 'disappear'} ${
+        darkMode && 'menuBurgerDark'
+      }`}
+    >
+      <Link to={'/'} onClick={handleBurgerMenu}>
         <img
           className='logo'
           src='/assets/images/icons/logo.png'
@@ -23,7 +30,7 @@ export default function MenuBurger({ isOpen, setIsOpen }) {
       <ul className='list'>
         <li>
           <Link to='/' onClick={handleBurgerMenu}>
-            Acceuil
+            Accueil
           </Link>
         </li>
         <li>
