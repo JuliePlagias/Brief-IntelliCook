@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import ingredients from '../data/ingredients.json'
+import { DarkModeContext } from './DarkModeProvider'
 
 /**
  * Affiche la dropdownlist des ingrédients qui matchent avec la recherche de l'input
@@ -13,6 +14,7 @@ const IngredientsDropdown = ({ search, setSearch, filterIng }) => {
   const [openSlide, setOpenSlide] = useState(true) //menu ouvert dés qu'il est monté
   const { filteredIngredients, addIngredient, addUndesirableIngredient } =
     filterIng
+  const { darkMode } = useContext(DarkModeContext)
 
   useEffect(() => {
     const handleCloseMenu = e => {
@@ -45,7 +47,12 @@ const IngredientsDropdown = ({ search, setSearch, filterIng }) => {
   return (
     findIngredients(search) &&
     openSlide && (
-      <div className='ingredientsDropdown' ref={catMenu}>
+      <div
+        className={`ingredientsDropdown ${
+          darkMode && 'ingredientsDropdownDark'
+        }`}
+        ref={catMenu}
+      >
         {findIngredients(search).map((ingredient, i) => (
           <div key={i} className='ingredientsDropdown__content'>
             <span>{ingredient}</span>

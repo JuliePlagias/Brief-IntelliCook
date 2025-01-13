@@ -34,6 +34,12 @@ const Recipes = ({ search, searchType, filterIng, numberRecipes = 12 }) => {
           }
           return null
         })}
+      {findRecipeByIngredient(addedIngredientsList, removedIngredientsList)
+        .length === 0 && (
+        <h2 style={{ marginBottom: '2rem', color: 'grey' }}>
+          La recherche n'a donné aucun résultat...
+        </h2>
+      )}
     </div>
   )
 }
