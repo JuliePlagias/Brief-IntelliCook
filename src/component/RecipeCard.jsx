@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { updateLocalStorage } from '../utils/functions/updateLocalStorage'
 import { Link } from 'react-router-dom'
 import Tooltip from './Tooltip'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
 import Ingredient from './Ingredient'
+import { DarkModeContext } from './DarkModeProvider'
 
 /**
  * Crée une carte de recette avec son image,son nom, le temps de cuisson, et les boutons "ajouter au panier" et "favoris"
@@ -12,9 +13,11 @@ import Ingredient from './Ingredient'
  */
 const RecipeCard = ({ recipe }) => {
   const [isFavorite, setIsFavorite] = useState(false)
+
   //Pour gérer la tooltip
   const [showTooltip, setShowTooltip] = useState(false)
   const [hoverTimeout, setHoverTimeout] = useState(null)
+  const { darkMode } = useContext(DarkModeContext)
 
   useEffect(() => {
     const displayFavorites = () => {
@@ -60,16 +63,18 @@ const RecipeCard = ({ recipe }) => {
     console.log(str, ' : ', strRegex)
 
     return strRegex
+    clearTimeout(hoverTimeout)
+    setHoverTimeout(null)
+    setShowTooltip(false)
   }
 
   return (
     <div
-      className='recipeCard'
+      className={`recipeCard ${darkMode && 'recipeCardDark'}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <Link to={`/recipe/${recipe.name.toLowerCase()}`} key={recipe.id}>
-        {/* {showTooltip && <Tooltip ingredients={recipe.ingredients.map(i => i.name)} />} */}
         <a className={`${toCamelCase(recipe.name)}`}>
           <div className='recipeCard__image'>
             <img
@@ -101,6 +106,12 @@ const RecipeCard = ({ recipe }) => {
             })}
           </ul>
         </ReactTooltip>
+        <div className='recipeCard__image'>
+          <img
+            src={`/assets/images/recettes/${recipe.name.toLowerCase()}.jpg`}
+            alt={recipe.name}
+          />
+        </div>
         <h1
           className={`recipeCard__name ${
             recipe.name.length > 16 ? 'recipeCard__name--small' : ''
