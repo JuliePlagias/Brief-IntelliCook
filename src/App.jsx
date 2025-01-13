@@ -9,15 +9,16 @@ import Footer from './component/home/Footer'
 import Error from './pages/Error'
 //styles
 import './styles/main.scss'
+import 'react-tooltip/dist/react-tooltip.css'
 //JSON
 import recettes from './data/recipes.json'
 import Conditions from './pages/Conditions'
 
 export default function App() {
   return (
-    <div className="app-container">
+    <div className='app-container'>
       <BrowserRouter>
-        <div className="content">
+        <div className='content'>
           <Routes>
             <Route path='/' element={<Navbar />}>
               <Route index element={<Home />} />

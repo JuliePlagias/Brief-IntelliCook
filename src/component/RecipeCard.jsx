@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { updateLocalStorage } from '../utils/functions/updateLocalStorage'
 import { Link } from 'react-router-dom'
 import Tooltip from './Tooltip'
+import { Tooltip as ReactTooltip } from 'react-tooltip'
+import Ingredient from './Ingredient'
 
 /**
  * Crée une carte de recette avec son image,son nom, le temps de cuisson, et les boutons "ajouter au panier" et "favoris"
@@ -10,10 +12,10 @@ import Tooltip from './Tooltip'
  */
 const RecipeCard = ({ recipe }) => {
   const [isFavorite, setIsFavorite] = useState(false)
-   //Pour gérer la tooltip
-  const [showTooltip, setShowTooltip] = useState(false);
-  const [hoverTimeout, setHoverTimeout] = useState(null);
-  
+  //Pour gérer la tooltip
+  const [showTooltip, setShowTooltip] = useState(false)
+  const [hoverTimeout, setHoverTimeout] = useState(null)
+
   useEffect(() => {
     const displayFavorites = () => {
       const favorites = JSON.parse(localStorage.getItem('favorites')) || []
@@ -41,34 +43,72 @@ const RecipeCard = ({ recipe }) => {
 
   /*Gérer la tooltip*/
   const handleMouseEnter = () => {
-    const timeout = setTimeout(() => { setShowTooltip(true) }, 1500);
-    setHoverTimeout(timeout);
+    const timeout = setTimeout(() => {
+      setShowTooltip(true)
+    }, 1500)
+    setHoverTimeout(timeout)
   }
 
   const handleMouseLeave = () => {
-    clearTimeout(hoverTimeout);
-    setHoverTimeout(null);
-    setShowTooltip(false);
+    clearTimeout(hoverTimeout)
+    setHoverTimeout(null)
+    setShowTooltip(false)
+  }
+
+  const toCamelCase = str => {
+    const strRegex = str.replace(/[' ']/g, '-')
+    console.log(str, ' : ', strRegex)
+
+    return strRegex
   }
 
   return (
-    <div className='recipeCard' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
+    <div
+      className='recipeCard'
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <Link to={`/recipe/${recipe.name.toLowerCase()}`} key={recipe.id}>
-        {showTooltip && <Tooltip ingredients={recipe.ingredients.map(i => i.name)} />}
-        <div className='recipeCard__image'>
-          <img
-            src={`/assets/images/recettes/${recipe.name.toLowerCase()}.jpg`}
-            alt={recipe.name}
+        {/* {showTooltip && <Tooltip ingredients={recipe.ingredients.map(i => i.name)} />} */}
+        <a className={`${toCamelCase(recipe.name)}`}>
+          <div className='recipeCard__image'>
+            <img
+              src={`/assets/images/recettes/${recipe.name.toLowerCase()}.jpg`}
+              alt={recipe.name}
             />
-        </div>
-      <h1
-        className={`recipeCard__name ${
-          recipe.name.length > 16 ? 'recipeCard__name--small' : ''
-        }`}
+          </div>
+        </a>
+        <ReactTooltip
+          anchorSelect={`.${toCamelCase(recipe.name)}`}
+          place='top'
+          style={{
+            backgroundColor: 'white',
+            boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
+          }}
+          clickable
         >
-        {recipe.name}
-      </h1>
-        </Link>
+          <ul className='tooltip__content'>
+            {recipe.ingredients.map(ing => {
+              return (
+                <li className='tooltip__content__ingredient'>
+                  <Ingredient
+                    name={ing.name}
+                    quantity={ing.quantity}
+                    unit={ing.unit}
+                  />
+                </li>
+              )
+            })}
+          </ul>
+        </ReactTooltip>
+        <h1
+          className={`recipeCard__name ${
+            recipe.name.length > 16 ? 'recipeCard__name--small' : ''
+          }`}
+        >
+          {recipe.name}
+        </h1>
+      </Link>
       <span className='recipeCard__time'>
         <svg
           xmlns='http://www.w3.org/2000/svg'

@@ -1,41 +1,45 @@
 .tooltip {
-    position: fixed;
-    animation: fadeIn 0.5s;
-    transition: 1s;
+  position: fixed;
+  animation: fadeIn 0.5s;
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgb(54, 14, 0);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 5px 10px;
+  z-index: 1000;
+  overflow-y: scroll;
+  max-height: 200px;
+  width: 90%;
+  font-family: Aclonica;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  left: 5%;
+  top: -10%;
+  h2 {
+    margin: 8px 0;
+  }
+  &__content {
     display: flex;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: rgb(54, 14, 0);
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 5px 10px;
-    z-index: 1000;
-    overflow-y: scroll;
+    gap: 5px;
     max-height: 200px;
-    width: 90%;
-    font-family: Aclonica;
-    box-sizing:border-box;
-    overflow-x: hidden;
-    h2 {
-        margin: 8px 0;
+    overflow-y: scroll;
+    color: black;
+    li {
+      font-size: 1.2rem;
+      font-family: Fairplay;
     }
-    &__content {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        li {
-            font-size: 1.2rem;
-            font-family: Fairplay;
-        }
-    }
+  }
 }
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-    
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

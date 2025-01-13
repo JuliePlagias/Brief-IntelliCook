@@ -6,15 +6,14 @@ import { Link } from 'react-router-dom'
 export default function NavbarMobile() {
   const [isOpen, setIsOpen] = useState(false)
 
-  const lockScroll = () => {
-    if (isOpen) {
-      document.body.classList.add('lockScroll')
-    } else {
-      document.body.classList.remove('lockScroll')
-    }
-  }
-
   useEffect(() => {
+    const lockScroll = () => {
+      if (isOpen) {
+        document.body.classList.add('lockScroll')
+      } else {
+        document.body.classList.remove('lockScroll')
+      }
+    }
     lockScroll()
   }, [isOpen])
 

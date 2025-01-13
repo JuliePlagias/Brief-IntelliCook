@@ -1,6 +1,9 @@
 import React from 'react'
 import RecipeCard from './RecipeCard'
-import {findRecipeByName, findRecipeByIngredient} from "../utils/functions/searchFunctions";
+import {
+  findRecipeByName,
+  findRecipeByIngredient,
+} from '../utils/functions/searchFunctions'
 
 /**
  * Mappe toutes les recettes trouvées à partir de la recherche search
@@ -8,21 +11,28 @@ import {findRecipeByName, findRecipeByIngredient} from "../utils/functions/searc
  */
 
 const Recipes = ({ search, searchType, filterIng }) => {
-  const {addedIngredientsList, removedIngredientsList} = filterIng;
-  
+  const { addedIngredientsList, removedIngredientsList } = filterIng
+
   return (
     <div className='recipes'>
-      {searchType === 'name' && findRecipeByName(search) &&
+      {searchType === 'name' &&
+        findRecipeByName(search) &&
         findRecipeByName(search).map((recipe, i) => {
           if (i < 12) {
             return <RecipeCard key={recipe.id} recipe={recipe} />
           }
+          return null
         })}
-      {searchType === 'ingredients' && findRecipeByIngredient(addedIngredientsList, removedIngredientsList) &&
-        findRecipeByIngredient(addedIngredientsList, removedIngredientsList).map((recipe, i) => {
+      {searchType === 'ingredients' &&
+        findRecipeByIngredient(addedIngredientsList, removedIngredientsList) &&
+        findRecipeByIngredient(
+          addedIngredientsList,
+          removedIngredientsList,
+        ).map((recipe, i) => {
           if (i < 12) {
             return <RecipeCard key={recipe.id} recipe={recipe} />
           }
+          return null
         })}
     </div>
   )
