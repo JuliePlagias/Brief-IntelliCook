@@ -1,8 +1,11 @@
-import {useEffect } from "react";
-import RecipeCard from "./RecipeCard";
+import { useEffect } from 'react'
+import RecipeCard from './RecipeCard'
 
-export default function FavoritesRecipes({favorites, setFavorites, sliceNumber = favorites.length}){
-
+export default function FavoritesRecipes({
+  favorites,
+  setFavorites,
+  sliceNumber = favorites.length,
+}) {
   //Aller chercher les recettes favorites dans le localStorage
   useEffect(() => {
     const handleFavoritesUpdated = e => {
@@ -13,12 +16,14 @@ export default function FavoritesRecipes({favorites, setFavorites, sliceNumber =
     return () => {
       window.removeEventListener('favoritesUpdated', handleFavoritesUpdated)
     }
-  }, [])
+  }, [setFavorites])
 
-    return (<div className="recipes">
-        {favorites &&
-          favorites.map(recipe => (
-            <RecipeCard key={recipe.id} recipe={recipe} />
-          )).slice(0, sliceNumber)}
-    </div>);
+  return (
+    <div className='recipes'>
+      {favorites &&
+        favorites
+          .map(recipe => <RecipeCard key={recipe.id} recipe={recipe} />)
+          .slice(0, sliceNumber)}
+    </div>
+  )
 }
