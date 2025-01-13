@@ -27,8 +27,8 @@ export default function App() {
               <Route
                 path='recipe/:name'
                 element={<FicheProduit recipes={recettes.recipes} />}
-                />
-                <Route path='*' element={<Error />} />
+              />
+              <Route path='*' element={<Error />} />
             </Route>
           </Routes>
         </div>
