@@ -60,6 +60,8 @@
       border-radius: 25px;
       object-fit: cover;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      position: relative;
+      z-index: 0;
     }
   }
 

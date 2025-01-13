@@ -59,8 +59,6 @@ const RecipeCard = ({ recipe }) => {
 
   const toCamelCase = str => {
     const strRegex = str.replace(/[' ']/g, '-')
-    console.log(str, ' : ', strRegex)
-
     return strRegex
     clearTimeout(hoverTimeout)
     setHoverTimeout(null)
@@ -73,15 +71,18 @@ const RecipeCard = ({ recipe }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <Link to={`/recipe/${recipe.name.toLowerCase()}`} key={recipe.id}>
-        <a className={`${toCamelCase(recipe.name)}`}>
-          <div className='recipeCard__image'>
-            <img
-              src={`/assets/images/recettes/${recipe.name.toLowerCase()}.jpg`}
-              alt={recipe.name}
-            />
-          </div>
-        </a>
+      <Link
+        to={`/recipe/${recipe.name.toLowerCase()}`}
+        key={recipe.id}
+        className={`${toCamelCase(recipe.name)}`}
+      >
+        {/* {showTooltip && <Tooltip ingredients={recipe.ingredients.map(i => i.name)} />} */}
+        <div className='recipeCard__image'>
+          <img
+            src={`/assets/images/recettes/${recipe.name.toLowerCase()}.jpg`}
+            alt={recipe.name}
+          />
+        </div>
         <ReactTooltip
           anchorSelect={`.${toCamelCase(recipe.name)}`}
           place='top'
@@ -92,9 +93,9 @@ const RecipeCard = ({ recipe }) => {
           clickable
         >
           <ul className='tooltip__content'>
-            {recipe.ingredients.map(ing => {
+            {recipe.ingredients.map((ing, i) => {
               return (
-                <li className='tooltip__content__ingredient'>
+                <li className='tooltip__content__ingredient' key={i}>
                   <Ingredient
                     name={ing.name}
                     quantity={ing.quantity}
