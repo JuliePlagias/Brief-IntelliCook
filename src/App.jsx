@@ -13,10 +13,13 @@ import 'react-tooltip/dist/react-tooltip.css'
 //JSON
 import recettes from './data/recipes.json'
 import Conditions from './pages/Conditions'
+import { useContext } from 'react'
+import { DarkModeContext } from './component/DarkModeProvider'
 
 export default function App() {
+  const { darkMode } = useContext(DarkModeContext)
   return (
-    <div className='app-container'>
+    <div className={`app-container ${darkMode && 'dark-theme'}`}>
       <BrowserRouter>
         <div className='content'>
           <Routes>
