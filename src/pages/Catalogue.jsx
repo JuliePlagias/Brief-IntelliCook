@@ -1,16 +1,18 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import SearchBar from '../component/SearchBar'
 import IngredientsFiltered from '../component/IngredientsFiltered'
 import Recipes from '../component/Recipes'
 import { useIngredientsFiltered } from '../utils/hooks/useIngredientsFiltered'
 import Filters from '../component/Filters'
 import recettes from '../data/recipes.json'
+import { DarkModeContext } from '../component/DarkModeProvider'
 
 const Catalogue = () => {
   const [search, setSearch] = useState('')
   const [searchType, setSearchType] = useState('name')
   const [numberRecipes, setNumberRecipes] = useState(12)
   const filterIng = useIngredientsFiltered()
+  const { darkMode } = useContext(DarkModeContext)
 
   return (
     <div className='catalogue'>
@@ -38,7 +40,7 @@ const Catalogue = () => {
       />
       {numberRecipes < recettes.recipes.length && (
         <button
-          className='catalogue__button'
+          className={`catalogue__button ${darkMode && 'buttonDark'}`}
           onClick={() => setNumberRecipes(numberRecipes + 12)}
         >
           Afficher + de recettes
