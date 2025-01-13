@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { updateLocalStorage } from '../utils/functions/updateLocalStorage'
 import { Link } from 'react-router-dom'
-import Tooltip from './Tooltip'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
 import Ingredient from './Ingredient'
 import { DarkModeContext } from './DarkModeProvider'
@@ -106,12 +105,6 @@ const RecipeCard = ({ recipe }) => {
             })}
           </ul>
         </ReactTooltip>
-        <div className='recipeCard__image'>
-          <img
-            src={`/assets/images/recettes/${recipe.name.toLowerCase()}.jpg`}
-            alt={recipe.name}
-          />
-        </div>
         <h1
           className={`recipeCard__name ${
             recipe.name.length > 16 ? 'recipeCard__name--small' : ''
