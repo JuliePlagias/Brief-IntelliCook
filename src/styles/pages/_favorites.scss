@@ -1,0 +1,29 @@
+// useless pour l'instant
+.favorites {
+  margin: auto 0;
+  .placeHolder{
+    &.visible{
+      display:block;
+    }
+    &.notVisible{
+      display: none;
+    }
+    margin-top: 28vh;
+    font-family: Playfair;
+    font-size: 1.5rem;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+  }
+  &__title, &__favorites {
+    margin: 2rem auto;
+    text-align: center;
+    font-family: Aclonica;
+  }
+  &__title {
+    font-size: 30px;
+  }
+  &__favorites {
+    font-size: 22px;
+  }
+}

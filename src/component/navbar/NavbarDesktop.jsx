@@ -5,11 +5,13 @@ export default function NavbarDesktop() {
   return (
     <>
       <div className='navBarDesktop'>
-        <img
-          className='logo'
-          src={`${path}logo.png`}
-          alt='Intelli Cook Logo'
-        ></img>
+        <Link to={'/'}>
+          <img
+            className='logo'
+            src={`${path}logo.png`}
+            alt='Intelli Cook Logo'
+          ></img>
+        </Link>
         <div className='icons'>
           <Link to='/'>
             <svg

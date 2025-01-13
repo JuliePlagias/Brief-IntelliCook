@@ -13,11 +13,13 @@ export default function MenuBurger({ isOpen, setIsOpen }) {
 
   return (
     <div className={`menuBurger ${isOpen ? 'appear' : 'disappear'}`}>
-      <img
-        className='logo'
-        src='/assets/images/icons/logo.png'
-        alt='Intelli Cook Logo'
-      ></img>
+      <Link to={"/"} onClick={handleBurgerMenu}>
+        <img
+          className='logo'
+          src='/assets/images/icons/logo.png'
+          alt='Intelli Cook Logo'
+        />
+      </Link>
       <ul className='list'>
         <li>
           <Link to='/' onClick={handleBurgerMenu}>

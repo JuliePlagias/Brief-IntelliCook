@@ -1,0 +1,26 @@
+.error {
+    @include verticalCenter;
+    font-family: Playfair;
+    font-size: 2rem;
+    color: indianred;
+    user-select: none;
+    gap: 50px;
+    flex-direction: column;
+    height: 80vh;
+    button {
+        border: 1px solid $iconsOrange;
+        cursor: pointer;
+        border-radius: 15px;
+        padding: 10px 15px;
+        color: $iconsOrange;
+        font-family: Playfair;
+        font-size: 1.2rem;
+        background-color: whitesmoke;
+        transition: 0.2s;
+        &:hover {
+            transition: 0.2s;
+            background-color: $iconsOrange;
+            color: white;
+        }
+    }
+}

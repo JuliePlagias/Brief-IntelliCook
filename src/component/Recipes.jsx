@@ -1,26 +1,31 @@
-import React from "react";
-import recettes from "../data/recipes.json";
-import RecipeCard from "./RecipeCard";
+import React from 'react'
+import RecipeCard from './RecipeCard'
+import {findRecipeByName, findRecipeByIngredient} from "../utils/functions/searchFunctions";
 
-const Recipes = ({ search }) => {
-  const findRecipe = (recipeName) => {
-    return recettes.recipes.filter((recipe) =>
-      recipe.name.toLowerCase().includes(recipeName.toLowerCase())
-    );
-  };
+/**
+ * Mappe toutes les recettes trouvées à partir de la recherche search
+ * @param {string} search
+ */
 
-  console.log(findRecipe("Salade composée"));
-
+const Recipes = ({ search, searchType, filterIng }) => {
+  const {addedIngredientsList, removedIngredientsList} = filterIng;
+  
   return (
-    <div className="recipes">
-      {findRecipe(search) &&
-        findRecipe(search).map((recipe, i) => {
+    <div className='recipes'>
+      {searchType === 'name' && findRecipeByName(search) &&
+        findRecipeByName(search).map((recipe, i) => {
           if (i < 12) {
-            return <RecipeCard key={recipe.id} recipe={recipe} />;
+            return <RecipeCard key={recipe.id} recipe={recipe} />
+          }
+        })}
+      {searchType === 'ingredients' && findRecipeByIngredient(addedIngredientsList, removedIngredientsList) &&
+        findRecipeByIngredient(addedIngredientsList, removedIngredientsList).map((recipe, i) => {
+          if (i < 12) {
+            return <RecipeCard key={recipe.id} recipe={recipe} />
           }
         })}
     </div>
-  );
-};
+  )
+}
 
-export default Recipes;
+export default Recipes

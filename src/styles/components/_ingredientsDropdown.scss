@@ -1,0 +1,68 @@
+/* enfant de #search-bar */
+.ingredientsDropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: rgb(240, 240, 240,1);
+  border: 1px solid black;
+  border-radius: 35px;
+  min-height: 50px;
+  max-height: 230px;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  border: none;
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
+  z-index: -1;
+  background: rgba(255, 255, 255, 0.8);
+  padding-top: 80px;
+  padding-bottom: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  &__content {
+    padding: 0 auto 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+    width: 100%;
+    user-select: none;
+    &:hover {
+      background: silver;
+    }
+    span {
+      margin-left: 20px;
+      font-size: 1.25rem;
+    }
+    &__buttons {
+      display: flex;
+      margin-right: 20px;
+      gap: 10px;
+      button {
+        cursor: pointer;
+        box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        height: 40px;
+        width: 40px;
+        font-size: 1.5rem;
+        color: darkslategray;
+        &:hover {
+          transition: 0.2s;
+          transform: scale(1.1);
+          filter: brightness(1.2);
+        }
+        &:active {
+          transition: 0.05s;
+          transform: scale(0.9);
+        }
+        &:first-child {
+          background: $green;
+        }
+        &:nth-child(2) {
+          background: indianred;
+        }
+      }
+    }
+  }
+}

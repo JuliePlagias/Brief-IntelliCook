@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Ratatouille",
-      "img": "",
+      "time": "30",
       "ingredients": [
         { "name": "courgette", "quantity": 2 },
         { "name": "aubergine", "quantity": 1 },
@@ -17,7 +17,7 @@
           "unit": "c à soupe"
         },
         {
-          "name": "herbe de Provence",
+          "name": "herbes de Provence",
           "quantity": 1,
           "unit": "c à café"
         },
@@ -35,7 +35,7 @@
     {
       "id": 2,
       "name": "Soupe de légumes",
-      "img": "",
+      "time": "30",
       "ingredients": [
         { "name": "carotte", "quantity": 3 },
         { "name": "pomme de terre", "quantity": 2 },
@@ -55,7 +55,7 @@
     {
       "id": 3,
       "name": "Gratin dauphinois",
-      "img": "",
+      "time": "75",
       "ingredients": [
         { "name": "pomme de terre", "quantity": 1, "unit": "kg" },
         { "name": "crème fraîche", "quantity": 200, "unit": "ml" },
@@ -74,7 +74,7 @@
     {
       "id": 4,
       "name": "Quiche aux légumes",
-      "img": "",
+      "time": "60",
       "ingredients": [
         { "name": "pâte brisée", "quantity": 1 },
         { "name": "œuf", "quantity": 2 },
@@ -94,7 +94,7 @@
     {
       "id": 5,
       "name": "Poulet au curry",
-      "img": "",
+      "time": "90",
       "ingredients": [
         { "name": "poulet", "quantity": 400, "unit": "g" },
         { "name": "lait de coco", "quantity": 400, "unit": "ml" },
@@ -113,7 +113,7 @@
     {
       "id": 6,
       "name": "Salade composée",
-      "img": "salade composée",
+      "time": "15",
       "ingredients": [
         { "name": "tomate", "quantity": 3 },
         { "name": "poivron rouge", "quantity": 1 },
@@ -134,7 +134,7 @@
     {
       "id": 7,
       "name": "Omelette aux champignons",
-      "img": "",
+      "time": "15",
       "ingredients": [
         { "name": "œuf", "quantity": 3 },
         { "name": "champignons", "quantity": 100, "unit": "g" },
@@ -150,7 +150,7 @@
     {
       "id": 8,
       "name": "Pâtes au saumon",
-      "img": "",
+      "time": "15",
       "ingredients": [
         { "name": "pâtes", "quantity": 200, "unit": "g" },
         { "name": "saumon", "quantity": 150, "unit": "g" },
@@ -166,7 +166,7 @@
     {
       "id": 9,
       "name": "Pain perdu",
-      "img": "",
+      "time": "15",
       "ingredients": [
         { "name": "pain de mie", "quantity": 4, "unit": "tranches" },
         { "name": "œuf", "quantity": 2 },
@@ -184,7 +184,7 @@
     {
       "id": 10,
       "name": "Tarte aux pommes",
-      "img": "",
+      "time": "45",
       "ingredients": [
         { "name": "pâte feuilletée", "quantity": 1 },
         { "name": "pomme", "quantity": 3 },
@@ -202,7 +202,7 @@
     {
       "id": 11,
       "name": "Brownies au chocolat",
-      "img": "",
+      "time": "60",
       "ingredients": [
         { "name": "chocolat noir", "quantity": 200, "unit": "g" },
         { "name": "beurre", "quantity": 150, "unit": "g" },
@@ -222,7 +222,7 @@
     {
       "id": 12,
       "name": "Crêpes",
-      "img": "",
+      "time": "60",
       "ingredients": [
         { "name": "farine", "quantity": 250, "unit": "g" },
         { "name": "lait", "quantity": 500, "unit": "ml" },
@@ -241,7 +241,7 @@
     {
       "id": 13,
       "name": "Salade de fruits",
-      "img": "",
+      "time": "15",
       "ingredients": [
         { "name": "pomme", "quantity": 1 },
         { "name": "banane", "quantity": 1 },
@@ -263,7 +263,7 @@
     {
       "id": 14,
       "name": "Pizza maison",
-      "img": "",
+      "time": "30",
       "ingredients": [
         { "name": "pâte à pizza", "quantity": 1 },
         { "name": "sauce tomate", "quantity": 150, "unit": "g" },
@@ -281,7 +281,7 @@
     {
       "id": 15,
       "name": "Gaufres",
-      "img": "",
+      "time": "90",
       "ingredients": [
         { "name": "farine", "quantity": 250, "unit": "g" },
         { "name": "lait", "quantity": 500, "unit": "ml" },
@@ -295,6 +295,115 @@
         "Ajoutez les œufs, le lait et le beurre fondu.",
         "Laissez reposer la pâte 1 heure.",
         "Faites cuire dans un gaufrier chaud."
+      ]
+    },  {
+      "id": 16,
+      "name": "Bœuf Bourguignon",
+      "time": "180",
+      "ingredients": [
+        { "name": "boeuf", "quantity": 1, "unit": "kg" },
+        { "name": "carotte", "quantity": 3 },
+        { "name": "oignon", "quantity": 2 },
+        { "name": "vin rouge", "quantity": 500, "unit": "ml" },
+        { "name": "bouquet garni", "quantity": 1 },
+        { "name": "huile", "quantity": 2, "unit": "c à soupe" },
+        { "name": "beurre", "quantity": 20, "unit": "g" },
+        { "name": "farine", "quantity": 2, "unit": "c à soupe" },
+        { "name": "sel" },
+        { "name": "poivre" }
+      ],
+      "steps": [
+        "Coupez le bœuf en morceaux, épluchez et tranchez les légumes.",
+        "Faites revenir la viande dans l'huile et le beurre.",
+        "Ajoutez les légumes, saupoudrez de farine et mélangez.",
+        "Ajoutez le vin rouge, le bouquet garni, le sel et le poivre.",
+        "Laissez mijoter 3 heures à feu doux."
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Lasagnes végétariennes",
+      "time": "60",
+      "ingredients": [
+        { "name": "pâtes à lasagne", "quantity": 9 },
+        { "name": "courgette", "quantity": 2 },
+        { "name": "aubergine", "quantity": 1 },
+        { "name": "sauce tomate", "quantity": 500, "unit": "ml" },
+        { "name": "fromage râpé", "quantity": 100, "unit": "g" },
+        { "name": "béchamel", "quantity": 500, "unit": "ml" },
+        { "name": "huile d'olive", "quantity": 2, "unit": "c à soupe" },
+        { "name": "sel" },
+        { "name": "poivre" }
+      ],
+      "steps": [
+        "Préchauffez le four à 180°C.",
+        "Coupez les légumes et faites-les revenir dans l’huile.",
+        "Alternez les couches de pâtes, légumes, sauce tomate, béchamel et fromage.",
+        "Enfournez 30 minutes."
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Soupe de potimarron",
+      "time": "40",
+      "ingredients": [
+        { "name": "potimarron", "quantity": 1 },
+        { "name": "pomme de terre", "quantity": 2 },
+        { "name": "oignon", "quantity": 1 },
+        { "name": "crème fraîche", "quantity": 100, "unit": "ml" },
+        { "name": "bouillon cube", "quantity": 1 },
+        { "name": "eau", "quantity": 1, "unit": "litre" },
+        { "name": "sel" },
+        { "name": "poivre" }
+      ],
+      "steps": [
+        "Épluchez et coupez le potimarron, les pommes de terre et l’oignon.",
+        "Faites cuire avec le bouillon dans l’eau pendant 30 minutes.",
+        "Mixez le tout, ajoutez la crème, salez et poivrez."
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Chili sin carne",
+      "time": "45",
+      "ingredients": [
+        { "name": "haricots rouges", "quantity": 400, "unit": "g" },
+        { "name": "maïs", "quantity": 150, "unit": "g" },
+        { "name": "tomate", "quantity": 3 },
+        { "name": "poivron rouge", "quantity": 1 },
+        { "name": "oignon", "quantity": 1 },
+        { "name": "ail", "quantity": 1, "unit": "gousse" },
+        { "name": "épices chili", "quantity": 1, "unit": "c à soupe" },
+        { "name": "huile d'olive", "quantity": 2, "unit": "c à soupe" },
+        { "name": "sel" },
+        { "name": "poivre" }
+      ],
+      "steps": [
+        "Hachez l’oignon et l’ail, faites-les revenir dans l’huile.",
+        "Ajoutez les poivrons, les tomates coupées en dés et les épices.",
+        "Ajoutez les haricots rouges et le maïs. Laissez mijoter 20 minutes."
+      ]
+    },{
+      "id": 20,
+      "name": "Tian de légumes",
+      "time": "50",
+      "ingredients": [
+        { "name": "courgette", "quantity": 2 },
+        { "name": "aubergine", "quantity": 1 },
+        { "name": "tomate", "quantity": 3 },
+        { "name": "huile d'olive", "quantity": 2, "unit": "c à soupe" },
+        { "name": "herbes de Provence", "quantity": 1, "unit": "c à café" },
+        { "name": "ail", "quantity": 2, "unit": "gousses" },
+        { "name": "sel" },
+        { "name": "poivre" }
+      ],
+      "steps": [
+        "Préchauffez le four à 180°C.",
+        "Coupez les légumes en rondelles fines.",
+        "Frottez un plat à gratin avec une gousse d’ail.",
+        "Disposez les rondelles de légumes en alternant les couleurs.",
+        "Arrosez d’huile d’olive, saupoudrez d’herbes de Provence, salez et poivrez.",
+        "Faites cuire au four pendant 40 minutes."
       ]
     }
   ]

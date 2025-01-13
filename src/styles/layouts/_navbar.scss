@@ -23,11 +23,15 @@
     gap: 10px;
     svg {
       position: relative;
-
       color: $iconsOrange;
       height: 45px;
       width: 45px;
       cursor: pointer;
+      &:hover {
+        transition: all 0.2s ease-in-out;
+        transform: scale(1.2);
+        filter: brightness(1.2);
+      }
     }
   }
 }
@@ -44,3 +48,5 @@
     display: flex;
   }
 }
+
+

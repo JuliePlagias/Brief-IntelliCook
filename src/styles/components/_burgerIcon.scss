@@ -1,12 +1,13 @@
 $dist: -42px;
 .burgerIcon {
-  z-index: 10;
+  z-index: 10001;
   position: absolute;
   width: 40px;
   height: 40px;
   top: 10px;
   left: 10px;
   user-select: none;
+  cursor: pointer;
   svg {
     color: $iconsOrange;
     width: 100%;
@@ -30,7 +31,7 @@ $dist: -42px;
 }
 @keyframes extendSteak {
   100% {
-    transform: translateY($dist) scaleX(0.9);
+    transform: translateY($dist) scaleX(0.8);
   }
 }
 @keyframes extendBottomBun {
@@ -52,10 +53,10 @@ $dist: -42px;
 }
 @keyframes smashSteak {
   0% {
-    transform: translateY($dist) scaleX(0.9);
+    transform: translateY($dist) scaleX(0.8);
   }
   50% {
-    transform: translateY($dist) scaleX(0.9);
+    transform: translateY($dist) scaleX(0.8);
   }
   70% {
     transform: translateY($dist) scaleX(1.05);

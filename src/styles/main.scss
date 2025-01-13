@@ -7,25 +7,32 @@
 @import './base/base';
 @import './base/typography';
 /* COMPONENTS */
+@import './components/filters';
 @import './components/bloc';
 @import './components/buttons';
-@import './components/cards';
+@import './components/_ficheProduit';
+@import './components/recipeCard';
 @import './components/form';
-@import './components/navbar';
+@import './components/ingredient';
 @import './components/recipes';
-@import './components/searchRecipe';
+@import './components/searchBar';
 @import './components/burgerIcon';
-@import './components/searchingPage';
+@import './components/ingredientsDropdown';
+@import './components/ingredientsFiltered';
+@import './components/error';
 /* LAYOUTS */
 @import './layouts/containers';
 @import './layouts/footer';
 @import './layouts/grid';
 @import './layouts/navbar';
 @import './layouts/menuBurger';
+@import './layouts/tooltip';
 /* PAGES */
 @import './pages/about';
 @import './pages/catalogue';
 @import './pages/home';
+@import './pages/favorites';
+@import './pages/conditions.scss';
 /* THEMES */
 @import './themes/dark';
 @import './themes/light';
