@@ -10,7 +10,7 @@ import {
  * @param {string} search
  */
 
-const Recipes = ({ search, searchType, filterIng }) => {
+const Recipes = ({ search, searchType, filterIng, numberRecipes = 12 }) => {
   const { addedIngredientsList, removedIngredientsList } = filterIng
 
   return (
@@ -18,7 +18,7 @@ const Recipes = ({ search, searchType, filterIng }) => {
       {searchType === 'name' &&
         findRecipeByName(search) &&
         findRecipeByName(search).map((recipe, i) => {
-          if (i < 12) {
+          if (i < numberRecipes) {
             return <RecipeCard key={recipe.id} recipe={recipe} />
           }
           return null
@@ -29,7 +29,7 @@ const Recipes = ({ search, searchType, filterIng }) => {
           addedIngredientsList,
           removedIngredientsList,
         ).map((recipe, i) => {
-          if (i < 12) {
+          if (i < numberRecipes) {
             return <RecipeCard key={recipe.id} recipe={recipe} />
           }
           return null

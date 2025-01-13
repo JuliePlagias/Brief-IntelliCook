@@ -4,10 +4,12 @@ import IngredientsFiltered from '../component/IngredientsFiltered'
 import Recipes from '../component/Recipes'
 import { useIngredientsFiltered } from '../utils/hooks/useIngredientsFiltered'
 import Filters from '../component/Filters'
+import recettes from '../data/recipes.json'
 
 const Catalogue = () => {
   const [search, setSearch] = useState('')
   const [searchType, setSearchType] = useState('name')
+  const [numberRecipes, setNumberRecipes] = useState(12)
   const filterIng = useIngredientsFiltered()
 
   return (
@@ -28,8 +30,20 @@ const Catalogue = () => {
           <IngredientsFiltered filterIng={filterIng} />
         )}
       {/* FIN ingrédients filtrés */}
-      <Recipes search={search} searchType={searchType} filterIng={filterIng} />
-      <button className='catalogue__button'>Afficher + de recettes</button>
+      <Recipes
+        search={search}
+        searchType={searchType}
+        filterIng={filterIng}
+        numberRecipes={numberRecipes}
+      />
+      {numberRecipes < recettes.recipes.length && (
+        <button
+          className='catalogue__button'
+          onClick={() => setNumberRecipes(numberRecipes + 12)}
+        >
+          Afficher + de recettes
+        </button>
+      )}
     </div>
   )
 }

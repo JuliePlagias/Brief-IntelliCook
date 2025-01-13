@@ -5,7 +5,18 @@
   margin: auto;
   /* Filtres */
   &__button {
+    cursor: pointer;
     border: 1px solid $iconsOrange;
+    width: 250px;
+    height: 75px;
+    margin: 20px auto;
+    border-radius: 30px;
+    font-size: 1.25rem;
+    &:hover {
+      transition: 0.2s;
+      background: $iconsOrange;
+      color: whitesmoke;
+    }
   }
 }
 .catalogue__title {
