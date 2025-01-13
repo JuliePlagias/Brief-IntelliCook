@@ -1,119 +1,122 @@
-.ficheProduit{
+.ficheProduit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  h1 {
+    height: 25px;
+    text-align: center;
+    font-family: Aclonica;
+    font-size: larger;
+    border-bottom: 3px solid #bd2525;
+  }
+  h2 {
+    font-family: Playfair Display;
+    font-size: large;
+    font-weight: 700;
+  }
+  .ingredients {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+  .preparationLight {
+    background-color: #ffe5be;
+  }
+  .preparation {
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap : 15px;
-    img{
-        width: 200px;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 15px;
+    align-items: left;
+    width: 100%;
+    overflow-x: hidden;
+    h2 {
+      align-self: center;
+      padding-bottom: 15px;
     }
-    h1{
-        height: 25px;
-        text-align: center;
-        font-family: Aclonica;
-        font-size:larger;
-        border-bottom:3px solid #BD2525;
-    }
-    h2{
+    .steps {
+      padding: 0 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      gap: 20px;
+      .step {
         font-family: Playfair Display;
-        font-size: large;
-        font-weight:700;
-    }
-    .ingredients{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 20px;
+        font-weight: 600;
         padding-bottom: 20px;
-    }
-    #preparation{
-        padding: 20px 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: left;
-        background-color: #FFA72626;
-        width: 100%;
-        overflow-x: hidden;
-        h2{
-            align-self: center;
-            padding-bottom: 15px;
-        }
-        .steps{
-            padding: 0 15px;
-            display: flex;
-            flex-direction: column;
-            justify-content:left;
-            gap:20px;
-           .step{
-               font-family:Playfair Display ;
-               font-weight: 600;
-                padding-bottom: 20px;           }
-           .step_content{
-               font-family: Playfair;
-           }
-        }
-    }
-    &--error{
-        display: flex;
-        flex-direction: column;
-        height: 80vh;
-        @include verticalCenter;
+      }
+      .step_content {
         font-family: Playfair;
-        font-size: 2rem;
-        color: indianred;
-        user-select: none;
-        gap: 50px;
-        button {
-            border: 1px solid $iconsOrange;
-            cursor: pointer;
-            border-radius: 15px;
-            padding: 10px 15px;
-            color: $iconsOrange;
-            font-family: Playfair;
-            font-size: 1.2rem;
-            background-color: whitesmoke;
-            transition: 0.2s;
-            &:hover {
-                transition: 0.2s;
-                background-color: $iconsOrange;
-                color: white;
-            }
-        }
+      }
     }
+  }
+  &--error {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    @include verticalCenter;
+    font-family: Playfair;
+    font-size: 2rem;
+    color: indianred;
+    user-select: none;
+    gap: 50px;
+    button {
+      border: 1px solid $iconsOrange;
+      cursor: pointer;
+      border-radius: 15px;
+      padding: 10px 15px;
+      color: $iconsOrange;
+      font-family: Playfair;
+      font-size: 1.2rem;
+      background-color: whitesmoke;
+      transition: 0.2s;
+      &:hover {
+        transition: 0.2s;
+        background-color: $iconsOrange;
+        color: white;
+      }
+    }
+  }
 }
 
 @media #{$tabletSize} {
-    .ficheProduit{
-        #preparation{
-            ul.steps {
-                align-items: center;
-                li {
-                    p.step {
-                        text-align: center;
-                    }
-                }
-            }
+  .ficheProduit {
+    .preparation {
+      ul.steps {
+        align-items: center;
+        li {
+          p.step {
+            text-align: center;
+          }
         }
+      }
     }
+  }
 }
 
 @media #{$desktopSize} {
-    .ficheProduit{
-        #preparation{
-            ul.steps {
-                align-items: center;
-                font-size: 1.2rem;
-                li {
-                    p.step {
-                        text-align: center;
-                    }
-                }
-            }
+  .ficheProduit {
+    .preparation {
+      ul.steps {
+        align-items: center;
+        font-size: 1.2rem;
+        li {
+          p.step {
+            text-align: center;
+          }
         }
+      }
     }
+  }
 }
