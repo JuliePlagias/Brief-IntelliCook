@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react'
 import { updateLocalStorage } from '../utils/functions/updateLocalStorage'
 import { Link } from 'react-router-dom'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
-import Ingredient from './Ingredient'
 import { DarkModeContext } from './DarkModeProvider'
 
 /**
@@ -60,9 +59,6 @@ const RecipeCard = ({ recipe }) => {
   const toCamelCase = str => {
     const strRegex = str.replace(/[' ']/g, '-')
     return strRegex
-    clearTimeout(hoverTimeout)
-    setHoverTimeout(null)
-    setShowTooltip(false)
   }
 
   return (
