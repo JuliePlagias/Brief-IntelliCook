@@ -1,4 +1,5 @@
 .tooltip {
+  /*
   position: fixed;
   animation: fadeIn 0.5s;
   transition: 1s;
@@ -15,7 +16,7 @@
   width: 90%;
   font-family: Aclonica;
   box-sizing: border-box;
-  overflow-x: hidden;
+  overflow-x: hidden;*/
   h2 {
     margin: 8px 0;
   }
@@ -24,10 +25,10 @@
     flex-direction: column;
     gap: 5px;
     max-height: 200px;
-    overflow-y: scroll;
+    overflow-y: none;
     color: black;
     li {
-      font-size: 1.2rem;
+      font-size: 0.9rem;
       font-family: Fairplay;
     }
   }

@@ -75,6 +75,9 @@ const RecipeCard = ({ recipe }) => {
         to={`/recipe/${recipe.name.toLowerCase()}`}
         key={recipe.id}
         className={`${toCamelCase(recipe.name)}`}
+        data-tooltip-position-strategy='absolute'
+        data-tooltip-float='true'
+        data-tooltip-delay-show='1000'
       >
         {/* {showTooltip && <Tooltip ingredients={recipe.ingredients.map(i => i.name)} />} */}
         <div className='recipeCard__image'>
@@ -96,11 +99,7 @@ const RecipeCard = ({ recipe }) => {
             {recipe.ingredients.map((ing, i) => {
               return (
                 <li className='tooltip__content__ingredient' key={i}>
-                  <Ingredient
-                    name={ing.name}
-                    quantity={ing.quantity}
-                    unit={ing.unit}
-                  />
+                  {ing.name}
                 </li>
               )
             })}
