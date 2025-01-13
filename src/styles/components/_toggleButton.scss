@@ -1,32 +1,37 @@
-.toggle {
-  cursor: pointer;
+.toggleButton {
+  overflow: hidden;
   width: 35px;
   height: 35px;
   border: solid $iconsOrange;
   border-radius: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  svg {
-    width: 25px;
-    height: 25px;
-    color: $iconsOrange;
-  }
-  .moon {
-    display: none;
-    &.visible {
+  .toggle {
+    width: 70px;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.2s;
+    &.darkMode {
+      transition: 0.2s;
+      transform: translateX(-50%);
+    }
+    svg {
+      width: 25px;
+      height: 25px;
+      color: $iconsOrange;
+    }
+    .moon {
       display: block;
     }
-  }
-  .sun {
-    display: block;
-    &.notVisible {
-      display: none;
+    .sun {
+      display: block;
     }
   }
   &:hover {
     transition: 0.2s;
-    transform: scale(1.1);
+    filter: brightness(1.2);
+    // transform: scale(1.1);
   }
 }
 

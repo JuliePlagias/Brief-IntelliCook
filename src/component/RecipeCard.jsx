@@ -13,7 +13,6 @@ const RecipeCard = ({ recipe }) => {
   const [isFavorite, setIsFavorite] = useState(false)
 
   //Pour gérer la tooltip
-  const [showTooltip, setShowTooltip] = useState(false)
   const [hoverTimeout, setHoverTimeout] = useState(null)
   const { darkMode } = useContext(DarkModeContext)
 
@@ -42,31 +41,13 @@ const RecipeCard = ({ recipe }) => {
     return `${Math.floor(time / 60)}h${Math.floor(time % 60)}${addZero}`
   }
 
-  /*Gérer la tooltip*/
-  const handleMouseEnter = () => {
-    const timeout = setTimeout(() => {
-      setShowTooltip(true)
-    }, 1500)
-    setHoverTimeout(timeout)
-  }
-
-  const handleMouseLeave = () => {
-    clearTimeout(hoverTimeout)
-    setHoverTimeout(null)
-    setShowTooltip(false)
-  }
-
   const toCamelCase = str => {
     const strRegex = str.replace(/[' ']/g, '-')
     return strRegex
   }
 
   return (
-    <div
-      className={`recipeCard ${darkMode && 'recipeCardDark'}`}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
+    <div className={`recipeCard ${darkMode && 'recipeCardDark'}`}>
       <Link
         to={`/recipe/${recipe.name.toLowerCase()}`}
         key={recipe.id}
