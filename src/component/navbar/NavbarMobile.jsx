@@ -4,6 +4,7 @@ import Burger from './Burger'
 import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { DarkModeContext } from '../DarkModeProvider'
+import ToggleButton from '../ToggleButton'
 
 export default function NavbarMobile() {
   const [isOpen, setIsOpen] = useState(false)
@@ -31,6 +32,7 @@ export default function NavbarMobile() {
             alt='Intelli Cook Logo'
           />
         </Link>
+        <ToggleButton />
       </div>
       <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
       <MenuBurger isOpen={isOpen} setIsOpen={setIsOpen} />

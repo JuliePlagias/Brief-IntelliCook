@@ -1,6 +1,7 @@
 import { Link, Outlet } from 'react-router-dom'
 import { useContext } from 'react'
 import { DarkModeContext } from '../DarkModeProvider'
+import ToggleButton from '../ToggleButton'
 
 export default function NavbarDesktop() {
   const { darkMode } = useContext(DarkModeContext)
@@ -15,6 +16,7 @@ export default function NavbarDesktop() {
             alt='Intelli Cook Logo'
           ></img>
         </Link>
+        <ToggleButton />
         <div className='icons'>
           <Link to='/'>
             <svg
